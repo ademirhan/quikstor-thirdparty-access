@@ -1,0 +1,193 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Quikstor ThirdParty",
+    "version": "1.0",
+    "description": "Quickstor Cloud API - Thrid Party Access Documentation"
+  },
+  "servers": [
+    {
+      "url": "http://api-test.quikstor.com",
+      "description": "api-test"
+    }
+  ],
+  "paths": {
+    "/login": {
+      "post": {
+        "summary": "login post",
+        "tags": [
+          "login"
+        ],
+        "responses": {
+          "200": {
+            "description": "API responses with the TokenResponse model(See models.)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "access_token": {
+                      "type": "string"
+                    },
+                    "token_type": {
+                      "type": "string"
+                    },
+                    "expires_in": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "refresh_token": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        },
+        "operationId": "post-login",
+        "requestBody": {
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "grant-type": {
+                    "type": "string"
+                  },
+                  "username": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "grant-type",
+                  "username",
+                  "password"
+                ]
+              },
+              "examples": {
+                "example-1": {
+                  "value": "grant_type=password&username=<third-party-user-name>@quikstor.com&password=<third-party-password>"
+                }
+              }
+            }
+          },
+          "description": "Raw text body required for authentication"
+        },
+        "description": "Get an access token from API ",
+        "security": []
+      }
+    },
+    "/api/<partner-name>/getsites": {
+      "get": {
+        "summary": "GetSites",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "name": {
+                        "type": "string",
+                        "description": ""
+                      },
+                      "test": {
+                        "type": "integer",
+                        "enum": [
+                          "Months=0",
+                          "Days=1"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-getsites",
+        "description": "A client can consume the array of the information for the sites(facilities) that is integrated with the partner.",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "Header values to be bearer token in a format \"bearer access-token\"",
+            "required": true
+          }
+        ],
+        "security": [
+          {
+            "BearerToken": []
+          }
+        ],
+        "tags": [
+          "site endpoints"
+        ]
+      },
+      "parameters": []
+    }
+  },
+  "components": {
+    "schemas": {
+      "TokenResponse": {
+        "title": "TokenResponse",
+        "type": "object",
+        "properties": {
+          "access_token": {
+            "type": "string"
+          },
+          "token_type": {
+            "type": "string"
+          },
+          "expires_in": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "refresh_token": {
+            "type": "string"
+          }
+        },
+        "description": "Response model for the login request. ",
+        "x-tags": [
+          "models"
+        ]
+      }
+    },
+    "securitySchemes": {
+      "BearerToken": {
+        "type": "oauth2",
+        "flows": {}
+      }
+    }
+  },
+  "security": [
+    {
+      "BearerToken": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "site endpoints"
+    }
+  ]
+}
