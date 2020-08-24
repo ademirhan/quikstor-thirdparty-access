@@ -145,66 +145,42 @@
         ]
       },
       "parameters": []
-    }
-  },
-      "/api/<partner-name>/getunittypes": {
+    },
+    "/api/<partner-name>/getunittypes": {
       "get": {
         "summary": "GetUnitTypes",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "headers": {},
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "name": {
-                        "type": "string",
-                        "description": ""
-                      },
-                      "test": {
-                        "type": "integer",
-                        "enum": [
-                          "Months=0",
-                          "Days=1"
-                        ]
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-getunittypes",
-        "description": "A client can consume the array of the information for the facility unit type that is integrated with the partner.",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "in": "header",
-            "name": "Authorization",
-            "description": "Header values to be bearer token in a format \"bearer access-token\"",
-            "required": true
-          }
-        ],
-        "security": [
-          {
-            "BearerToken": []
-          }
-        ],
         "tags": [
           "site endpoints"
-        ]
-      },
-      "parameters": []
+        ],
+        "responses": {},
+        "operationId": "get-api-partner-name-getunittypes"
+      }
+    },
+    "/api/<partner-name>/getavailableunittypes": {
+      "get": {
+        "summary": "GetAvailableUnitTypes",
+        "tags": [
+          "site endpoints"
+        ],
+        "responses": {},
+        "operationId": "get-api-partner-name-getavailableunittypes"
+      }
+    },
+    "/api/<partner-name>/getunits": {
+      "get": {
+        "summary": "GetUnits",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-api-partner-name-getunits"
+      }
+    },
+    "/api/<partner-name>/gettenants": {
+      "get": {
+        "summary": "GetTenants",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-api-partner-name-gettenants"
+      }
     }
   },
   "components": {
