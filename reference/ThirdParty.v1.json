@@ -123,7 +123,7 @@
           }
         },
         "operationId": "get-getsites",
-        "description": "A client can consume the array of the information for the sites(facilities) that is integrated with the partner.",
+        "description": "A client can consume the array of the information for the sites(facilities) that is integrated with the partner. Test",
         "parameters": [
           {
             "schema": {
