@@ -101,103 +101,197 @@
                   "items": {
                     "type": "object",
                     "properties": {
-                      "Id": {
+                      "id": {
                         "type": "integer"
                       },
-                      "Name": {
+                      "name": {
                         "type": "string"
                       },
-                      "Abbreviations": {
+                      "abbreviation": {
                         "type": "string"
                       },
-                      "Phone": {
+                      "phone": {
                         "type": "string"
                       },
-                      "Email": {
+                      "email": {
                         "type": "string"
                       },
-                      "Manager": {
+                      "manager": {
                         "type": "string"
                       },
-                      "TimeZone": {
+                      "timeZone": {
                         "type": "string"
                       },
-                      "AddressId": {
+                      "addressId": {
                         "type": [
-                          "number",
+                          "integer",
                           "null"
                         ]
                       },
-                      "Address": {
-                        "type": "object",
+                      "address": {
+                        "type": [
+                          "string",
+                          "object"
+                        ],
                         "properties": {
-                          "Zip": {
-                            "type": "string"
-                          },
-                          "StateId": {
+                          "id": {
                             "type": "integer"
                           },
-                          "State": {
+                          "streetAddress": {
                             "type": "string"
                           },
-                          "StateCode": {
+                          "city": {
                             "type": "string"
                           },
-                          "CountryId": {
-                            "type": "integer"
-                          },
-                          "Country": {
+                          "zip": {
                             "type": "string"
                           },
-                          "CountryCode": {
+                          "stateId": {
                             "type": "string"
                           },
-                          "Id": {
-                            "type": "integer"
+                          "state": {
+                            "type": "string"
+                          },
+                          "stateCode": {
+                            "type": "string"
+                          },
+                          "countryId": {
+                            "type": "string"
+                          },
+                          "country": {
+                            "type": "string"
+                          },
+                          "countryCode": {
+                            "type": "string"
                           }
                         },
                         "required": [
-                          "Id"
+                          "id"
                         ]
                       },
-                      "InsuranceProviderId": {
+                      "insuranceProviderId": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      },
+                      "clientId": {
                         "type": "integer"
                       },
-                      "ClientId": {
+                      "currencyId": {
                         "type": "integer"
                       },
-                      "CurrencyId": {
+                      "processorId": {
                         "type": "integer"
                       },
-                      "ProcessorId": {
+                      "paymentSchemeId": {
                         "type": "integer"
                       },
-                      "PaymentSchemeId": {
-                        "type": "integer"
-                      },
-                      "OvernightsEnabled": {
+                      "overnightEnabled": {
                         "type": "boolean"
                       },
-                      "DaysBeforeRedLocksOn": {
+                      "daysBeforeRedLocksOn": {
                         "type": "integer"
                       },
-                      "": {
+                      "daysBeforePaidToDateToSendInvoice": {
+                        "type": "integer"
+                      },
+                      "paymentSchemeIncrement": {
+                        "type": [
+                          "string",
+                          "object"
+                        ]
+                      },
+                      "paymentSchemeDaysInMonth": {
+                        "type": "integer"
+                      },
+                      "setupFee": {
+                        "type": "number",
+                        "format": "float",
+                        "default": "decimal"
+                      },
+                      "salesTax": {
+                        "type": "number",
+                        "format": "float",
+                        "default": "decimal"
+                      },
+                      "rentTax": {
+                        "type": "number",
+                        "format": "float",
+                        "default": "decimal",
+                        "example": 0
+                      },
+                      "isActive": {
+                        "type": "boolean"
+                      },
+                      "isDeleted": {
+                        "type": "boolean"
+                      },
+                      "smtpUsername": {
                         "type": "string"
+                      },
+                      "smtpPassword": {
+                        "type": "string"
+                      },
+                      "smtpRequireSSL": {
+                        "type": "boolean"
+                      },
+                      "smtpHost": {
+                        "type": "string"
+                      },
+                      "smtpPort": {
+                        "type": "integer"
+                      },
+                      "bankName": {
+                        "type": [
+                          "string",
+                          "object"
+                        ],
+                        "properties": {
+                          "": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "bankAccountNumber": {
+                        "type": "string"
+                      },
+                      "bankAddressId": {
+                        "type": "string"
+                      },
+                      "bankAddress": {
+                        "type": [
+                          "string",
+                          "object"
+                        ]
+                      },
+                      "delinquencyPolicy": {
+                        "type": [
+                          "string",
+                          "object"
+                        ],
+                        "properties": {
+                          "delinquencyPolicy": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "languages": {
+                        "type": [
+                          "string",
+                          "object"
+                        ]
                       }
                     },
                     "required": [
-                      "Id",
-                      "Manager",
-                      "ClientId",
-                      "CurrencyId"
+                      "id",
+                      "timeZone",
+                      "clientId",
+                      "currencyId",
+                      "daysBeforePaidToDateToSendInvoice",
+                      "paymentSchemeIncrement",
+                      "paymentSchemeDaysInMonth"
                     ]
-                  }
-                },
-                "examples": {
-                  "example-1": {
-                    "value": {
-                      "": "string"
-                    }
                   }
                 }
               }
@@ -231,11 +325,65 @@
     "/api/<partner-name>/getunittypes": {
       "get": {
         "summary": "GetUnitTypes",
-        "responses": {},
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "siteId": {
+                        "type": "integer"
+                      },
+                      "categoryId": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "string"
+                      },
+                      "length": {
+                        "type": "string"
+                      },
+                      "": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ]
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Authorization": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "Header values to be bearer token in a format \"bearer access-token\""
+              }
+            }
+          }
+        },
         "operationId": "get-api-partner-name-getunittypes",
         "tags": [
           "Unit/UnitType"
-        ]
+        ],
+        "security": [
+          {
+            "BearerToken": []
+          }
+        ],
+        "description": "Access to array of the information for the facilities' unit types."
       }
     },
     "/api/<partner-name>/getavailableunittypes": {
