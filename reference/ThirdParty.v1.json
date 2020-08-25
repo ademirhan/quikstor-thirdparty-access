@@ -101,41 +101,6 @@
                   "items": {
                     "type": "object",
                     "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "name": {
-                        "type": "string",
-                        "description": ""
-                      },
-                      "test": {
-                        "type": "integer",
-                        "enum": [
-                          "Months=0",
-                          "Days=1"
-                        ]
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "example-1": {
-                    "value": [
-                      {
-                        "id": 0,
-                        "name": "string",
-                        "test": "Months=0"
-                      }
-                    ]
-                  }
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
                       "Id": {
                         "type": "integer"
                       },
@@ -235,7 +200,7 @@
                     }
                   }
                 }
-              }
+              }   
             }
           }
         },
