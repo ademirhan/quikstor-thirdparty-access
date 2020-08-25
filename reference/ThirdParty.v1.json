@@ -117,6 +117,123 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": [
+                      {
+                        "id": 0,
+                        "name": "string",
+                        "test": "Months=0"
+                      }
+                    ]
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "integer"
+                      },
+                      "Name": {
+                        "type": "string"
+                      },
+                      "Abbreviations": {
+                        "type": "string"
+                      },
+                      "Phone": {
+                        "type": "string"
+                      },
+                      "Email": {
+                        "type": "string"
+                      },
+                      "Manager": {
+                        "type": "string"
+                      },
+                      "TimeZone": {
+                        "type": "string"
+                      },
+                      "AddressId": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "Address": {
+                        "type": "object",
+                        "properties": {
+                          "Zip": {
+                            "type": "string"
+                          },
+                          "StateId": {
+                            "type": "integer"
+                          },
+                          "State": {
+                            "type": "string"
+                          },
+                          "StateCode": {
+                            "type": "string"
+                          },
+                          "CountryId": {
+                            "type": "integer"
+                          },
+                          "Country": {
+                            "type": "string"
+                          },
+                          "CountryCode": {
+                            "type": "string"
+                          },
+                          "Id": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "Id"
+                        ]
+                      },
+                      "InsuranceProviderId": {
+                        "type": "integer"
+                      },
+                      "ClientId": {
+                        "type": "integer"
+                      },
+                      "CurrencyId": {
+                        "type": "integer"
+                      },
+                      "ProcessorId": {
+                        "type": "integer"
+                      },
+                      "PaymentSchemeId": {
+                        "type": "integer"
+                      },
+                      "OvernightsEnabled": {
+                        "type": "boolean"
+                      },
+                      "DaysBeforeRedLocksOn": {
+                        "type": "integer"
+                      },
+                      "": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "Id",
+                      "Manager",
+                      "ClientId",
+                      "CurrencyId"
+                    ]
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "": "string"
+                    }
+                  }
                 }
               }
             }
@@ -149,19 +266,16 @@
     "/api/<partner-name>/getunittypes": {
       "get": {
         "summary": "GetUnitTypes",
-        "tags": [
-          "site endpoints"
-        ],
         "responses": {},
-        "operationId": "get-api-partner-name-getunittypes"
+        "operationId": "get-api-partner-name-getunittypes",
+        "tags": [
+          "Unit/UnitType"
+        ]
       }
     },
     "/api/<partner-name>/getavailableunittypes": {
       "get": {
         "summary": "GetAvailableUnitTypes",
-        "tags": [
-          "site endpoints"
-        ],
         "responses": {},
         "operationId": "get-api-partner-name-getavailableunittypes"
       }
@@ -169,7 +283,9 @@
     "/api/<partner-name>/getunits": {
       "get": {
         "summary": "GetUnits",
-        "tags": [],
+        "tags": [
+          "Unit/UnitType"
+        ],
         "responses": {},
         "operationId": "get-api-partner-name-getunits"
       }
@@ -177,7 +293,9 @@
     "/api/<partner-name>/gettenants": {
       "get": {
         "summary": "GetTenants",
-        "tags": [],
+        "tags": [
+          "Tenant"
+        ],
         "responses": {},
         "operationId": "get-api-partner-name-gettenants"
       }
@@ -224,6 +342,12 @@
   "tags": [
     {
       "name": "site endpoints"
+    },
+    {
+      "name": "Unit/UnitType"
+    },
+    {
+      "name": "Tenant"
     }
   ]
 }
