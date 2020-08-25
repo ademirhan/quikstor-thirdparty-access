@@ -342,23 +342,105 @@
                         "type": "integer"
                       },
                       "categoryId": {
-                        "type": "string"
+                        "type": "integer"
                       },
                       "title": {
                         "type": "string"
                       },
                       "width": {
-                        "type": "string"
+                        "type": "number",
+                        "format": "float"
                       },
                       "length": {
+                        "type": "number",
+                        "format": "float"
+                      },
+                      "height": {
+                        "type": "number",
+                        "format": "float"
+                      },
+                      "baseRent": {
                         "type": "string"
                       },
-                      "": {
+                      "doorType": {
                         "type": "string"
+                      },
+                      "doorWidth": {
+                        "type": "number",
+                        "format": "float"
+                      },
+                      "isInside": {
+                        "type": "boolean"
+                      },
+                      "floorNumber": {
+                        "type": "number"
+                      },
+                      "securityDepositType": {
+                        "type": "string"
+                      },
+                      "securityDepositAmount": {
+                        "type": "string"
+                      },
+                      "securityDepositPercent": {
+                        "type": "number",
+                        "format": "float"
+                      },
+                      "applyRentTax": {
+                        "type": "boolean"
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "lateFee": {
+                        "type": "string"
+                      },
+                      "lateFeeType": {
+                        "type": [
+                          "string",
+                          "object"
+                        ]
+                      },
+                      "picture": {
+                        "type": [
+                          "string",
+                          "object"
+                        ]
+                      },
+                      "vacantUnit": {
+                        "type": "string"
+                      },
+                      "currentPrice": {
+                        "type": "string"
+                      },
+                      "leaseAgreement": {
+                        "type": "string"
+                      },
+                      "insuranceCertificate": {
+                        "type": "string"
+                      },
+                      "onlineRate": {
+                        "type": "string"
+                      },
+                      "specialAvailable": {
+                        "type": "boolean"
+                      },
+                      "limitedAvailability": {
+                        "type": "boolean"
+                      },
+                      "group": {
+                        "type": "object"
+                      },
+                      "features": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
                       }
                     },
                     "required": [
-                      "id"
+                      "id",
+                      "isInside",
+                      "floorNumber"
                     ]
                   }
                 }
@@ -369,7 +451,8 @@
                 "schema": {
                   "type": "string"
                 },
-                "description": "Header values to be bearer token in a format \"bearer access-token\""
+                "description": "Header values to be bearer token in a format \"bearer access-token\"",
+                "required": true
               }
             }
           }
@@ -389,8 +472,32 @@
     "/api/<partner-name>/getavailableunittypes": {
       "get": {
         "summary": "GetAvailableUnitTypes",
-        "responses": {},
-        "operationId": "get-api-partner-name-getavailableunittypes"
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Authorization": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "Header values to be bearer token in a format \"bearer access-token\"",
+                "required": true
+              }
+            }
+          }
+        },
+        "operationId": "get-api-partner-name-getavailableunittypes",
+        "description": "Ability to access available unit types for each facility."
       }
     },
     "/api/<partner-name>/getunits": {
