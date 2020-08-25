@@ -83,7 +83,7 @@
           },
           "description": "Raw text body required for authentication"
         },
-        "description": "Get an access token from API ",
+        "description": "Get an access token from API test",
         "security": []
       }
     },
@@ -200,7 +200,7 @@
                     }
                   }
                 }
-              }   
+              }
             }
           }
         },
