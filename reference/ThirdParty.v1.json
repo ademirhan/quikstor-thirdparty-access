@@ -480,7 +480,15 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "type": "object"
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "siteID": {
+                        "type": "integer"
+                      }
+                    }
                   }
                 }
               }
