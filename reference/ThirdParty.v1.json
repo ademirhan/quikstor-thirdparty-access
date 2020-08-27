@@ -123,21 +123,29 @@
                         "type": "string"
                       },
                       "addressId": {
-                        "type": [
-                          "integer",
-                          "null"
-                        ]
+                        "type": "integer"
                       },
                       "address": {
-                        "type": [
-                          "string",
-                          "object"
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "streetAddress",
+                          "streetAddress2",
+                          "city",
+                          "zip",
+                          "state",
+                          "stateCode",
+                          "country",
+                          "countryCode"
                         ],
                         "properties": {
                           "id": {
                             "type": "integer"
                           },
                           "streetAddress": {
+                            "type": "string"
+                          },
+                          "streetAddress2": {
                             "type": "string"
                           },
                           "city": {
@@ -147,7 +155,7 @@
                             "type": "string"
                           },
                           "stateId": {
-                            "type": "string"
+                            "type": "integer"
                           },
                           "state": {
                             "type": "string"
@@ -155,25 +163,19 @@
                           "stateCode": {
                             "type": "string"
                           },
-                          "countryId": {
+                          "countryID": {
                             "type": "string"
                           },
                           "country": {
-                            "type": "string"
+                            "type": "integer"
                           },
                           "countryCode": {
                             "type": "string"
                           }
-                        },
-                        "required": [
-                          "id"
-                        ]
+                        }
                       },
                       "insuranceProviderId": {
-                        "type": [
-                          "integer",
-                          "null"
-                        ]
+                        "type": "integer"
                       },
                       "clientId": {
                         "type": "integer"
@@ -197,29 +199,23 @@
                         "type": "integer"
                       },
                       "paymentSchemeIncrement": {
-                        "type": [
-                          "string",
-                          "object"
+                        "type": "integer",
+                        "enum": [
+                          "months",
+                          "days"
                         ]
                       },
                       "paymentSchemeDaysInMonth": {
                         "type": "integer"
                       },
                       "setupFee": {
-                        "type": "number",
-                        "format": "float",
-                        "default": "decimal"
+                        "type": "number"
                       },
                       "salesTax": {
-                        "type": "number",
-                        "format": "float",
-                        "default": "decimal"
+                        "type": "number"
                       },
                       "rentTax": {
-                        "type": "number",
-                        "format": "float",
-                        "default": "decimal",
-                        "example": 0
+                        "type": "number"
                       },
                       "isActive": {
                         "type": "boolean"
@@ -243,10 +239,7 @@
                         "type": "integer"
                       },
                       "bankName": {
-                        "type": [
-                          "string",
-                          "object"
-                        ],
+                        "type": "object",
                         "properties": {
                           "": {
                             "type": "string"
@@ -260,16 +253,10 @@
                         "type": "string"
                       },
                       "bankAddress": {
-                        "type": [
-                          "string",
-                          "object"
-                        ]
+                        "type": "object"
                       },
                       "delinquencyPolicy": {
-                        "type": [
-                          "string",
-                          "object"
-                        ],
+                        "type": "object",
                         "properties": {
                           "delinquencyPolicy": {
                             "type": "string"
@@ -277,20 +264,28 @@
                         }
                       },
                       "languages": {
-                        "type": [
-                          "string",
-                          "object"
-                        ]
+                        "type": "object"
                       }
                     },
                     "required": [
                       "id",
+                      "name",
+                      "abbreviation",
+                      "phone",
+                      "email",
+                      "manager",
                       "timeZone",
+                      "address",
                       "clientId",
                       "currencyId",
+                      "processorId",
+                      "paymentSchemeId",
+                      "overnightEnabled",
+                      "daysBeforeRedLocksOn",
                       "daysBeforePaidToDateToSendInvoice",
                       "paymentSchemeIncrement",
-                      "paymentSchemeDaysInMonth"
+                      "paymentSchemeDaysInMonth",
+                      "setupFee"
                     ]
                   }
                 }
@@ -505,7 +500,10 @@
           }
         },
         "operationId": "get-api-partner-name-getavailableunittypes",
-        "description": "Ability to access available unit types for each facility."
+        "description": "Ability to access available unit types for each facility.",
+        "tags": [
+          "Unit/UnitType"
+        ]
       }
     },
     "/api/<partner-name>/getunits": {
@@ -576,6 +574,9 @@
     },
     {
       "name": "Tenant"
+    },
+    {
+      "name": "Special"
     }
   ]
 }
