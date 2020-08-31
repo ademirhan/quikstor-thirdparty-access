@@ -596,9 +596,6 @@
         },
         "operationId": "get-api-partner-name-getavailableunittypes",
         "description": "Ability to access an array of available unit types for each facility.",
-        "tags": [
-          "Unit/UnitType"
-        ],
         "parameters": [
           {
             "schema": {
@@ -608,6 +605,9 @@
             "name": "siteId",
             "required": true
           }
+        ],
+        "tags": [
+          "Unit/UnitType"
         ]
       }
     },
@@ -1302,6 +1302,133 @@
             },
             "in": "query",
             "name": "reservationId",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/api/<partner-name>/getspecialsforunittype": {
+      "get": {
+        "summary": "GetSpecialsForUnitType",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "stieId": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "code": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "created": {
+                        "type": "string"
+                      },
+                      "updated": {
+                        "type": "string"
+                      },
+                      "starteDate": {
+                        "type": "string"
+                      },
+                      "endDate": {
+                        "type": "string"
+                      },
+                      "availableDays": {
+                        "type": "string"
+                      },
+                      "trigger": {
+                        "type": "string"
+                      },
+                      "coupon": {
+                        "type": "string"
+                      },
+                      "condition": {
+                        "type": "string"
+                      },
+                      "conditionDuration": {
+                        "type": "string"
+                      },
+                      "isRestricted": {
+                        "type": "string"
+                      },
+                      "platformFree": {
+                        "type": "string"
+                      },
+                      "isActive": {
+                        "type": "string"
+                      },
+                      "isDeleted": {
+                        "type": "string"
+                      },
+                      "isUsed": {
+                        "type": "string"
+                      },
+                      "breakdowns": {
+                        "type": "string"
+                      },
+                      "unitTypes": {
+                        "type": "string"
+                      },
+                      "platforms": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-api-partner-name-getspecialsforunittype",
+        "description": "Clients able to attain an array of information on specials for unit type in the facility. ",
+        "security": [
+          {
+            "BearerToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "description": "Header values to be bearer token in a format \"bearer access-token\""
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "siteId",
+            "description": "",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "unitTypeId",
             "required": true
           }
         ]
