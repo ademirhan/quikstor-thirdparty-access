@@ -239,12 +239,12 @@
                         "type": "integer"
                       },
                       "bankName": {
-                        "type": "object",
-                        "properties": {
-                          "": {
-                            "type": "string"
-                          }
-                        }
+                        "type": "string",
+                        "pattern": "[-a-zA-Z0-9._\\'& ]*",
+                        "enum": [
+                          "errorMessageResourceName = \"StringLength\"",
+                          "errorMessageResourceType = typeof(Resource.Languages)"
+                        ]
                       },
                       "bankAccountNumber": {
                         "type": "string"
@@ -285,7 +285,16 @@
                       "daysBeforePaidToDateToSendInvoice",
                       "paymentSchemeIncrement",
                       "paymentSchemeDaysInMonth",
-                      "setupFee"
+                      "setupFee",
+                      "salesTax",
+                      "rentTax",
+                      "isActive",
+                      "isDeleted",
+                      "smtpUsername",
+                      "smtpPassword",
+                      "smtpRequireSSL",
+                      "smtpHost",
+                      "smtpPort"
                     ]
                   }
                 }
@@ -390,16 +399,10 @@
                         "type": "string"
                       },
                       "lateFeeType": {
-                        "type": [
-                          "string",
-                          "object"
-                        ]
+                        "type": "object"
                       },
                       "picture": {
-                        "type": [
-                          "string",
-                          "object"
-                        ]
+                        "type": "object"
                       },
                       "vacantUnit": {
                         "type": "string"
@@ -461,7 +464,18 @@
             "BearerToken": []
           }
         ],
-        "description": "Access to array of the information for the facilities' unit types."
+        "description": "A client can access to the array of the information for the facilities' unit types.",
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "siteId",
+            "description": "",
+            "required": true
+          }
+        ]
       }
     },
     "/api/<partner-name>/getavailableunittypes": {
@@ -482,6 +496,87 @@
                       },
                       "siteID": {
                         "type": "integer"
+                      },
+                      "categoryId": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "string"
+                      },
+                      "length": {
+                        "type": "string"
+                      },
+                      "height": {
+                        "type": "string"
+                      },
+                      "baseRent": {
+                        "type": "string"
+                      },
+                      "doorType": {
+                        "type": "string"
+                      },
+                      "doorWidth": {
+                        "type": "string"
+                      },
+                      "isInside": {
+                        "type": "string"
+                      },
+                      "floorNumber": {
+                        "type": "string"
+                      },
+                      "securityDepositType": {
+                        "type": "string"
+                      },
+                      "securityDepositAmount": {
+                        "type": "string"
+                      },
+                      "securityDepositPercent": {
+                        "type": "string"
+                      },
+                      "applyRentTax": {
+                        "type": "string"
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "lateFee": {
+                        "type": "string"
+                      },
+                      "lateFeeType": {
+                        "type": "string"
+                      },
+                      "picture": {
+                        "type": "string"
+                      },
+                      "vacantUnits": {
+                        "type": "string"
+                      },
+                      "currentPrice": {
+                        "type": "string"
+                      },
+                      "leaseAgreement": {
+                        "type": "string"
+                      },
+                      "insuranceCertificate": {
+                        "type": "string"
+                      },
+                      "onlineRate": {
+                        "type": "string"
+                      },
+                      "specialAvailable": {
+                        "type": "string"
+                      },
+                      "limitedAvailability": {
+                        "type": "string"
+                      },
+                      "group": {
+                        "type": "string"
+                      },
+                      "features": {
+                        "type": "string"
                       }
                     }
                   }
@@ -500,9 +595,19 @@
           }
         },
         "operationId": "get-api-partner-name-getavailableunittypes",
-        "description": "Ability to access available unit types for each facility.",
+        "description": "Ability to access an array of available unit types for each facility.",
         "tags": [
           "Unit/UnitType"
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "siteId",
+            "required": true
+          }
         ]
       }
     },
@@ -512,8 +617,105 @@
         "tags": [
           "Unit/UnitType"
         ],
-        "responses": {},
-        "operationId": "get-api-partner-name-getunits"
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "number": {
+                        "type": "string"
+                      },
+                      "typeId": {
+                        "type": "integer"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "vacantSince": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "scheduledRent": {
+                        "type": "number"
+                      },
+                      "activeLeaseId": {
+                        "type": "integer"
+                      },
+                      "reservationId": {
+                        "type": "integer"
+                      },
+                      "isDamaged": {
+                        "type": "boolean"
+                      },
+                      "siteId": {
+                        "type": "integer"
+                      },
+                      "isActive": {
+                        "type": "boolean"
+                      },
+                      "isDeleted": {
+                        "type": "boolean"
+                      },
+                      "lockReleaseDateTime": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "lockByUserId": {
+                        "type": "integer"
+                      },
+                      "defaultCharges": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer"
+                        }
+                      },
+                      "defaultInsuranceType": {
+                        "type": "integer"
+                      },
+                      "insuranceIsRequired": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-api-partner-name-getunits",
+        "description": "Ability to access an array of each units in facilites. ",
+        "security": [
+          {
+            "BearerToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "Header values to be bearer token in a format \"bearer access-token\"",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "siteId",
+            "required": true
+          }
+        ]
       }
     },
     "/api/<partner-name>/gettenants": {
@@ -522,8 +724,587 @@
         "tags": [
           "Tenant"
         ],
-        "responses": {},
-        "operationId": "get-api-partner-name-gettenants"
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "siteId": {
+                        "type": "integer"
+                      },
+                      "primaryAddressId": {
+                        "type": "integer"
+                      },
+                      "languageId": {
+                        "type": "integer"
+                      },
+                      "profileId": {
+                        "type": "integer"
+                      },
+                      "sourceId": {
+                        "type": "integer"
+                      },
+                      "firstName": {
+                        "type": "string"
+                      },
+                      "middleName": {
+                        "type": "string"
+                      },
+                      "lastName": {
+                        "type": "string"
+                      },
+                      "dateOfBirth": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "gender": {
+                        "type": "string"
+                      },
+                      "driversLicense": {
+                        "type": "string"
+                      },
+                      "drivingLicenseStateId": {
+                        "type": "integer"
+                      },
+                      "companyName": {
+                        "type": "string"
+                      },
+                      "email": {
+                        "type": "string"
+                      },
+                      "socialSecurityNumber": {
+                        "type": "string"
+                      },
+                      "ssnChanged": {
+                        "type": "string",
+                        "pattern": "[-0-9() ]*"
+                      },
+                      "homePhone": {
+                        "type": "string",
+                        "pattern": "[-0-9() ]*"
+                      },
+                      "workPhone": {
+                        "type": "string",
+                        "pattern": "[-0-9() ]*"
+                      },
+                      "faxNumber": {
+                        "type": "string"
+                      },
+                      "lastReceiptNumber": {
+                        "type": "string"
+                      },
+                      "customerNumber": {
+                        "type": "string"
+                      },
+                      "profileType": {
+                        "type": "string"
+                      },
+                      "hasWebPassword": {
+                        "type": "boolean"
+                      },
+                      "address": {
+                        "type": "object",
+                        "properties": {
+                          "id ": {
+                            "type": "integer"
+                          },
+                          "streetAddress": {
+                            "type": "string"
+                          },
+                          "streetAddress2": {
+                            "type": "string"
+                          },
+                          "city": {
+                            "type": "string"
+                          },
+                          "zip": {
+                            "type": "string"
+                          },
+                          "stateId": {
+                            "type": "integer"
+                          },
+                          "state": {
+                            "type": "string"
+                          },
+                          "stateCode": {
+                            "type": "string"
+                          },
+                          "countryId": {
+                            "type": "integer"
+                          },
+                          "country": {
+                            "type": "string"
+                          },
+                          "countryCode": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "optOutOfNotifications": {
+                        "type": "boolean"
+                      },
+                      "milesFromSite": {
+                        "type": "number",
+                        "format": "float"
+                      },
+                      "units": {
+                        "type": "string"
+                      },
+                      "isActiveMilitary": {
+                        "type": "string"
+                      },
+                      "militaryInfo": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "customer Id": {
+                            "type": "integer"
+                          },
+                          "etsDate": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "unitName": {
+                            "type": "string",
+                            "pattern": "[-a-zA-Z0-9'.,_() ]*"
+                          },
+                          "unitPhoneNumber": {
+                            "type": "string",
+                            "pattern": "[-0-9() ]*"
+                          },
+                          "commandingOfficer": {
+                            "type": "string",
+                            "pattern": "[-a-zA-Z0-9'.,_() ]*"
+                          }
+                        }
+                      },
+                      "preferredReporting": {
+                        "type": "string"
+                      },
+                      "NSFCount": {
+                        "type": "number",
+                        "format": "float"
+                      },
+                      "isActive": {
+                        "type": "boolean"
+                      },
+                      "isDeleted": {
+                        "type": "boolean"
+                      },
+                      "hasPassword": {
+                        "type": "boolean"
+                      },
+                      "noEmail": {
+                        "type": "boolean"
+                      },
+                      "noPhoneNumber": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-api-partner-name-gettenants",
+        "description": "Availability to access an array of all tenant's information of a facility site. ",
+        "security": [
+          {
+            "BearerToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "Header values to be bearer token in a format \"bearer access-token\"",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "siteId",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "in": "query",
+            "name": "fromDate"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "in": "query",
+            "name": "toDate"
+          }
+        ]
+      }
+    },
+    "/api/<partner-name>/getinventoryitems": {
+      "get": {
+        "summary": "GetInventoryItems",
+        "tags": [
+          "Retail"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "siteId": {
+                        "type": "integer"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "cost": {
+                        "type": "number"
+                      },
+                      "price": {
+                        "type": "number"
+                      },
+                      "stock": {
+                        "type": "integer"
+                      },
+                      "isActive": {
+                        "type": "boolean"
+                      },
+                      "isDeleted": {
+                        "type": "boolean"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-api-partner-name-getinventoryitems",
+        "description": "Client will able to access the array of inventory information for the facility.",
+        "security": [
+          {
+            "BearerToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "Header values to be bearer token in a format \"bearer access-token\"",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "siteId",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/api/<partner-name>/getreservations": {
+      "get": {
+        "summary": "GetReservations",
+        "tags": [
+          "Reservation"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "siteId": {
+                        "type": "integer"
+                      },
+                      "userId": {
+                        "type": "integer"
+                      },
+                      "unitReservationId": {
+                        "type": "integer"
+                      },
+                      "truckReservationId": {
+                        "type": "integer"
+                      },
+                      "dateTime": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "notes": {
+                        "type": "string"
+                      },
+                      "isEcomReservation": {
+                        "type": "boolean"
+                      },
+                      "isActive": {
+                        "type": "boolean"
+                      },
+                      "isDeleted": {
+                        "type": "boolean"
+                      },
+                      "transactionId": {
+                        "type": "integer"
+                      },
+                      "receiptId": {
+                        "type": "integer"
+                      },
+                      "unitReservation": {
+                        "type": "object",
+                        "properties": {
+                          "customerID": {
+                            "type": "integer"
+                          },
+                          "leaseID": {
+                            "type": "integer"
+                          },
+                          "expiresAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "rentAtMoveIn": {
+                            "type": "number"
+                          },
+                          "rentDeposit": {
+                            "type": "string"
+                          },
+                          "securityDeposit": {
+                            "type": "number"
+                          },
+                          "setupFee": {
+                            "type": "number"
+                          },
+                          "hasMoveIn": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "customerID",
+                          "leaseID",
+                          "hasMoveIn"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "siteId",
+                      "userId",
+                      "dateTime",
+                      "notes",
+                      "isEcomReservation",
+                      "isActive",
+                      "isDeleted"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-api-partner-name-getreservations",
+        "description": "Gives a client availability to an array of reservations information to a unit in facility. ",
+        "security": [
+          {
+            "BearerToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "Header values to be bearer token in a format \"bearer access-token\"",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "siteId",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/api/<partner-name>/getreservationsdetails": {
+      "get": {
+        "summary": "GetReservationDetials",
+        "tags": [
+          "Reservation"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "siteId": {
+                        "type": "integer"
+                      },
+                      "userId": {
+                        "type": "integer"
+                      },
+                      "unitReservationId": {
+                        "type": "integer"
+                      },
+                      "truckReservationId": {
+                        "type": "integer"
+                      },
+                      "dateTime": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "notes": {
+                        "type": "string"
+                      },
+                      "isEcomReservation": {
+                        "type": "boolean"
+                      },
+                      "isActive": {
+                        "type": "boolean"
+                      },
+                      "isDeleted": {
+                        "type": "boolean"
+                      },
+                      "transactionId": {
+                        "type": "integer"
+                      },
+                      "receiptId": {
+                        "type": "integer"
+                      },
+                      "unitReservation": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "unitId": {
+                            "type": "integer"
+                          },
+                          "customerId": {
+                            "type": "integer"
+                          },
+                          "leaseId": {
+                            "type": "integer"
+                          },
+                          "expiresAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "rentAtMoveIn": {
+                            "type": "string"
+                          },
+                          "rentDeposit": {
+                            "type": "number"
+                          },
+                          "securityDeposit": {
+                            "type": "number"
+                          },
+                          "setupFee": {
+                            "type": "number"
+                          },
+                          "hasMovedIn": {
+                            "type": "boolean"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-api-partner-name-getreservationsdetails",
+        "description": "Gives a client availability to an array of details of reservation information to a unit in facility.",
+        "security": [
+          {
+            "BearerToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "Header values to be bearer token in a format \"bearer access-token\"",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "siteId",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "reservationId",
+            "required": true
+          }
+        ]
       }
     }
   },
@@ -577,6 +1358,12 @@
     },
     {
       "name": "Special"
+    },
+    {
+      "name": "Retail"
+    },
+    {
+      "name": "Reservation"
     }
   ]
 }
