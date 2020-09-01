@@ -1322,13 +1322,18 @@
                     "type": "object",
                     "properties": {
                       "id": {
-                        "type": "string"
+                        "type": "integer"
                       },
                       "stieId": {
-                        "type": "string"
+                        "type": "integer"
                       },
                       "type": {
-                        "type": "string"
+                        "enum": [
+                          "reservation = 1",
+                          "moveIn",
+                          "activeTenant"
+                        ],
+                        "type": "integer"
                       },
                       "code": {
                         "type": "string"
@@ -1340,57 +1345,149 @@
                         "type": "string"
                       },
                       "created": {
-                        "type": "string"
+                        "type": "string",
+                        "format": "date-time"
                       },
                       "updated": {
-                        "type": "string"
+                        "type": "string",
+                        "format": "date-time"
                       },
                       "starteDate": {
-                        "type": "string"
+                        "type": "string",
+                        "format": "date-time"
                       },
                       "endDate": {
-                        "type": "string"
+                        "type": "string",
+                        "format": "date-time"
                       },
                       "availableDays": {
                         "type": "string"
                       },
                       "trigger": {
-                        "type": "string"
+                        "type": "integer",
+                        "example": 0,
+                        "enum": [
+                          "manual = 1",
+                          "coupon"
+                        ]
                       },
                       "coupon": {
                         "type": "string"
                       },
                       "condition": {
-                        "type": "string"
+                        "enum": [
+                          "pay = 1",
+                          "stay",
+                          "none"
+                        ],
+                        "type": "integer"
                       },
                       "conditionDuration": {
-                        "type": "string"
+                        "type": "integer"
                       },
                       "isRestricted": {
-                        "type": "string"
+                        "type": "boolean"
                       },
                       "platformFree": {
-                        "type": "string"
+                        "type": "boolean"
                       },
                       "isActive": {
-                        "type": "string"
+                        "type": "boolean"
                       },
                       "isDeleted": {
-                        "type": "string"
+                        "type": "boolean"
                       },
                       "isUsed": {
-                        "type": "string"
+                        "type": "boolean"
                       },
                       "breakdowns": {
-                        "type": "string"
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "specialId": {
+                            "type": "integer"
+                          },
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "rent = 1",
+                              "charges",
+                              "insurance",
+                              "prorate",
+                              "securityDeposit",
+                              "adminFee",
+                              "inventoryItem"
+                            ]
+                          },
+                          "entityId": {
+                            "type": "integer"
+                          },
+                          "discountType": {
+                            "type": "string",
+                            "enum": [
+                              "fixedAmount = 1",
+                              "percentage",
+                              "flatRate"
+                            ]
+                          },
+                          "roundingRule": {
+                            "type": "string",
+                            "enum": [
+                              "nearestDollar = 1",
+                              "nearestFiveDollar",
+                              "nearestTenDollar",
+                              "none"
+                            ]
+                          },
+                          "duration": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "specialId",
+                          "type",
+                          "discountType",
+                          "roundingRule",
+                          "duration"
+                        ]
                       },
                       "unitTypes": {
-                        "type": "string"
+                        "type": "array",
+                        "items": {
+                          "type": "integer"
+                        }
                       },
                       "platforms": {
-                        "type": "string"
+                        "type": "array",
+                        "items": {
+                          "type": "integer",
+                          "enum": [
+                            "cloud = 1",
+                            "ecom",
+                            "mobile",
+                            "all"
+                          ]
+                        }
                       }
-                    }
+                    },
+                    "required": [
+                      "id",
+                      "stieId",
+                      "type",
+                      "code",
+                      "name",
+                      "description",
+                      "created",
+                      "starteDate",
+                      "availableDays",
+                      "trigger",
+                      "coupon",
+                      "unitTypes",
+                      "platforms"
+                    ]
                   }
                 }
               }
