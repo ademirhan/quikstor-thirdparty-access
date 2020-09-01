@@ -812,6 +812,18 @@
                       },
                       "address": {
                         "type": "object",
+                        "required": [
+                          "id ",
+                          "streetAddress",
+                          "streetAddress2",
+                          "city",
+                          "zip",
+                          "state",
+                          "stateCode",
+                          "countryId",
+                          "country",
+                          "countryCode"
+                        ],
                         "properties": {
                           "id ": {
                             "type": "integer"
@@ -863,6 +875,14 @@
                       },
                       "militaryInfo": {
                         "type": "object",
+                        "required": [
+                          "id",
+                          "customer Id",
+                          "etsDate",
+                          "unitName",
+                          "unitPhoneNumber",
+                          "commandingOfficer"
+                        ],
                         "properties": {
                           "id": {
                             "type": "integer"
@@ -889,7 +909,45 @@
                         }
                       },
                       "preferredReporting": {
-                        "type": "string"
+                        "type": "array",
+                        "uniqueItems": false,
+                        "items": {
+                          "type": [
+                            "object",
+                            "integer"
+                          ],
+                          "enum": [
+                            "customerId = tenantId",
+                            "channelId = channelId",
+                            "reportingType = reportingType"
+                          ],
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "customerId": {
+                              "type": "integer"
+                            },
+                            "channelId": {
+                              "type": "integer"
+                            },
+                            "reportingType": {
+                              "type": "integer",
+                              "enum": [
+                                "receipts = 1",
+                                "bills = 2",
+                                "notices = 3",
+                                "other"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "customerId",
+                            "channelId",
+                            "reportingType"
+                          ]
+                        }
                       },
                       "NSFCount": {
                         "type": "number",
@@ -910,7 +968,41 @@
                       "noPhoneNumber": {
                         "type": "boolean"
                       }
-                    }
+                    },
+                    "required": [
+                      "id",
+                      "siteId",
+                      "firstName",
+                      "middleName",
+                      "lastName",
+                      "gender",
+                      "driversLicense",
+                      "drivingLicenseStateId",
+                      "companyName",
+                      "email",
+                      "socialSecurityNumber",
+                      "ssnChanged",
+                      "homePhone",
+                      "workPhone",
+                      "faxNumber",
+                      "lastReceiptNumber",
+                      "customerNumber",
+                      "profileType",
+                      "hasWebPassword",
+                      "address",
+                      "optOutOfNotifications",
+                      "milesFromSite",
+                      "units",
+                      "isActiveMilitary",
+                      "militaryInfo",
+                      "preferredReporting",
+                      "NSFCount",
+                      "isActive",
+                      "isDeleted",
+                      "hasPassword",
+                      "noEmail",
+                      "noPhoneNumber"
+                    ]
                   }
                 }
               }
