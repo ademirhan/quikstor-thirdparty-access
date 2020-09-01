@@ -1007,7 +1007,19 @@
                       "reason": {
                         "type": "string"
                       }
-                    }
+                    },
+                    "required": [
+                      "id",
+                      "siteId",
+                      "name",
+                      "description",
+                      "cost",
+                      "price",
+                      "stock",
+                      "isActive",
+                      "isDeleted",
+                      "reason"
+                    ]
                   }
                 }
               }
@@ -1097,6 +1109,11 @@
                       },
                       "unitReservation": {
                         "type": "object",
+                        "required": [
+                          "customerID",
+                          "leaseID",
+                          "hasMoveIn"
+                        ],
                         "properties": {
                           "customerID": {
                             "type": "integer"
@@ -1123,12 +1140,7 @@
                           "hasMoveIn": {
                             "type": "boolean"
                           }
-                        },
-                        "required": [
-                          "customerID",
-                          "leaseID",
-                          "hasMoveIn"
-                        ]
+                        }
                       }
                     },
                     "required": [
@@ -1139,7 +1151,8 @@
                       "notes",
                       "isEcomReservation",
                       "isActive",
-                      "isDeleted"
+                      "isDeleted",
+                      "unitReservation"
                     ]
                   }
                 }
@@ -1230,6 +1243,13 @@
                       },
                       "unitReservation": {
                         "type": "object",
+                        "required": [
+                          "id",
+                          "unitId",
+                          "customerId",
+                          "leaseId",
+                          "hasMovedIn"
+                        ],
                         "properties": {
                           "id": {
                             "type": "integer"
@@ -1248,7 +1268,7 @@
                             "format": "date-time"
                           },
                           "rentAtMoveIn": {
-                            "type": "string"
+                            "type": "number"
                           },
                           "rentDeposit": {
                             "type": "number"
@@ -1264,7 +1284,18 @@
                           }
                         }
                       }
-                    }
+                    },
+                    "required": [
+                      "id",
+                      "siteId",
+                      "userId",
+                      "dateTime",
+                      "notes",
+                      "isEcomReservation",
+                      "isActive",
+                      "isDeleted",
+                      "unitReservation"
+                    ]
                   }
                 }
               }
@@ -1365,7 +1396,6 @@
                       },
                       "trigger": {
                         "type": "integer",
-                        "example": 0,
                         "enum": [
                           "manual = 1",
                           "coupon"
@@ -1401,58 +1431,7 @@
                         "type": "boolean"
                       },
                       "breakdowns": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "specialId": {
-                            "type": "integer"
-                          },
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "rent = 1",
-                              "charges",
-                              "insurance",
-                              "prorate",
-                              "securityDeposit",
-                              "adminFee",
-                              "inventoryItem"
-                            ]
-                          },
-                          "entityId": {
-                            "type": "integer"
-                          },
-                          "discountType": {
-                            "type": "string",
-                            "enum": [
-                              "fixedAmount = 1",
-                              "percentage",
-                              "flatRate"
-                            ]
-                          },
-                          "roundingRule": {
-                            "type": "string",
-                            "enum": [
-                              "nearestDollar = 1",
-                              "nearestFiveDollar",
-                              "nearestTenDollar",
-                              "none"
-                            ]
-                          },
-                          "duration": {
-                            "type": "integer"
-                          }
-                        },
-                        "required": [
-                          "id",
-                          "specialId",
-                          "type",
-                          "discountType",
-                          "roundingRule",
-                          "duration"
-                        ]
+                        "type": "object"
                       },
                       "unitTypes": {
                         "type": "array",
