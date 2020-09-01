@@ -498,87 +498,243 @@
                         "type": "integer"
                       },
                       "categoryId": {
-                        "type": "string"
+                        "type": "integer"
                       },
                       "title": {
                         "type": "string"
                       },
                       "width": {
-                        "type": "string"
+                        "type": "number",
+                        "format": "float"
                       },
                       "length": {
-                        "type": "string"
+                        "type": "number",
+                        "format": "float"
                       },
                       "height": {
-                        "type": "string"
+                        "type": "number",
+                        "format": "float"
                       },
                       "baseRent": {
-                        "type": "string"
+                        "type": "number"
                       },
                       "doorType": {
-                        "type": "string"
+                        "type": "number",
+                        "format": "float"
                       },
                       "doorWidth": {
-                        "type": "string"
+                        "type": "number",
+                        "format": "float"
                       },
                       "isInside": {
-                        "type": "string"
+                        "type": "boolean"
                       },
                       "floorNumber": {
-                        "type": "string"
+                        "type": "integer"
                       },
                       "securityDepositType": {
                         "type": "string"
                       },
                       "securityDepositAmount": {
-                        "type": "string"
+                        "type": "number"
                       },
                       "securityDepositPercent": {
-                        "type": "string"
+                        "type": "number",
+                        "format": "float"
                       },
                       "applyRentTax": {
-                        "type": "string"
+                        "type": "boolean"
                       },
                       "category": {
                         "type": "string"
                       },
                       "lateFee": {
-                        "type": "string"
+                        "type": "number"
                       },
                       "lateFeeType": {
-                        "type": "string"
+                        "enum": [
+                          "FIXEDAMOUNT = 1",
+                          "PERCENT = 2"
+                        ],
+                        "type": "integer"
                       },
                       "picture": {
-                        "type": "string"
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "unitTypeId": {
+                              "type": "integer"
+                            },
+                            "source": {
+                              "type": "string"
+                            },
+                            "alt": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "unitTypeId",
+                            "source",
+                            "alt"
+                          ]
+                        }
                       },
                       "vacantUnits": {
-                        "type": "string"
+                        "type": "integer"
                       },
                       "currentPrice": {
-                        "type": "string"
+                        "type": "number"
                       },
                       "leaseAgreement": {
-                        "type": "string"
+                        "type": "integer",
+                        "enum": [
+                          "LEASE_AGREEMENT = 1",
+                          "AUTO_BILLING_AGREEMENT",
+                          "RENT_CHANGE_LETTER",
+                          "NSF_LETTER",
+                          "FIRST_LATE_NOTICE",
+                          "SECOND_LATE_NOTICE",
+                          "THIRD_LATE_NOTICE",
+                          "PRE_LIEN_NOTICE",
+                          "LIEN_SALE_NOTICE",
+                          "INSURANCE_CERTIFICATE",
+                          "INSURANCE_PRE_CANCELLATION_NOTICE",
+                          "INSURANCE_CANCELLATION_NOTICE",
+                          "INVOICE",
+                          "RESERVATION_RECEIPT",
+                          "PAYMENT_RECEIPT",
+                          "REFUND_RECEIPT",
+                          "TRANSFER_RECEIPT",
+                          "RETAIL_SALE_RECEIPT",
+                          "MOVE_IN_RECEIPT",
+                          "MOVE_OUT_RECEIPT",
+                          "SKIP_LETTER",
+                          "VACATE_TENANT_REPORT",
+                          "RETAIL_SALE_RECEIPT_NON_TENANT",
+                          "SECONDARY_LEASE_AGREEMENT",
+                          "SECONDARY_INSURANCE_CERTIFICATE",
+                          "TEANANT_COMMUNICATION",
+                          "LINKED_INVOICE",
+                          "CUSTOM1 =101",
+                          "CUSTOM2",
+                          "CUSTOM3",
+                          "CUSTOM4",
+                          "CUSTOM5"
+                        ]
                       },
                       "insuranceCertificate": {
-                        "type": "string"
+                        "type": "integer",
+                        "enum": [
+                          "LEASE_AGREEMENT = 1",
+                          "AUTO_BILLING_AGREEMENT",
+                          "RENT_CHANGE_LETTER",
+                          "NSF_LETTER",
+                          "FIRST_LATE_NOTICE",
+                          "SECOND_LATE_NOTICE",
+                          "THIRD_LATE_NOTICE",
+                          "PRE_LIEN_NOTICE",
+                          "LIEN_SALE_NOTICE",
+                          "INSURANCE_CERTIFICATE",
+                          "INSURANCE_PRE_CANCELLATION_NOTICE",
+                          "INSURANCE_CANCELLATION_NOTICE",
+                          "INVOICE",
+                          "RESERVATION_RECEIPT",
+                          "PAYMENT_RECEIPT",
+                          "REFUND_RECEIPT",
+                          "TRANSFER_RECEIPT",
+                          "RETAIL_SALE_RECEIPT",
+                          "MOVE_IN_RECEIPT",
+                          "MOVE_OUT_RECEIPT",
+                          "SKIP_LETTER",
+                          "VACATE_TENANT_REPORT",
+                          "RETAIL_SALE_RECEIPT_NON_TENANT",
+                          "SECONDARY_LEASE_AGREEMENT",
+                          "SECONDARY_INSURANCE_CERTIFICATE",
+                          "TEANANT_COMMUNICATION",
+                          "LINKED_INVOICE",
+                          "CUSTOM1 =101",
+                          "CUSTOM2",
+                          "CUSTOM3",
+                          "CUSTOM4",
+                          "CUSTOM5"
+                        ]
                       },
                       "onlineRate": {
-                        "type": "string"
+                        "type": "number"
                       },
                       "specialAvailable": {
-                        "type": "string"
+                        "type": "boolean"
                       },
                       "limitedAvailability": {
-                        "type": "string"
+                        "type": "boolean"
                       },
                       "group": {
-                        "type": "string"
+                        "type": "integer",
+                        "enum": [
+                          "small = 1",
+                          "medium",
+                          "large",
+                          "parking"
+                        ]
                       },
                       "features": {
-                        "type": "string"
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "unitTypeID": {
+                              "type": "integer"
+                            },
+                            "languageId": {
+                              "type": "integer"
+                            },
+                            "label": {
+                              "type": "string",
+                              "maxLength": 64
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "unitTypeID",
+                            "languageId",
+                            "label"
+                          ]
+                        }
                       }
-                    }
+                    },
+                    "required": [
+                      "id",
+                      "siteID",
+                      "categoryId",
+                      "title",
+                      "width",
+                      "length",
+                      "height",
+                      "baseRent",
+                      "doorType",
+                      "doorWidth",
+                      "isInside",
+                      "floorNumber",
+                      "securityDepositType",
+                      "securityDepositAmount",
+                      "securityDepositPercent",
+                      "applyRentTax",
+                      "category",
+                      "lateFeeType",
+                      "picture",
+                      "vacantUnits",
+                      "currentPrice",
+                      "leaseAgreement",
+                      "insuranceCertificate",
+                      "specialAvailable",
+                      "limitedAvailability",
+                      "group",
+                      "features"
+                    ]
                   }
                 }
               }
