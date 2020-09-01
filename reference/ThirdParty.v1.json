@@ -753,13 +753,19 @@
                         "type": "integer"
                       },
                       "firstName": {
-                        "type": "string"
+                        "type": "string",
+                        "pattern": "[-a-zA-Z0-9'.,_() ]*",
+                        "maxLength": 50
                       },
                       "middleName": {
-                        "type": "string"
+                        "type": "string",
+                        "pattern": "[-a-zA-Z0-9'.,_() ]*",
+                        "maxLength": 50
                       },
                       "lastName": {
-                        "type": "string"
+                        "type": "string",
+                        "pattern": "[-a-zA-Z0-9'.,_() ]*",
+                        "maxLength": 50
                       },
                       "dateOfBirth": {
                         "type": "string",
@@ -769,31 +775,42 @@
                         "type": "string"
                       },
                       "driversLicense": {
-                        "type": "string"
+                        "type": "string",
+                        "maxLength": 15
                       },
                       "drivingLicenseStateId": {
                         "type": "integer"
                       },
                       "companyName": {
-                        "type": "string"
+                        "type": "string",
+                        "maxLength": 50
                       },
                       "email": {
-                        "type": "string"
+                        "type": "string",
+                        "maxLength": 50
                       },
                       "socialSecurityNumber": {
-                        "type": "string"
+                        "type": "string",
+                        "maxLength": 11
                       },
                       "ssnChanged": {
                         "type": "string",
                         "pattern": "[-0-9() ]*"
                       },
+                      "cellPhone": {
+                        "type": "string",
+                        "pattern": "[-0-9() ]*",
+                        "maxLength": 15
+                      },
                       "homePhone": {
                         "type": "string",
-                        "pattern": "[-0-9() ]*"
+                        "pattern": "[-0-9() ]*",
+                        "maxLength": 15
                       },
                       "workPhone": {
                         "type": "string",
-                        "pattern": "[-0-9() ]*"
+                        "pattern": "[-0-9() ]*",
+                        "maxLength": 15
                       },
                       "faxNumber": {
                         "type": "string"
@@ -820,7 +837,6 @@
                           "zip",
                           "state",
                           "stateCode",
-                          "countryId",
                           "country",
                           "countryCode"
                         ],
@@ -829,16 +845,24 @@
                             "type": "integer"
                           },
                           "streetAddress": {
-                            "type": "string"
+                            "type": "string",
+                            "pattern": "[-a-zA-Z0-9_.,# ]*",
+                            "maxLength": 50
                           },
                           "streetAddress2": {
-                            "type": "string"
+                            "type": "string",
+                            "pattern": "[-a-zA-Z0-9_.,# ]*",
+                            "maxLength": 50
                           },
                           "city": {
-                            "type": "string"
+                            "type": "string",
+                            "pattern": "[-a-zA-Z0-9_.,# ]*",
+                            "maxLength": 20
                           },
                           "zip": {
-                            "type": "string"
+                            "type": "string",
+                            "maxLength": 20,
+                            "pattern": "[-a-zA-Z0-9_.,# ]*"
                           },
                           "stateId": {
                             "type": "integer"
@@ -896,15 +920,18 @@
                           },
                           "unitName": {
                             "type": "string",
-                            "pattern": "[-a-zA-Z0-9'.,_() ]*"
+                            "pattern": "[-a-zA-Z0-9'.,_() ]*",
+                            "maxLength": 150
                           },
                           "unitPhoneNumber": {
                             "type": "string",
-                            "pattern": "[-0-9() ]*"
+                            "pattern": "[-0-9() ]*",
+                            "maxLength": 15
                           },
                           "commandingOfficer": {
                             "type": "string",
-                            "pattern": "[-a-zA-Z0-9'.,_() ]*"
+                            "pattern": "[-a-zA-Z0-9'.,_() ]*",
+                            "maxLength": 150
                           }
                         }
                       },
@@ -1484,7 +1511,9 @@
                         "format": "date-time"
                       },
                       "availableDays": {
-                        "type": "string"
+                        "type": "string",
+                        "minLength": 7,
+                        "maxLength": 7
                       },
                       "trigger": {
                         "type": "integer",
@@ -1523,7 +1552,62 @@
                         "type": "boolean"
                       },
                       "breakdowns": {
-                        "type": "object"
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "specialId",
+                          "type",
+                          "discountType",
+                          "amount",
+                          "roundingRule",
+                          "duration"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "specialId": {
+                            "type": "integer"
+                          },
+                          "type": {
+                            "enum": [
+                              "rent = 1",
+                              "charges",
+                              "insurance",
+                              "prorate",
+                              "securityDeposit",
+                              "adminFee",
+                              "inventoryItem"
+                            ],
+                            "type": "integer"
+                          },
+                          "entityId": {
+                            "type": "integer"
+                          },
+                          "discountType": {
+                            "type": "integer",
+                            "enum": [
+                              "fixedAmount = 1",
+                              "percentage",
+                              "flatRate"
+                            ]
+                          },
+                          "amount": {
+                            "type": "number"
+                          },
+                          "roundingRule": {
+                            "enum": [
+                              "nearestDollar = 1",
+                              "nearestFiveDollar",
+                              "nearestTenDollar",
+                              "none"
+                            ],
+                            "type": "integer"
+                          },
+                          "duration": {
+                            "type": "integer"
+                          }
+                        }
                       },
                       "unitTypes": {
                         "type": "array",
@@ -1556,6 +1640,14 @@
                       "availableDays",
                       "trigger",
                       "coupon",
+                      "condition",
+                      "conditionDuration",
+                      "isRestricted",
+                      "platformFree",
+                      "isActive",
+                      "isDeleted",
+                      "isUsed",
+                      "breakdowns",
                       "unitTypes",
                       "platforms"
                     ]
