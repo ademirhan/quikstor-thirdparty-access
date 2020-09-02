@@ -364,7 +364,7 @@
                         "format": "float"
                       },
                       "baseRent": {
-                        "type": "string"
+                        "type": "number"
                       },
                       "doorType": {
                         "type": "string"
@@ -383,7 +383,7 @@
                         "type": "string"
                       },
                       "securityDepositAmount": {
-                        "type": "string"
+                        "type": "number"
                       },
                       "securityDepositPercent": {
                         "type": "number",
@@ -396,13 +396,16 @@
                         "type": "string"
                       },
                       "lateFee": {
-                        "type": "string"
+                        "type": "number"
                       },
                       "lateFeeType": {
                         "type": "object"
                       },
                       "picture": {
-                        "type": "object"
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
                       },
                       "vacantUnit": {
                         "type": "string"
@@ -411,10 +414,44 @@
                         "type": "string"
                       },
                       "leaseAgreement": {
-                        "type": "string"
+                        "type": "integer"
                       },
                       "insuranceCertificate": {
-                        "type": "string"
+                        "type": "integer",
+                        "enum": [
+                          "LEASE_AGREEMENT = 1",
+                          "AUTO_BILLING_AGREEMENT",
+                          "RENT_CHANGE_LETTER",
+                          "NSF_LETTER",
+                          "FIRST_LATE_NOTICE",
+                          "SECOND_LATE_NOTICE",
+                          "THIRD_LATE_NOTICE",
+                          "PRE_LIEN_NOTICE",
+                          "LIEN_SALE_NOTICE",
+                          "INSURANCE_CERTIFICATE",
+                          "INSURANCE_PRE_CANCELLATION_NOTICE",
+                          "INSURANCE_CANCELLATION_NOTICE",
+                          "INVOICE",
+                          "RESERVATION_RECEIPT",
+                          "PAYMENT_RECEIPT",
+                          "REFUND_RECEIPT",
+                          "TRANSFER_RECEIPT",
+                          "RETAIL_SALE_RECEIPT",
+                          "MOVE_IN_RECEIPT",
+                          "MOVE_OUT_RECEIPT",
+                          "SKIP_LETTER",
+                          "VACATE_TENANT_REPORT",
+                          "RETAIL_SALE_RECEIPT_NON_TENANT",
+                          "SECONDARY_LEASE_AGREEMENT",
+                          "SECONDARY_INSURANCE_CERTIFICATE",
+                          "TEANANT_COMMUNICATION",
+                          "LINKED_INVOICE",
+                          "CUSTOM1 =101",
+                          "CUSTOM2",
+                          "CUSTOM3",
+                          "CUSTOM4",
+                          "CUSTOM5"
+                        ]
                       },
                       "onlineRate": {
                         "type": "string"
@@ -426,12 +463,33 @@
                         "type": "boolean"
                       },
                       "group": {
-                        "type": "object"
+                        "type": "integer",
+                        "enum": [
+                          "small = 1",
+                          "medium",
+                          "large",
+                          "parking"
+                        ]
                       },
                       "features": {
                         "type": "array",
                         "items": {
-                          "type": "object"
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "unitTypeId": {
+                              "type": "integer"
+                            },
+                            "languageId": {
+                              "type": "integer"
+                            },
+                            "label": {
+                              "type": "string",
+                              "maxLength": 64
+                            }
+                          }
                         }
                       }
                     },
