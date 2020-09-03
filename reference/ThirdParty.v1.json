@@ -240,11 +240,7 @@
                       },
                       "bankName": {
                         "type": "string",
-                        "pattern": "[-a-zA-Z0-9._\\'& ]*",
-                        "enum": [
-                          "errorMessageResourceName = \"StringLength\"",
-                          "errorMessageResourceType = typeof(Resource.Languages)"
-                        ]
+                        "pattern": "[-a-zA-Z0-9._\\'& ]*"
                       },
                       "bankAccountNumber": {
                         "type": "string"
@@ -253,18 +249,73 @@
                         "type": "string"
                       },
                       "bankAddress": {
-                        "type": "object"
-                      },
-                      "delinquencyPolicy": {
                         "type": "object",
                         "properties": {
-                          "delinquencyPolicy": {
+                          "id": {
+                            "type": [
+                              "string",
+                              "integer"
+                            ]
+                          },
+                          "streetAddress": {
+                            "type": "string"
+                          },
+                          "streetAddress2": {
+                            "type": "string"
+                          },
+                          "city": {
+                            "type": "string"
+                          },
+                          "zip": {
+                            "type": "string"
+                          },
+                          "stateId": {
+                            "type": "string"
+                          },
+                          "state": {
+                            "type": "string"
+                          },
+                          "stateCode": {
+                            "type": "string"
+                          },
+                          "countryId": {
+                            "type": "integer"
+                          },
+                          "country": {
+                            "type": "string"
+                          },
+                          "countryCode": {
                             "type": "string"
                           }
                         }
                       },
+                      "delinquencyPolicy": {
+                        "type": "integer",
+                        "enum": [
+                          "RELEASE_ON_PAYMENT = 1",
+                          "CONTINUE_ON_PAYMENT",
+                          "EVALUATE_ON_PAYMENT"
+                        ]
+                      },
                       "languages": {
-                        "type": "object"
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "code": {
+                              "type": "string"
+                            },
+                            "isActive": {
+                              "type": "boolean"
+                            }
+                          }
+                        }
                       }
                     },
                     "required": [
@@ -399,12 +450,27 @@
                         "type": "number"
                       },
                       "lateFeeType": {
-                        "type": "object"
+                        "type": "integer",
+                        "enum": [
+                          "FIXEDAMOUNT = 1",
+                          "PERCENT = 2"
+                        ]
                       },
                       "picture": {
                         "type": "array",
                         "items": {
-                          "type": "object"
+                          "type": "object",
+                          "properties": {
+                            "unitTypeId": {
+                              "type": "integer"
+                            },
+                            "source": {
+                              "type": "string"
+                            },
+                            "alt": {
+                              "type": "string"
+                            }
+                          }
                         }
                       },
                       "vacantUnit": {
