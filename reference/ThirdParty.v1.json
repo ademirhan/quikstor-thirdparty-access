@@ -1740,7 +1740,9 @@
     "/api/<partner-name>/getspecialsforunittype": {
       "get": {
         "summary": "GetSpecialsForUnitType",
-        "tags": [],
+        "tags": [
+          "Specials"
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -2018,7 +2020,10 @@
           "title": {
             "type": "string"
           }
-        }
+        },
+        "x-tags": [
+          "models"
+        ]
       }
     },
     "securitySchemes": {
@@ -2051,6 +2056,12 @@
     },
     {
       "name": "Reservation"
+    },
+    {
+      "name": "Specials"
+    },
+    {
+      "name": "login"
     }
   ]
 }
