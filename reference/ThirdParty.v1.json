@@ -92,7 +92,7 @@
         "summary": "GetSites",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "API reponds to the SiteId model. \n\nSee ( link )",
             "headers": {},
             "content": {
               "application/json": {
@@ -588,7 +588,7 @@
             "BearerToken": []
           }
         ],
-        "description": "A client can access to the array of the information for the facilities' unit types.",
+        "description": "GetUnitTypes is an endpoint that responds to a collection of information for types of units in a facility, such as the type of storage, width, length and height of the unit. \n\nThese information are passed through the siteId, which can be viewed in SiteId models located in (https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/SiteId), and the identifier (id) will return the information.",
         "parameters": [
           {
             "schema": {
@@ -2000,6 +2000,25 @@
         "x-tags": [
           "models"
         ]
+      },
+      "SiteId": {
+        "title": "SiteId",
+        "type": "object",
+        "description": "Response to get the unit types.",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "siteId": {
+            "type": "string"
+          },
+          "categoryId": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
       }
     },
     "securitySchemes": {
