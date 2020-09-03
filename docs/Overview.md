@@ -4,8 +4,20 @@ The QuikStor API model will allow clients to integrate QuikStor Cloud Applicatio
 
 # Overview 
 
-Our API lets you to integrate to our Cloud Service applications within minutes. Currently the QuikStore API supports fourteen third-party applications. 
+Our API lets you to integrate to our Cloud Service applications within minutes. Currently the QuikStore API already supports seven third-party applications. 
 
+Gate Services: 
+- DigiGate
+- DoorKing
+- PTI Security Systems
+
+Communication: 
+- Twilio-VOIP and Text
+- E-Signature
+- BlueMoon Software
+
+Payment Processing:
+- Yapstone
 
 # Authentication
 
