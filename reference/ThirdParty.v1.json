@@ -2040,25 +2040,25 @@
   ],
   "tags": [
     {
-      "name": "site endpoints"
+      "name": "Site Endpoints"
     },
     {
-      "name": "Unit/UnitType"
+      "name": "Unit & Unit Type Endpoints"
     },
     {
-      "name": "Tenant"
+      "name": "Tenant Endpoints"
     },
     {
-      "name": "Special"
+      "name": "Special Endpoints"
     },
     {
-      "name": "Retail"
+      "name": "Retail Endpoints"
     },
     {
-      "name": "Reservation"
+      "name": "Reservation Endpoints"
     },
     {
-      "name": "Specials"
+      "name": "Specials Endpoints"
     },
     {
       "name": "login"
