@@ -372,7 +372,7 @@
           }
         ],
         "tags": [
-          "site endpoints"
+          "Site Endpoints"
         ]
       },
       "parameters": []
@@ -581,7 +581,7 @@
         },
         "operationId": "get-api-partner-name-getunittypes",
         "tags": [
-          "Unit/UnitType"
+          "Unit & Unit Type Endpoints"
         ],
         "security": [
           {
@@ -887,7 +887,7 @@
           }
         ],
         "tags": [
-          "Unit/UnitType"
+          "Unit & Unit Type Endpoints"
         ]
       }
     },
@@ -895,7 +895,7 @@
       "get": {
         "summary": "GetUnits",
         "tags": [
-          "Unit/UnitType"
+          "Unit & Unit Type Endpoints"
         ],
         "responses": {
           "200": {
@@ -1002,7 +1002,7 @@
       "get": {
         "summary": "GetTenants",
         "tags": [
-          "Tenant"
+          "Tenant Endpoints"
         ],
         "responses": {
           "200": {
@@ -1364,7 +1364,7 @@
       "get": {
         "summary": "GetInventoryItems",
         "tags": [
-          "Retail"
+          "Retail Endpoints"
         ],
         "responses": {
           "200": {
@@ -1457,7 +1457,7 @@
       "get": {
         "summary": "GetReservations",
         "tags": [
-          "Reservation"
+          "Reservation Endpoints"
         ],
         "responses": {
           "200": {
@@ -1591,7 +1591,7 @@
       "get": {
         "summary": "GetReservationDetials",
         "tags": [
-          "Reservation"
+          "Reservation Endpoints"
         ],
         "responses": {
           "200": {
@@ -1741,7 +1741,7 @@
       "get": {
         "summary": "GetSpecialsForUnitType",
         "tags": [
-          "Specials"
+          "Specials Endpoints"
         ],
         "responses": {
           "200": {
