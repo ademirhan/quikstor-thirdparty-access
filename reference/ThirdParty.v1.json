@@ -1589,7 +1589,7 @@
     },
     "/api/<partner-name>/getreservationsdetails": {
       "get": {
-        "summary": "GetReservationDetials",
+        "summary": "GetReservationDetails",
         "tags": [
           "Reservation Endpoints"
         ],
@@ -1756,7 +1756,7 @@
                       "id": {
                         "type": "integer"
                       },
-                      "stieId": {
+                      "siteId": {
                         "type": "integer"
                       },
                       "type": {
@@ -1913,7 +1913,7 @@
                     },
                     "required": [
                       "id",
-                      "stieId",
+                      "siteId",
                       "type",
                       "code",
                       "name",
@@ -2024,6 +2024,24 @@
         "x-tags": [
           "models"
         ]
+      },
+      "ReservationId": {
+        "title": "ReservationId",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      },
+      "UnitTypeId": {
+        "title": "UnitTypeId",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
       }
     },
     "securitySchemes": {
