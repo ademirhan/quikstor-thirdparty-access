@@ -354,7 +354,7 @@
           }
         },
         "operationId": "get-getsites",
-        "description": "A client can consume the array of the information for the sites(facilities) that is integrated with the partner.",
+        "description": "A client can consume the array of the information for the sites(facilities) that is integrated with the partner.\n\nThese information are passed through the site identifier (siteId), which can be viewed (https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/SiteId).",
         "parameters": [
           {
             "schema": {
@@ -588,7 +588,7 @@
             "BearerToken": []
           }
         ],
-        "description": "GetUnitTypes is an endpoint that responds to a collection of information for types of units in a facility, such as the type of storage, width, length and height of the unit. \n\nThese information are passed through the siteId, which can be viewed in SiteId models located in (https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/SiteId), and the identifier (id) will return the information.",
+        "description": "GetUnitTypes is an endpoint that responds to a collection of information for types of units in a facility, such as the type of storage, width, length and height of the unit. The list of unit types are retrieved based on the identifier (id) parameters provided.\n\nThese information are passed through the site identifier (siteId), which can be viewed (https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/SiteId).",
         "parameters": [
           {
             "schema": {
@@ -875,7 +875,7 @@
           }
         },
         "operationId": "get-api-partner-name-getavailableunittypes",
-        "description": "Ability to access an array of available unit types for each facility.",
+        "description": "GetAvailableUnitTypes is an endpoint that responds to a collection of information for types of units that are available to be rented belonging to the facility. The list of available units are retrieved based on the identifier (id) parameters provided.\n\nThese information are passed through the site identifier (siteId), which can be viewed (https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/SiteId).",
         "parameters": [
           {
             "schema": {
@@ -971,7 +971,7 @@
           }
         },
         "operationId": "get-api-partner-name-getunits",
-        "description": "Ability to access an array of each units in facilites. ",
+        "description": "GetUnits is an endpoint that responds to a collection of information for all units belonging to the facility whether they're being occupied or available. The list of units are retrieved based on the identifier (id) parameters provided.",
         "security": [
           {
             "BearerToken": []

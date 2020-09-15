@@ -5,8 +5,6 @@ The QuikStor API model will allow clients to integrate QuikStor Cloud Applicatio
 # Overview 
 
 Our API lets you to integrate to our Cloud Service applications within minutes. QuikStore API are communicating to seven third-party applications. 
-
-
  
 
 # Authentication
