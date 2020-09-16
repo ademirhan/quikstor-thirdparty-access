@@ -2112,11 +2112,41 @@
           "models"
         ]
       },
-      "SiteIdentifier": {
-        "title": "SiteIdentifier",
+      "Site": {
+        "title": "Address",
         "type": "object",
         "properties": {
           "id": {
+            "type": "string"
+          },
+          "streetAddress": {
+            "type": "string"
+          },
+          "streetAddress2": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "zip": {
+            "type": "string"
+          },
+          "stateId": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "stateCode": {
+            "type": "string"
+          },
+          "countryId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "countryCode": {
             "type": "string"
           }
         }
