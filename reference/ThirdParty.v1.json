@@ -357,6 +357,42 @@
                 }
               }
             }
+          },
+          "201": {
+            "description": "API of Address object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "streetAddress": {
+                        "type": "string"
+                      },
+                      "streetAddress2": {
+                        "type": "string"
+                      },
+                      "city": {
+                        "type": "string"
+                      },
+                      "zip": {
+                        "type": "string"
+                      },
+                      "stateId": {
+                        "type": "string"
+                      },
+                      "": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "operationId": "get-getsites",
