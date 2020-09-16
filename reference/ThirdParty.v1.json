@@ -2111,46 +2111,6 @@
         "x-tags": [
           "models"
         ]
-      },
-      "SiteId": {
-        "title": "SiteId",
-        "type": "object",
-        "description": "Response to get the unit types.",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "siteId": {
-            "type": "string"
-          },
-          "categoryId": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          }
-        },
-        "x-tags": [
-          "models"
-        ]
-      },
-      "ReservationId": {
-        "title": "ReservationId",
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          }
-        }
-      },
-      "UnitTypeId": {
-        "title": "UnitTypeId",
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          }
-        }
       }
     },
     "securitySchemes": {
