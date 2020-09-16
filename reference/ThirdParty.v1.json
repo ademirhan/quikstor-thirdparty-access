@@ -457,6 +457,28 @@
                   }
                 }
               }
+            },
+            "application/xml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "cide": {
+                      "type": "string"
+                    },
+                    "isActive": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
             }
           },
           "description": "API responds to address object of getSites."
