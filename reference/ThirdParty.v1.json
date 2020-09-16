@@ -2111,6 +2111,15 @@
         "x-tags": [
           "models"
         ]
+      },
+      "SiteIdentifier": {
+        "title": "SiteIdentifier",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
       }
     },
     "securitySchemes": {
