@@ -357,42 +357,6 @@
                 }
               }
             }
-          },
-          "201": {
-            "description": "API of Address object",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "string"
-                      },
-                      "streetAddress": {
-                        "type": "string"
-                      },
-                      "streetAddress2": {
-                        "type": "string"
-                      },
-                      "city": {
-                        "type": "string"
-                      },
-                      "zip": {
-                        "type": "string"
-                      },
-                      "stateId": {
-                        "type": "string"
-                      },
-                      "": {
-                        "type": "string"
-                      }
-                    }
-                  }
-                }
-              }
-            }
           }
         },
         "operationId": "get-getsites",
@@ -415,74 +379,7 @@
         ],
         "tags": [
           "Site Endpoints"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "streetAddress": {
-                      "type": "string"
-                    },
-                    "streetAddress2": {
-                      "type": "string"
-                    },
-                    "city": {
-                      "type": "string"
-                    },
-                    "zip": {
-                      "type": "string"
-                    },
-                    "state": {
-                      "type": "string"
-                    },
-                    "stateCode": {
-                      "type": "string"
-                    },
-                    "countryId": {
-                      "type": "string"
-                    },
-                    "country": {
-                      "type": "string"
-                    },
-                    "countryCode": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "cide": {
-                      "type": "string"
-                    },
-                    "isActive": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "description": "API responds to address object of getSites."
-        }
+        ]
       },
       "parameters": []
     },
@@ -2147,6 +2044,15 @@
             "type": "string"
           },
           "countryCode": {
+            "type": "string"
+          }
+        }
+      },
+      "Site": {
+        "title": "Site",
+        "type": "object",
+        "properties": {
+          "id": {
             "type": "string"
           }
         }
