@@ -2112,7 +2112,7 @@
           "models"
         ]
       },
-      "Site": {
+      "Address": {
         "title": "Address",
         "type": "object",
         "properties": {
