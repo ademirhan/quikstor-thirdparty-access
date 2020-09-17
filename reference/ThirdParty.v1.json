@@ -2054,6 +2054,108 @@
         "properties": {
           "id": {
             "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "abbreviation": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "manager": {
+            "type": "string"
+          },
+          "timeZone": {
+            "type": "string"
+          },
+          "addressId": {
+            "type": "string"
+          },
+          "insuranceProviderId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "string"
+          },
+          "currencyId": {
+            "type": "string"
+          },
+          "processorId": {
+            "type": "string"
+          },
+          "paymentSchemeId": {
+            "type": "string"
+          },
+          "overnightEnabled": {
+            "type": "string"
+          },
+          "daysBeforeRedLocksOn": {
+            "type": "string"
+          },
+          "daysBeforePaidToDateToSendInvoice": {
+            "type": "string"
+          },
+          "paymentSchemeIncrement": {
+            "type": "string"
+          },
+          "paymentSchemeDaysInMonth": {
+            "type": "string"
+          },
+          "setupFee": {
+            "type": "string"
+          },
+          "salesTax": {
+            "type": "string"
+          },
+          "rentTax": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "string"
+          },
+          "smptpUsername": {
+            "type": "string"
+          },
+          "smtpPassword": {
+            "type": "string"
+          },
+          "smtpRequireSSL": {
+            "type": "string"
+          },
+          "smtpHost": {
+            "type": "string"
+          },
+          "smtpPort": {
+            "type": "string"
+          },
+          "bankName": {
+            "type": "string"
+          },
+          "bankAccountNumber": {
+            "type": "string"
+          },
+          "bankAddressId": {
+            "type": "string"
+          },
+          "delinquencyPolicy": {
+            "type": "string"
+          }
+        }
+      },
+      "UnitType": {
+        "title": "UnitType",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
           }
         }
       }
