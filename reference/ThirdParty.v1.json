@@ -2158,6 +2158,159 @@
             "type": "string"
           }
         }
+      },
+      "Specials": {
+        "title": "Specials",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "siteId": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "unitReservationId": {
+            "type": "string"
+          },
+          "truckReservationId": {
+            "type": "string"
+          },
+          "dateTime": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "isEcomReservation": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "string"
+          },
+          "isUsed": {
+            "type": "string"
+          },
+          "unitType": {
+            "type": "string"
+          },
+          "platforms": {
+            "type": "string"
+          }
+        }
+      },
+      "UnitReservation": {
+        "title": "UnitReservation",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "specialId": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "entityId": {
+            "type": "string"
+          },
+          "discountType": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "roundingRule": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "string"
+          }
+        }
+      },
+      "SpecialsBreakdown": {
+        "title": "SpecialsBreakdown",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "specialId": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "entityId": {
+            "type": "string"
+          },
+          "discountType": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "roundingRule": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "string"
+          }
+        }
+      },
+      "PreferredReporting": {
+        "title": "PreferredReporting",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "customerId": {
+            "type": "string"
+          },
+          "channelId": {
+            "type": "string"
+          },
+          "reportingType": {
+            "type": "string"
+          },
+          "": {
+            "type": "string"
+          }
+        }
+      },
+      "MilitaryInfo": {
+        "title": "MilitaryInfo",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "customerId": {
+            "type": "string"
+          },
+          "channelId": {
+            "type": "string"
+          },
+          "reportingType": {
+            "type": "string"
+          }
+        }
+      },
+      "Tenant": {
+        "title": "Tenant",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
       }
     },
     "securitySchemes": {
