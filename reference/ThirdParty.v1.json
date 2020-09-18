@@ -2211,25 +2211,28 @@
           "id": {
             "type": "string"
           },
-          "specialId": {
+          "customerId": {
             "type": "string"
           },
-          "type": {
+          "leaseId": {
             "type": "string"
           },
-          "entityId": {
+          "expiresAt": {
             "type": "string"
           },
-          "discountType": {
+          "rentAtMoveIn": {
             "type": "string"
           },
-          "amount": {
+          "rentDeposit": {
             "type": "string"
           },
-          "roundingRule": {
+          "securityDeposit": {
             "type": "string"
           },
-          "duration": {
+          "setupFee": {
+            "type": "string"
+          },
+          "hasMoveIn": {
             "type": "string"
           }
         }
@@ -2279,9 +2282,6 @@
           },
           "reportingType": {
             "type": "string"
-          },
-          "": {
-            "type": "string"
           }
         }
       },
@@ -2308,6 +2308,108 @@
         "type": "object",
         "properties": {
           "id": {
+            "type": "string"
+          },
+          "siteId": {
+            "type": "string"
+          },
+          "primaryAddressId": {
+            "type": "string"
+          },
+          "languageId": {
+            "type": "string"
+          },
+          "profileId": {
+            "type": "string"
+          },
+          "sourceId": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "middleName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "dateOfBirth": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "driversLicense": {
+            "type": "string"
+          },
+          "drivingLicenseStateId": {
+            "type": "string"
+          },
+          "companyName": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "socialSecurityNumber": {
+            "type": "string"
+          },
+          "ssnChanged": {
+            "type": "string"
+          },
+          "cellPhone": {
+            "type": "string"
+          },
+          "homePhone": {
+            "type": "string"
+          },
+          "workPhone": {
+            "type": "string"
+          },
+          "faxNumber": {
+            "type": "string"
+          },
+          "lastReceiptNumber": {
+            "type": "string"
+          },
+          "customerNumber": {
+            "type": "string"
+          },
+          "profileType": {
+            "type": "string"
+          },
+          "hasWebPassword": {
+            "type": "string"
+          },
+          "optOutOfNotifications": {
+            "type": "string"
+          },
+          "milesFromSite": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "isActiveMilitary": {
+            "type": "string"
+          },
+          "NSFCount": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "string"
+          },
+          "hasPassword": {
+            "type": "string"
+          },
+          "noEmail": {
+            "type": "string"
+          },
+          "noPhoneNumber": {
             "type": "string"
           }
         }
