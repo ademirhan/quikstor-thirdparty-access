@@ -2156,6 +2156,30 @@
         "properties": {
           "id": {
             "type": "string"
+          },
+          "siteId": {
+            "type": "string"
+          },
+          "categoryId": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "width": {
+            "type": "string"
+          },
+          "length": {
+            "type": "string"
+          },
+          "height": {
+            "type": "string"
+          },
+          "baseRent": {
+            "type": "string"
+          },
+          "": {
+            "type": "string"
           }
         }
       },
