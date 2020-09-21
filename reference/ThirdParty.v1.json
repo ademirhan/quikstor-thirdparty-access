@@ -163,7 +163,7 @@
                           "stateCode": {
                             "type": "string"
                           },
-                          "countryID": {
+                          "countryId": {
                             "type": "string"
                           },
                           "country": {
@@ -594,7 +594,7 @@
             "BearerToken": []
           }
         ],
-        "description": "GetUnitTypes is an endpoint that responds to a collection of objects related to types of units in a facility, such as the type of storage, width, length and height of the unit. The list of unit types are retrieved based on the identifier (id) parameters that are being passed through siteId which can be viewed at:\n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).\n\n",
+        "description": "GetUnitTypes is an endpoint that responds to objects related to types of units in a facility, such as the type of storage, width, length and height of the unit.\n\nTo retrieve GetUnitTypes data, you'd have to call siteId parameter from \n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).\n\n",
         "parameters": [
           {
             "schema": {
@@ -2178,7 +2178,61 @@
           "baseRent": {
             "type": "string"
           },
-          "": {
+          "doorType": {
+            "type": "string"
+          },
+          "doorWidth": {
+            "type": "string"
+          },
+          "isInside": {
+            "type": "string"
+          },
+          "floorNumber": {
+            "type": "string"
+          },
+          "securityDepositType": {
+            "type": "string"
+          },
+          "securityDepositAmount": {
+            "type": "string"
+          },
+          "securityDepositPercent": {
+            "type": "string"
+          },
+          "applyRentTax": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "lateFee": {
+            "type": "string"
+          },
+          "lateFeeType": {
+            "type": "string"
+          },
+          "vacantUnit": {
+            "type": "string"
+          },
+          "currentPrice": {
+            "type": "string"
+          },
+          "leaseAgreement": {
+            "type": "string"
+          },
+          "insuranceCertificate": {
+            "type": "string"
+          },
+          "onlineRate": {
+            "type": "string"
+          },
+          "specialAvailable": {
+            "type": "string"
+          },
+          "limitedAvailability": {
+            "type": "string"
+          },
+          "group": {
             "type": "string"
           }
         }
@@ -2319,10 +2373,16 @@
           "customerId": {
             "type": "string"
           },
-          "channelId": {
+          "etsDate": {
             "type": "string"
           },
-          "reportingType": {
+          "unitName": {
+            "type": "string"
+          },
+          "unitPhoneNumber": {
+            "type": "string"
+          },
+          "commandingOfficer": {
             "type": "string"
           }
         }
@@ -2434,6 +2494,135 @@
             "type": "string"
           },
           "noPhoneNumber": {
+            "type": "string"
+          }
+        }
+      },
+      "Languages": {
+        "title": "Languages",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "string"
+          }
+        }
+      },
+      "Picture": {
+        "title": "Picture",
+        "type": "object",
+        "properties": {
+          "unitTypeId": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "alt": {
+            "type": "string"
+          }
+        }
+      },
+      "Features": {
+        "title": "Features",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "unitTypeId": {
+            "type": "string"
+          },
+          "languageId": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          }
+        }
+      },
+      "InventoryItems": {
+        "title": "InventoryItems",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "siteId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string"
+          },
+          "stock": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      },
+      "Reservations": {
+        "title": "Reservations",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "siteId": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "unitReservationId": {
+            "type": "string"
+          },
+          "truckReservationId": {
+            "type": "string"
+          },
+          "dateTime": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "isEcomReservation": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "string"
+          },
+          "transactionId": {
+            "type": "string"
+          },
+          "receiptId": {
             "type": "string"
           }
         }
