@@ -594,7 +594,7 @@
             "BearerToken": []
           }
         ],
-        "description": "GetUnitTypes is an endpoint that responds to objects related to types of units in a facility, such as the type of storage, width, length and height of the unit.\n\nTo retrieve GetUnitTypes data, you'd have to call siteId parameter from \n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).\n\n",
+        "description": "GetUnitTypes is an endpoint that responds to a collection of objects related to types of units in a facility, such as the type of storage, width, length and height of the unit. The list of unit types are retrieved based on the identifier (id) parameters that are being passed through siteId which can be viewed at:\n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).\n\n",
         "parameters": [
           {
             "schema": {
@@ -1515,15 +1515,15 @@
                       "unitReservation": {
                         "type": "object",
                         "required": [
-                          "customerID",
-                          "leaseID",
+                          "customerId",
+                          "leaseId",
                           "hasMoveIn"
                         ],
                         "properties": {
-                          "customerID": {
+                          "customerId": {
                             "type": "integer"
                           },
-                          "leaseID": {
+                          "leaseId": {
                             "type": "integer"
                           },
                           "expiresAt": {
@@ -2434,57 +2434,6 @@
             "type": "string"
           },
           "noPhoneNumber": {
-            "type": "string"
-          }
-        }
-      },
-      "Languages": {
-        "title": "Languages",
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "code": {
-            "type": "string"
-          },
-          "isActive": {
-            "type": "string"
-          }
-        }
-      },
-      "Picture": {
-        "title": "Picture",
-        "type": "object",
-        "properties": {
-          "unitTypeId": {
-            "type": "string"
-          },
-          "source": {
-            "type": "string"
-          },
-          "alt": {
-            "type": "string"
-          }
-        }
-      },
-      "Features": {
-        "title": "Features",
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "unitTypeId": {
-            "type": "string"
-          },
-          "languageId": {
-            "type": "string"
-          },
-          "label": {
             "type": "string"
           }
         }
