@@ -624,7 +624,7 @@
                       "id": {
                         "type": "integer"
                       },
-                      "siteID": {
+                      "siteId": {
                         "type": "integer"
                       },
                       "categoryId": {
@@ -816,7 +816,7 @@
                             "id": {
                               "type": "integer"
                             },
-                            "unitTypeID": {
+                            "unitTypeId": {
                               "type": "integer"
                             },
                             "languageId": {
@@ -829,7 +829,7 @@
                           },
                           "required": [
                             "id",
-                            "unitTypeID",
+                            "unitTypeId",
                             "languageId",
                             "label"
                           ]
@@ -838,7 +838,7 @@
                     },
                     "required": [
                       "id",
-                      "siteID",
+                      "siteId",
                       "categoryId",
                       "title",
                       "width",
