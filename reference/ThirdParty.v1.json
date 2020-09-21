@@ -2626,6 +2626,63 @@
             "type": "string"
           }
         }
+      },
+      "Units": {
+        "title": "Units",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "number": {
+            "type": "string"
+          },
+          "typeId": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "vacantSince": {
+            "type": "string"
+          },
+          "scheduledRent": {
+            "type": "string"
+          },
+          "activeLEaseId": {
+            "type": "string"
+          },
+          "reservationId": {
+            "type": "string"
+          },
+          "isDamaged": {
+            "type": "string"
+          },
+          "siteId": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "string"
+          },
+          "lockReleaseDateTime": {
+            "type": "string"
+          },
+          "lockByUserId": {
+            "type": "string"
+          },
+          "defaultCharges": {
+            "type": "string"
+          },
+          "defaultInsuranceType": {
+            "type": "string"
+          },
+          "insuranceRequired": {
+            "type": "string"
+          }
+        }
       }
     },
     "securitySchemes": {
