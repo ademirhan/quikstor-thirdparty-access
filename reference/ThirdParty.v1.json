@@ -2017,16 +2017,24 @@
             "type": "integer"
           },
           "streetAddress": {
-            "type": "string"
+            "type": "string",
+            "pattern": "[-a-zA-Z0-9_.,# ]*",
+            "maxLength": 50
           },
           "streetAddress2": {
-            "type": "string"
+            "type": "string",
+            "pattern": "[-a-zA-Z0-9_.,# ]*",
+            "maxLength": 50
           },
           "city": {
-            "type": "string"
+            "type": "string",
+            "pattern": "[-a-zA-Z0-9_.,# ]*",
+            "maxLength": 20
           },
           "zip": {
-            "type": "string"
+            "type": "string",
+            "pattern": "[-a-zA-Z0-9_.,# ]*",
+            "maxLength": 20
           },
           "stateId": {
             "type": "integer"
@@ -2385,22 +2393,29 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "customerId": {
-            "type": "string"
+            "type": "integer"
           },
           "etsDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "unitName": {
-            "type": "string"
+            "type": "string",
+            "pattern": "[-a-zA-Z0-9'.,_() ]*",
+            "maxLength": 150
           },
           "unitPhoneNumber": {
-            "type": "string"
+            "type": "string",
+            "pattern": "[-0-9() ]*",
+            "maxLength": 15
           },
           "commandingOfficer": {
-            "type": "string"
+            "type": "string",
+            "pattern": "[-a-zA-Z0-9'.,_() ]*",
+            "maxLength": 150
           }
         }
       },
@@ -2409,67 +2424,87 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "siteId": {
-            "type": "string"
+            "type": "integer"
           },
           "primaryAddressId": {
-            "type": "string"
+            "type": "integer"
           },
           "languageId": {
-            "type": "string"
+            "type": "integer"
           },
           "profileId": {
-            "type": "string"
+            "type": "integer"
           },
           "sourceId": {
-            "type": "string"
+            "type": "integer"
           },
           "firstName": {
-            "type": "string"
+            "type": "string",
+            "pattern": "[-a-zA-Z0-9_.,# ]*",
+            "maxLength": 50
           },
           "middleName": {
-            "type": "string"
+            "type": "string",
+            "pattern": "[-a-zA-Z0-9_.,# ]*",
+            "maxLength": 50
           },
           "lastName": {
-            "type": "string"
+            "type": "string",
+            "pattern": "[-a-zA-Z0-9_.,# ]*",
+            "maxLength": 50
           },
           "dateOfBirth": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "gender": {
             "type": "string"
           },
           "driversLicense": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 15
           },
           "drivingLicenseStateId": {
             "type": "string"
           },
           "companyName": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 50
           },
           "email": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 50
           },
           "socialSecurityNumber": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 11
           },
           "ssnChanged": {
-            "type": "string"
+            "type": "string",
+            "pattern": "[-0-9() ]*"
           },
           "cellPhone": {
-            "type": "string"
+            "type": "string",
+            "pattern": "[-0-9() ]*",
+            "maxLength": 15
           },
           "homePhone": {
-            "type": "string"
+            "type": "string",
+            "pattern": "[-0-9() ]*",
+            "maxLength": 15
           },
           "workPhone": {
-            "type": "string"
+            "type": "string",
+            "pattern": "[-0-9() ]*",
+            "maxLength": 15
           },
           "faxNumber": {
-            "type": "string"
+            "type": "string",
+            "pattern": "[-0-9() ]*",
+            "maxLength": 15
           },
           "lastReceiptNumber": {
             "type": "string"
@@ -2484,34 +2519,34 @@
             "type": "string"
           },
           "optOutOfNotifications": {
-            "type": "string"
+            "type": "boolean"
           },
           "milesFromSite": {
-            "type": "string"
+            "type": "number"
           },
           "unit": {
             "type": "string"
           },
           "isActiveMilitary": {
-            "type": "string"
+            "type": "boolean"
           },
           "NSFCount": {
-            "type": "string"
+            "type": "number"
           },
           "isActive": {
-            "type": "string"
+            "type": "boolean"
           },
           "isDeleted": {
-            "type": "string"
+            "type": "boolean"
           },
           "hasPassword": {
-            "type": "string"
+            "type": "boolean"
           },
           "noEmail": {
-            "type": "string"
+            "type": "boolean"
           },
           "noPhoneNumber": {
-            "type": "string"
+            "type": "boolean"
           }
         }
       },
