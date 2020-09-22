@@ -2053,7 +2053,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "name": {
             "type": "string"
@@ -2074,52 +2074,52 @@
             "type": "string"
           },
           "addressId": {
-            "type": "string"
+            "type": "integer"
           },
           "insuranceProviderId": {
-            "type": "string"
+            "type": "integer"
           },
           "clientId": {
-            "type": "string"
+            "type": "integer"
           },
           "currencyId": {
-            "type": "string"
+            "type": "integer"
           },
           "processorId": {
-            "type": "string"
+            "type": "integer"
           },
           "paymentSchemeId": {
-            "type": "string"
+            "type": "integer"
           },
           "overnightEnabled": {
-            "type": "string"
+            "type": "boolean"
           },
           "daysBeforeRedLocksOn": {
-            "type": "string"
+            "type": "integer"
           },
           "daysBeforePaidToDateToSendInvoice": {
-            "type": "string"
+            "type": "integer"
           },
           "paymentSchemeIncrement": {
-            "type": "string"
+            "type": "integer"
           },
           "paymentSchemeDaysInMonth": {
-            "type": "string"
+            "type": "integer"
           },
           "setupFee": {
-            "type": "string"
+            "type": "number"
           },
           "salesTax": {
-            "type": "string"
+            "type": "number"
           },
           "rentTax": {
-            "type": "string"
+            "type": "number"
           },
           "isActive": {
-            "type": "string"
+            "type": "boolean"
           },
           "isDeleted": {
-            "type": "string"
+            "type": "boolean"
           },
           "smptpUsername": {
             "type": "string"
@@ -2128,13 +2128,13 @@
             "type": "string"
           },
           "smtpRequireSSL": {
-            "type": "string"
+            "type": "boolean"
           },
           "smtpHost": {
             "type": "string"
           },
           "smtpPort": {
-            "type": "string"
+            "type": "integer"
           },
           "bankName": {
             "type": "string"
@@ -2146,7 +2146,7 @@
             "type": "string"
           },
           "delinquencyPolicy": {
-            "type": "string"
+            "type": "integer"
           }
         }
       },
@@ -2155,13 +2155,13 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "siteId": {
-            "type": "string"
+            "type": "integer"
           },
           "categoryId": {
-            "type": "string"
+            "type": "integer"
           },
           "title": {
             "type": "string"
@@ -2206,7 +2206,11 @@
             "type": "string"
           },
           "lateFee": {
-            "type": "string"
+            "type": "integer",
+            "enum": [
+              "IXEDAMOUNT = 1",
+              "PERCENT = 2"
+            ]
           },
           "lateFeeType": {
             "type": "string"
@@ -2233,7 +2237,13 @@
             "type": "string"
           },
           "group": {
-            "type": "string"
+            "type": "integer",
+            "enum": [
+              "Small = 1",
+              "Medium",
+              "Large",
+              "Parking"
+            ]
           }
         }
       },
@@ -2242,43 +2252,80 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "siteId": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "integer"
+          },
+          "code": {
             "type": "string"
           },
-          "userId": {
+          "name": {
             "type": "string"
           },
-          "unitReservationId": {
+          "description": {
             "type": "string"
           },
-          "truckReservationId": {
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "availableDays": {
             "type": "string"
           },
-          "dateTime": {
+          "trigger": {
+            "type": "integer"
+          },
+          "coupon": {
             "type": "string"
           },
-          "notes": {
-            "type": "string"
+          "condition": {
+            "type": "integer"
           },
-          "isEcomReservation": {
-            "type": "string"
+          "conditionDuration": {
+            "type": "integer"
+          },
+          "isRestricted": {
+            "type": "boolean"
+          },
+          "platformFree": {
+            "type": "boolean"
           },
           "isActive": {
-            "type": "string"
+            "type": "boolean"
           },
           "isDeleted": {
-            "type": "string"
+            "type": "boolean"
           },
           "isUsed": {
-            "type": "string"
+            "type": "boolean"
           },
-          "unitType": {
-            "type": "string"
+          "unitTypes": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
           },
           "platforms": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
           }
         }
       },
@@ -2311,36 +2358,6 @@
             "type": "string"
           },
           "hasMoveIn": {
-            "type": "string"
-          }
-        }
-      },
-      "SpecialsBreakdown": {
-        "title": "SpecialsBreakdown",
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "specialId": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "entityId": {
-            "type": "string"
-          },
-          "discountType": {
-            "type": "string"
-          },
-          "amount": {
-            "type": "string"
-          },
-          "roundingRule": {
-            "type": "string"
-          },
-          "duration": {
             "type": "string"
           }
         }
@@ -2503,7 +2520,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "name": {
             "type": "string"
@@ -2512,7 +2529,7 @@
             "type": "string"
           },
           "isActive": {
-            "type": "string"
+            "type": "boolean"
           }
         }
       },
@@ -2521,7 +2538,7 @@
         "type": "object",
         "properties": {
           "unitTypeId": {
-            "type": "string"
+            "type": "integer"
           },
           "source": {
             "type": "string"
@@ -2536,16 +2553,17 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "unitTypeId": {
-            "type": "string"
+            "type": "integer"
           },
           "languageId": {
-            "type": "string"
+            "type": "integer"
           },
           "label": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 64
           }
         }
       },
@@ -2680,6 +2698,39 @@
             "type": "string"
           },
           "insuranceRequired": {
+            "type": "string"
+          }
+        }
+      },
+      "Breakdowns": {
+        "title": "Breakdowns",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "specialId": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "entityId": {
+            "type": "string"
+          },
+          "discountType": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "roundingRule": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "string"
+          },
+          "": {
             "type": "string"
           }
         }
