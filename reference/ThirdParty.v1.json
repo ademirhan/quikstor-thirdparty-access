@@ -360,7 +360,7 @@
           }
         },
         "operationId": "get-getsites",
-        "description": "A client can consume the array of the information for the sites(facilities) that is integrated with the partner.\n\nThese information are passed through the site identifier (siteId), which can be viewed (https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/SiteId).",
+        "description": "A client can consume the array of the information for the sites(facilities) that is integrated with the partner.\n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/SiteId).",
         "parameters": [
           {
             "schema": {
@@ -594,7 +594,7 @@
             "BearerToken": []
           }
         ],
-        "description": "GetUnitTypes is an endpoint that responds to objects related to types of units in a facility, such as the type of storage, width, length and height of the unit.\n\nTo retrieve GetUnitTypes data, you'd have to call siteId parameter from \n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).\n\n",
+        "description": "GetUnitTypes is an endpoint that responds to objects related to types of units in a facility, such as the type of storage, width, length and height of the unit.\n\nTo retrieve GetUnitTypes data, you'd have to call siteId parameter accessible through site models \n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).\n\n",
         "parameters": [
           {
             "schema": {
@@ -881,7 +881,7 @@
           }
         },
         "operationId": "get-api-partner-name-getavailableunittypes",
-        "description": "GetAvailableUnitTypes is an endpoint that responds to a collection of objects related to types of units that are available to be rented belonging to the facility. The list of available units are retrieved based on the identifier (id) parameters that are being passed through siteId which can be viewed at:\n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).",
+        "description": "GetAvailableUnitTypes is an endpoint are types of units that are available to be rented belonging to the facility. \n\nTo retrieve GetAvailableUnitTypes data, you'd have to call siteId\n\n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).",
         "parameters": [
           {
             "schema": {
@@ -1181,7 +1181,7 @@
                         "type": "string"
                       },
                       "isActiveMilitary": {
-                        "type": "string"
+                        "type": "boolean"
                       },
                       "militaryInfo": {
                         "type": "object",
@@ -2175,16 +2175,16 @@
             "type": "string"
           },
           "width": {
-            "type": "string"
+            "type": "number"
           },
           "length": {
-            "type": "string"
+            "type": "number"
           },
           "height": {
-            "type": "string"
+            "type": "number"
           },
           "baseRent": {
-            "type": "string"
+            "type": "number"
           },
           "doorType": {
             "type": "string"
@@ -2193,22 +2193,22 @@
             "type": "string"
           },
           "isInside": {
-            "type": "string"
+            "type": "boolean"
           },
           "floorNumber": {
-            "type": "string"
+            "type": "number"
           },
           "securityDepositType": {
             "type": "string"
           },
           "securityDepositAmount": {
-            "type": "string"
+            "type": "number"
           },
           "securityDepositPercent": {
-            "type": "string"
+            "type": "number"
           },
           "applyRentTax": {
-            "type": "string"
+            "type": "boolean"
           },
           "category": {
             "type": "string"
@@ -2230,19 +2230,19 @@
             "type": "string"
           },
           "leaseAgreement": {
-            "type": "string"
+            "type": "integer"
           },
           "insuranceCertificate": {
-            "type": "string"
+            "type": "integer"
           },
           "onlineRate": {
             "type": "string"
           },
           "specialAvailable": {
-            "type": "string"
+            "type": "boolean"
           },
           "limitedAvailability": {
-            "type": "string"
+            "type": "boolean"
           },
           "group": {
             "type": "integer",
@@ -2297,13 +2297,22 @@
             "type": "string"
           },
           "trigger": {
-            "type": "integer"
+            "type": "integer",
+            "enum": [
+              "Manual = 1",
+              "Coupon"
+            ]
           },
           "coupon": {
             "type": "string"
           },
           "condition": {
-            "type": "integer"
+            "type": "integer",
+            "enum": [
+              "Pay = 1",
+              "Stay",
+              "None"
+            ]
           },
           "conditionDuration": {
             "type": "integer"
@@ -2342,31 +2351,31 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "customerId": {
-            "type": "string"
+            "type": "integer"
           },
           "leaseId": {
-            "type": "string"
+            "type": "integer"
           },
           "expiresAt": {
             "type": "string"
           },
           "rentAtMoveIn": {
-            "type": "string"
+            "type": "number"
           },
           "rentDeposit": {
-            "type": "string"
+            "type": "number"
           },
           "securityDeposit": {
-            "type": "string"
+            "type": "number"
           },
           "setupFee": {
-            "type": "string"
+            "type": "number"
           },
           "hasMoveIn": {
-            "type": "string"
+            "type": "boolean"
           }
         }
       },
@@ -2643,19 +2652,19 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "siteId": {
-            "type": "string"
+            "type": "integer"
           },
           "userId": {
-            "type": "string"
+            "type": "integer"
           },
           "unitReservationId": {
-            "type": "string"
+            "type": "integer"
           },
           "truckReservationId": {
-            "type": "string"
+            "type": "integer"
           },
           "dateTime": {
             "type": "string"
@@ -2664,19 +2673,19 @@
             "type": "string"
           },
           "isEcomReservation": {
-            "type": "string"
+            "type": "boolean"
           },
           "isActive": {
-            "type": "string"
+            "type": "boolean"
           },
           "isDeleted": {
-            "type": "string"
+            "type": "boolean"
           },
           "transactionId": {
-            "type": "string"
+            "type": "integer"
           },
           "receiptId": {
-            "type": "string"
+            "type": "integer"
           }
         }
       },
@@ -2685,13 +2694,13 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "number": {
             "type": "string"
           },
           "typeId": {
-            "type": "string"
+            "type": "integer"
           },
           "description": {
             "type": "string"
@@ -2700,40 +2709,43 @@
             "type": "string"
           },
           "scheduledRent": {
-            "type": "string"
+            "type": "number"
           },
           "activeLEaseId": {
-            "type": "string"
+            "type": "integer"
           },
           "reservationId": {
-            "type": "string"
+            "type": "integer"
           },
           "isDamaged": {
-            "type": "string"
+            "type": "boolean"
           },
           "siteId": {
-            "type": "string"
+            "type": "integer"
           },
           "isActive": {
-            "type": "string"
+            "type": "boolean"
           },
           "isDeleted": {
-            "type": "string"
+            "type": "boolean"
           },
           "lockReleaseDateTime": {
             "type": "string"
           },
           "lockByUserId": {
-            "type": "string"
+            "type": "integer"
           },
           "defaultCharges": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
           },
           "defaultInsuranceType": {
-            "type": "string"
+            "type": "integer"
           },
           "insuranceRequired": {
-            "type": "string"
+            "type": "boolean"
           }
         }
       },
@@ -2742,31 +2754,28 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "specialId": {
-            "type": "string"
+            "type": "integer"
           },
           "type": {
-            "type": "string"
+            "type": "integer"
           },
           "entityId": {
-            "type": "string"
+            "type": "integer"
           },
           "discountType": {
-            "type": "string"
+            "type": "integer"
           },
           "amount": {
-            "type": "string"
+            "type": "integer"
           },
           "roundingRule": {
-            "type": "string"
+            "type": "integer"
           },
           "duration": {
-            "type": "string"
-          },
-          "": {
-            "type": "string"
+            "type": "integer"
           }
         }
       }
