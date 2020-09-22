@@ -2014,7 +2014,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "streetAddress": {
             "type": "string"
@@ -2029,7 +2029,7 @@
             "type": "string"
           },
           "stateId": {
-            "type": "string"
+            "type": "integer"
           },
           "state": {
             "type": "string"
@@ -2038,7 +2038,7 @@
             "type": "string"
           },
           "countryId": {
-            "type": "string"
+            "type": "integer"
           },
           "country": {
             "type": "string"
