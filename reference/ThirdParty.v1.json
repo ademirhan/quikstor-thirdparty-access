@@ -2384,16 +2384,16 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "customerId": {
-            "type": "string"
+            "type": "integer"
           },
           "channelId": {
-            "type": "string"
+            "type": "integer"
           },
           "reportingType": {
-            "type": "string"
+            "type": "integer"
           }
         }
       },
