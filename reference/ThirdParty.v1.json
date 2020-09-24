@@ -2166,6 +2166,9 @@
       "UnitType": {
         "title": "UnitType",
         "type": "object",
+        "x-tags": [
+          "models"
+        ],
         "properties": {
           "id": {
             "type": "integer"
@@ -2221,7 +2224,7 @@
           "lateFee": {
             "type": "integer",
             "enum": [
-              "IXEDAMOUNT = 1",
+              "FIXEDAMOUNT = 1",
               "PERCENT = 2"
             ]
           },
@@ -2238,7 +2241,41 @@
             "type": "integer"
           },
           "insuranceCertificate": {
-            "type": "integer"
+            "type": "integer",
+            "enum": [
+              "LEASE_AGREEMENT = 1",
+              "AUTO_BILLING_AGREEMENT",
+              "RENT_CHANGE_LETTER",
+              "NSF_LETTER",
+              "FIRST_LATE_NOTICE",
+              "SECOND_LATE_NOTICE",
+              "THIRD_LATE_NOTICE",
+              "PRE_LIEN_NOTICE",
+              "LIEN_SALE_NOTICE",
+              "INSURANCE_CERTIFICATE",
+              "INSURANCE_PRE_CANCELLATION_NOTICE",
+              "INSURANCE_CANCELLATION_NOTICE",
+              "INVOICE",
+              "RESERVATION_RECEIPT",
+              "PAYMENT_RECEIPT",
+              "REFUND_RECEIPT",
+              "TRANSFER_RECEIPT",
+              "RETAIL_SALE_RECEIPT",
+              "MOVE_IN_RECEIPT",
+              "MOVE_OUT_RECEIPT",
+              "SKIP_LETTER",
+              "VACATE_TENANT_REPORT",
+              "RETAIL_SALE_RECEIPT_NON_TENANT",
+              "SECONDARY_LEASE_AGREEMENT",
+              "SECONDARY_INSURANCE_CERTIFICATE",
+              "TEANANT_COMMUNICATION",
+              "LINKED_INVOICE",
+              "CUSTOM1 =101",
+              "CUSTOM2",
+              "CUSTOM3",
+              "CUSTOM4",
+              "CUSTOM5"
+            ]
           },
           "onlineRate": {
             "type": "string"
@@ -2258,10 +2295,7 @@
               "Parking"
             ]
           }
-        },
-        "x-tags": [
-          "models"
-        ]
+        }
       },
       "Special": {
         "title": "Special",
