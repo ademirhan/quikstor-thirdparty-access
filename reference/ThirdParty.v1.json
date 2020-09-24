@@ -16,7 +16,7 @@
       "post": {
         "summary": "PostLogin",
         "tags": [
-          "login"
+          "Login"
         ],
         "responses": {
           "200": {
@@ -2007,7 +2007,7 @@
         },
         "description": "Response model for the login request. ",
         "x-tags": [
-          "models"
+          "Models"
         ]
       },
       "Address": {
@@ -2057,7 +2057,7 @@
           }
         },
         "x-tags": [
-          "models"
+          "Models"
         ]
       },
       "Site": {
@@ -2163,14 +2163,14 @@
         },
         "description": "Response model for units, unit types, available unit types, tenants, inventory items, reservations, reservation details",
         "x-tags": [
-          "models"
+          "Models"
         ]
       },
       "UnitType": {
         "title": "UnitType",
         "type": "object",
         "x-tags": [
-          "models"
+          "Models"
         ],
         "properties": {
           "id": {
@@ -2391,7 +2391,7 @@
           }
         },
         "x-tags": [
-          "models"
+          "Models"
         ]
       },
       "UnitReservation": {
@@ -2427,7 +2427,7 @@
           }
         },
         "x-tags": [
-          "models"
+          "Models"
         ]
       },
       "PreferredReporting": {
@@ -2482,7 +2482,7 @@
           }
         },
         "x-tags": [
-          "models"
+          "Models"
         ]
       },
       "Tenant": {
@@ -2616,7 +2616,7 @@
           }
         },
         "x-tags": [
-          "models"
+          "Models"
         ]
       },
       "Languages": {
@@ -2637,7 +2637,7 @@
           }
         },
         "x-tags": [
-          "models"
+          "Models"
         ]
       },
       "Picture": {
@@ -2677,7 +2677,7 @@
           }
         },
         "x-tags": [
-          "models"
+          "Models"
         ]
       },
       "InventoryItem": {
@@ -2716,7 +2716,7 @@
           }
         },
         "x-tags": [
-          "models"
+          "Models"
         ]
       },
       "Reservations": {
@@ -2761,7 +2761,7 @@
           }
         },
         "x-tags": [
-          "models"
+          "Models"
         ]
       },
       "Units": {
@@ -2824,7 +2824,7 @@
           }
         },
         "x-tags": [
-          "models"
+          "Models"
         ]
       },
       "SpecialBreakdown": {
@@ -2857,7 +2857,7 @@
           }
         },
         "x-tags": [
-          "models"
+          "Models"
         ]
       }
     },
