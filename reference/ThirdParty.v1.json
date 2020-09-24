@@ -14,7 +14,7 @@
   "paths": {
     "/login": {
       "post": {
-        "summary": "login post",
+        "summary": "PostLogin",
         "tags": [
           "login"
         ],
@@ -92,7 +92,7 @@
         "summary": "GetSites",
         "responses": {
           "200": {
-            "description": "API reponds to the SiteId model. \n\nSee ( link )",
+            "description": "API reponds to the Site model. \n\nSee ( link )",
             "headers": {},
             "content": {
               "application/json": {
@@ -388,7 +388,7 @@
         "summary": "GetUnitTypes",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "API reponds to the Site model. ",
             "content": {
               "application/json": {
                 "schema": {
@@ -594,7 +594,7 @@
             "BearerToken": []
           }
         ],
-        "description": "GetUnitTypes is an endpoint that responds to objects related to types of units in a facility, such as the type of storage, width, length and height of the unit.\n\nTo retrieve GetUnitTypes data, you'd have to call siteId parameter accessible through site models \n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).\n\n",
+        "description": "GetUnitTypes is an endpoint that responds to objects related to types of units in a facility, such as the type of storage, width, length and height of the unit.\n\nTo retrieve GetUnitTypes data, you'd have to call siteId parameter accessible through the site model\n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).\n\n",
         "parameters": [
           {
             "schema": {
@@ -613,7 +613,7 @@
         "summary": "GetAvailableUnitTypes",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "API reponds to the Site, Picture and Feature model. ",
             "content": {
               "application/json": {
                 "schema": {
@@ -2054,7 +2054,10 @@
           "countryCode": {
             "type": "string"
           }
-        }
+        },
+        "x-tags": [
+          "models"
+        ]
       },
       "Site": {
         "title": "Site",
@@ -2255,8 +2258,8 @@
           }
         }
       },
-      "Specials": {
-        "title": "Specials",
+      "Special": {
+        "title": "Special",
         "type": "object",
         "properties": {
           "id": {
@@ -2560,7 +2563,7 @@
         }
       },
       "Languages": {
-        "title": "Languages",
+        "title": "Language",
         "type": "object",
         "properties": {
           "id": {
@@ -2592,8 +2595,8 @@
           }
         }
       },
-      "Features": {
-        "title": "Features",
+      "Feature": {
+        "title": "Feature",
         "type": "object",
         "properties": {
           "id": {
@@ -2609,10 +2612,13 @@
             "type": "string",
             "maxLength": 64
           }
-        }
+        },
+        "x-tags": [
+          "models"
+        ]
       },
-      "InventoryItems": {
-        "title": "InventoryItems",
+      "InventoryItem": {
+        "title": "InventoryItem",
         "type": "object",
         "properties": {
           "id": {
@@ -2645,10 +2651,13 @@
           "reason": {
             "type": "string"
           }
-        }
+        },
+        "x-tags": [
+          "models"
+        ]
       },
       "Reservations": {
-        "title": "Reservations",
+        "title": "Reservation",
         "type": "object",
         "properties": {
           "id": {
@@ -2749,8 +2758,8 @@
           }
         }
       },
-      "Breakdowns": {
-        "title": "Breakdowns",
+      "SpecialBreakdown": {
+        "title": "SpecialBreakdown",
         "type": "object",
         "properties": {
           "id": {
@@ -2777,7 +2786,10 @@
           "duration": {
             "type": "integer"
           }
-        }
+        },
+        "x-tags": [
+          "models"
+        ]
       }
     },
     "securitySchemes": {
