@@ -977,7 +977,7 @@
           }
         },
         "operationId": "get-api-partner-name-getunits",
-        "description": "GetUnits is an endpoint that responds to a collection of objects related to all units belonging to the facility whether they're being occupied or available. The list of units are retrieved based on the identifier (id) parameters that are being passed through siteId which can be viewed at:\n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).",
+        "description": "GetUnits is an endpoint that responds to a collection of objects related to all units belonging to the facility whether they're being occupied or available.\n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).",
         "security": [
           {
             "BearerToken": []
