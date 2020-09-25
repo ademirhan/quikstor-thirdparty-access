@@ -594,7 +594,7 @@
             "BearerToken": []
           }
         ],
-        "description": "GetUnitTypes is an endpoint that responds to objects related to types of units in a facility, such as the type of storage, width, length and height of the unit.\n\nTo request getUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).\n\n",
+        "description": "GetUnitTypes is an endpoint is related to types of units in a facility, such as the type of storage, width, length and height of the unit.\n\nTo request getUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n\n\n",
         "parameters": [
           {
             "schema": {
@@ -881,7 +881,7 @@
           }
         },
         "operationId": "get-api-partner-name-getavailableunittypes",
-        "description": "GetAvailableUnitTypes is an endpoint are types of units that are available to be rented belonging to the facility. \n\nTo request getAvailableUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId). \n\n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).",
+        "description": "GetAvailableUnitTypes is an endpoint are types of units that are available to be rented belonging to the facility. \n\nTo request getAvailableUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId). \n\n",
         "parameters": [
           {
             "schema": {
@@ -977,7 +977,7 @@
           }
         },
         "operationId": "get-api-partner-name-getunits",
-        "description": "GetUnits is an endpoint that responds to a collection of objects related to all units belonging to the facility whether they're being occupied or available.\n\nTTo request getUnits endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId). \n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).",
+        "description": "GetUnits is an endpoint that responds to a collection of objects related to all units belonging to the facility whether they're being occupied or available.\n\nTTo request getUnits endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId). \n",
         "security": [
           {
             "BearerToken": []
@@ -1323,7 +1323,7 @@
           }
         },
         "operationId": "get-api-partner-name-gettenants",
-        "description": "GetTenants is an endpoint that responds to a collection of objects related to all tenant's information belonging to a unit in the facility. The list of tenants are retrieved bbased on the identifier (id) parameters that are being passed through siteId. You'd be able to filter tenants based on the move-in date by passing fromDate or toDate parameters which can be viewed at:\n\nTo request getTenants endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas). ",
+        "description": "GetTenants is an endpoint that responds to a collection of objects related to all tenant's information belonging to a unit in the facility. The list of tenants are retrieved bbased on the identifier (id) parameters that are being passed through siteId. You'd be able to filter tenants based on the move-in date by passing fromDate or toDate parameters which can be viewed at:\n\nTo request getTenants endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId, fromDate, and toDate. SiteId can be retrieved from getSites endpoint (SiteModelId).\n",
         "security": [
           {
             "BearerToken": []
@@ -1432,7 +1432,7 @@
           }
         },
         "operationId": "get-api-partner-name-getinventoryitems",
-        "description": "GetInventoryItems is an endpoint that responds to a collection of objects related to all inventory items located in the facility. \n\nTo request getInventoryItems endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas). ",
+        "description": "GetInventoryItems is an endpoint that responds to a collection of objects related to all inventory items located in the facility. \n\nTo request getInventoryItems endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n",
         "security": [
           {
             "BearerToken": []
@@ -1566,7 +1566,7 @@
           }
         },
         "operationId": "get-api-partner-name-getreservations",
-        "description": "GetReservations is an endpoint that reponds to a collection of objects related to all reservations information belonging to the facility.\n\nTo request getReservations endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).",
+        "description": "GetReservations is an endpoint that reponds to a collection of objects related to all reservations information belonging to the facility.\n\nTo request getReservations endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n",
         "security": [
           {
             "BearerToken": []
@@ -1708,7 +1708,7 @@
           }
         },
         "operationId": "get-api-partner-name-getreservationsdetails",
-        "description": "GetReservationDetails is an endpoint that reponds to a collection of objects related to the detailed information of all reservations belonging to the facility. \n\nTo request getReservationDetail endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas).",
+        "description": "GetReservationDetails is an endpoint that's related to the detailed information of all reservations belonging to the facility. \n\nTo request getReservationDetail endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId and reservationId. \n\n- SiteId can be retrieved from getSites endpoint (SiteModelId). \n- ReservationId can be retrieved from getReservations endpoint (ReservationModelId).\n",
         "security": [
           {
             "BearerToken": []
@@ -1948,7 +1948,7 @@
           }
         },
         "operationId": "get-api-partner-name-getspecialsforunittype",
-        "description": "GetSpecialsForUnitType is an endpoint that reponds to a collection of objects related to all the specials created for each type of units belonging to the facility. \n\nTo request getSpecialsForUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas). ",
+        "description": "GetSpecialsForUnitType is an endpoint that reponds to a collection of objects related to all the specials created for each type of units belonging to the facility. \n\nTo request getSpecialsForUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId and unitTypeId. \n\n- SiteId can be retrieved from getSites endpoint (SiteModelId).\n- UnitTypeId can be retrieved from getUnits endpoint (UnitModelId).\n\n ",
         "security": [
           {
             "BearerToken": []
@@ -2303,6 +2303,10 @@
       "Special": {
         "title": "Special",
         "type": "object",
+        "x-tags": [
+          "Models"
+        ],
+        "description": "",
         "properties": {
           "id": {
             "type": "integer"
@@ -2311,7 +2315,12 @@
             "type": "integer"
           },
           "type": {
-            "type": "integer"
+            "type": "integer",
+            "enum": [
+              "Reservation = 1",
+              "MoveIn",
+              "ActiveTenant"
+            ]
           },
           "code": {
             "type": "string"
@@ -2386,17 +2395,23 @@
           "platforms": {
             "type": "array",
             "items": {
-              "type": "integer"
+              "type": "integer",
+              "enum": [
+                "CLOUD = 1",
+                "ECOM",
+                "MOBILE",
+                "ALL"
+              ]
             }
           }
-        },
-        "x-tags": [
-          "Models"
-        ]
+        }
       },
       "UnitReservation": {
         "title": "UnitReservation",
         "type": "object",
+        "x-tags": [
+          "Models"
+        ],
         "properties": {
           "id": {
             "type": "integer"
@@ -2411,7 +2426,8 @@
             "type": "string"
           },
           "rentAtMoveIn": {
-            "type": "number"
+            "type": "string",
+            "format": "date-time"
           },
           "rentDeposit": {
             "type": "number"
@@ -2426,13 +2442,17 @@
             "type": "boolean"
           }
         },
-        "x-tags": [
-          "Models"
+        "required": [
+          "id",
+          "customerId"
         ]
       },
       "PreferredReporting": {
         "title": "PreferredReporting",
         "type": "object",
+        "x-tags": [
+          "models"
+        ],
         "properties": {
           "id": {
             "type": "integer"
@@ -2444,12 +2464,15 @@
             "type": "integer"
           },
           "reportingType": {
-            "type": "integer"
+            "type": "integer",
+            "enum": [
+              "RECEIPTS = 1",
+              "BILLS = 2",
+              "NOTICES = 3",
+              "OTHER"
+            ]
           }
-        },
-        "x-tags": [
-          "models"
-        ]
+        }
       },
       "MilitaryInfo": {
         "title": "MilitaryInfo",
@@ -2719,9 +2742,12 @@
           "Models"
         ]
       },
-      "Reservations": {
+      "Reservation": {
         "title": "Reservation",
         "type": "object",
+        "x-tags": [
+          "Models"
+        ],
         "properties": {
           "id": {
             "type": "integer"
@@ -2739,7 +2765,8 @@
             "type": "integer"
           },
           "dateTime": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "notes": {
             "type": "string"
@@ -2759,14 +2786,14 @@
           "receiptId": {
             "type": "integer"
           }
-        },
-        "x-tags": [
-          "Models"
-        ]
+        }
       },
       "Units": {
         "title": "Units",
         "type": "object",
+        "x-tags": [
+          "Models"
+        ],
         "properties": {
           "id": {
             "type": "integer"
@@ -2781,7 +2808,8 @@
             "type": "string"
           },
           "vacantSince": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "scheduledRent": {
             "type": "number"
@@ -2805,7 +2833,8 @@
             "type": "boolean"
           },
           "lockReleaseDateTime": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "lockByUserId": {
             "type": "integer"
@@ -2822,14 +2851,14 @@
           "insuranceRequired": {
             "type": "boolean"
           }
-        },
-        "x-tags": [
-          "Models"
-        ]
+        }
       },
       "SpecialBreakdown": {
         "title": "SpecialBreakdown",
         "type": "object",
+        "x-tags": [
+          "Models"
+        ],
         "properties": {
           "id": {
             "type": "integer"
@@ -2838,27 +2867,44 @@
             "type": "integer"
           },
           "type": {
-            "type": "integer"
+            "type": "integer",
+            "enum": [
+              "Rent = 1",
+              "Charges",
+              "Insurance",
+              "Prorate",
+              "SecurityDeposit",
+              "AdminFee",
+              "InventoryItem"
+            ]
           },
           "entityId": {
             "type": "integer"
           },
           "discountType": {
-            "type": "integer"
+            "type": "integer",
+            "enum": [
+              "FixedAmount = 1",
+              "Percentage",
+              "FlatRate"
+            ]
           },
           "amount": {
             "type": "integer"
           },
           "roundingRule": {
-            "type": "integer"
+            "type": "integer",
+            "enum": [
+              "NearestDollar = 1",
+              "NearestFiveDollar",
+              "NearestTenDollar",
+              "None"
+            ]
           },
           "duration": {
             "type": "integer"
           }
-        },
-        "x-tags": [
-          "Models"
-        ]
+        }
       }
     },
     "securitySchemes": {
