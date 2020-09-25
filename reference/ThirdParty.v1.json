@@ -92,7 +92,7 @@
         "summary": "GetSites",
         "responses": {
           "200": {
-            "description": "API reponds to the Site model. \n\nSee ( link )",
+            "description": "API reponds to the Site model. \n\nSee (https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Site)",
             "headers": {},
             "content": {
               "application/json": {
@@ -364,7 +364,7 @@
           }
         },
         "operationId": "get-getsites",
-        "description": "A client can consume the array of the information for the sites(facilities) that is integrated with the partner.\n\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/SiteId).",
+        "description": "A client can consume the array of the information for the sites(facilities) that is integrated with the partner.\n",
         "parameters": [
           {
             "schema": {
@@ -392,7 +392,7 @@
         "summary": "GetUnitTypes",
         "responses": {
           "200": {
-            "description": "API reponds to the Site model. ",
+            "description": "API reponds to the Site model. \n\nResponse model for getUnitTypes can be viewed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/UnitType",
             "content": {
               "application/json": {
                 "schema": {
@@ -578,15 +578,7 @@
                 }
               }
             },
-            "headers": {
-              "Authorization": {
-                "schema": {
-                  "type": "string"
-                },
-                "description": "Header values to be bearer token in a format \"bearer access-token\"",
-                "required": true
-              }
-            }
+            "headers": {}
           }
         },
         "operationId": "get-api-partner-name-getunittypes",
@@ -598,7 +590,7 @@
             "BearerToken": []
           }
         ],
-        "description": "GetUnitTypes is an endpoint is related to types of units in a facility, such as the type of storage, width, length and height of the unit.\n\nTo request getUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n\nResponse model for getUnitTypes can be viwed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/UnitType\n",
+        "description": "GetUnitTypes is an endpoint is related to types of units in a facility, such as the type of storage, width, length and height of the unit.\n\nTo request getUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (Site Model Id).\n",
         "parameters": [
           {
             "schema": {
@@ -607,6 +599,15 @@
             "in": "query",
             "name": "siteId",
             "description": "",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "header",
+            "description": "Header values to be bearer token in a format \"bearer access-token\"",
+            "name": "Authorization",
             "required": true
           }
         ]
@@ -617,7 +618,7 @@
         "summary": "GetAvailableUnitTypes",
         "responses": {
           "200": {
-            "description": "API reponds to the Site, Picture and Feature models. ",
+            "description": "API reponds to the Site, Picture and Feature models. \n\nResponse model for GetAvailableUnitTypes can be viewed below:\nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/UnitType",
             "content": {
               "application/json": {
                 "schema": {
@@ -873,19 +874,11 @@
                 }
               }
             },
-            "headers": {
-              "Authorization": {
-                "schema": {
-                  "type": "string"
-                },
-                "description": "Header values to be bearer token in a format \"bearer access-token\"",
-                "required": true
-              }
-            }
+            "headers": {}
           }
         },
         "operationId": "get-api-partner-name-getavailableunittypes",
-        "description": "GetAvailableUnitTypes is an endpoint are types of units that are available to be rented belonging to the facility. \n\nTo request getAvailableUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId). \n\nResponse model for GetAvailableUnitTypes can be viewed below:\nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/UnitType\n",
+        "description": "GetAvailableUnitTypes is an endpoint are types of units that are available to be rented belonging to the facility. \n\nTo request getAvailableUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (Site Model Id). \n\n\n",
         "parameters": [
           {
             "schema": {
@@ -893,6 +886,15 @@
             },
             "in": "query",
             "name": "siteId",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "Header values to be bearer token in a format \"bearer access-token\"",
             "required": true
           }
         ],
@@ -909,7 +911,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Response model for getUnits can be viewed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Unit",
             "content": {
               "application/json": {
                 "schema": {
@@ -981,7 +983,7 @@
           }
         },
         "operationId": "get-api-partner-name-getunits",
-        "description": "GetUnits is an endpoint that responds to a collection of objects related to all units belonging to the facility whether they're being occupied or available.\n\nTo request getUnits endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId). \n\nResponse model for getUnits can be viwed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Unit",
+        "description": "GetUnits is an endpoint that responds to a collection of objects related to all units belonging to the facility whether they're being occupied or available.\n\nTo request getUnits endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (Site Model Id). \n\n",
         "security": [
           {
             "BearerToken": []
@@ -990,7 +992,7 @@
         "parameters": [
           {
             "schema": {
-              "type": "string"
+              "type": "integer"
             },
             "in": "header",
             "name": "Authorization",
@@ -1016,7 +1018,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Response model for getTenants can be viewed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Tenant",
             "content": {
               "application/json": {
                 "schema": {
@@ -1327,7 +1329,7 @@
           }
         },
         "operationId": "get-api-partner-name-gettenants",
-        "description": "GetTenants is an endpoint that's related to all tenant's information belonging to a unit in the facility. You'd be able to filter tenants based on the move-in date by passing fromDate or toDate parameters.\n\nTo request getTenants endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n\nResponse model for getTenants can be viwed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Tenant",
+        "description": "GetTenants is an endpoint that's related to all tenant's information belonging to a unit in the facility. You'd be able to filter tenants based on the move-in date by passing fromDate or toDate parameters.\n\nTo request getTenants endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (Site Model Id).\n\n",
         "security": [
           {
             "BearerToken": []
@@ -1336,7 +1338,7 @@
         "parameters": [
           {
             "schema": {
-              "type": "string"
+              "type": "integer"
             },
             "in": "header",
             "name": "Authorization",
@@ -1378,7 +1380,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Response model for getInventoryItems can be viewed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/InventoryItem",
             "content": {
               "application/json": {
                 "schema": {
@@ -1436,7 +1438,7 @@
           }
         },
         "operationId": "get-api-partner-name-getinventoryitems",
-        "description": "GetInventoryItems is an endpoint that's related to all inventory items located in the facility. \n\nTo request getInventoryItems endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n\nResponse model for getInventoryItems can be viwed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/InventoryItem\n",
+        "description": "GetInventoryItems is an endpoint that's related to all inventory items located in the facility. \n\nTo request getInventoryItems endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (Site Model Id).\n\n\n",
         "security": [
           {
             "BearerToken": []
@@ -1445,7 +1447,7 @@
         "parameters": [
           {
             "schema": {
-              "type": "string"
+              "type": "integer"
             },
             "in": "header",
             "name": "Authorization",
@@ -1471,7 +1473,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Response model for getReservations can be viewed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Reservation",
             "content": {
               "application/json": {
                 "schema": {
@@ -1570,7 +1572,7 @@
           }
         },
         "operationId": "get-api-partner-name-getreservations",
-        "description": "GetReservations is an endpoint that's related to all reservations information belonging to the facility.\n\nTo request getReservations endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n\nResponse model for getReservations can be viwed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Reservation",
+        "description": "GetReservations is an endpoint that's related to all reservations information belonging to the facility.\n\nTo request getReservations endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (Site Model Id).\n",
         "security": [
           {
             "BearerToken": []
@@ -1579,7 +1581,7 @@
         "parameters": [
           {
             "schema": {
-              "type": "string"
+              "type": "integer"
             },
             "in": "header",
             "name": "Authorization",
@@ -1605,7 +1607,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Response model for getReservationDetails can be viewed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Reservation",
             "content": {
               "application/json": {
                 "schema": {
@@ -1712,7 +1714,7 @@
           }
         },
         "operationId": "get-api-partner-name-getreservationsdetails",
-        "description": "GetReservationDetails is an endpoint that's related to the detailed information of all reservations belonging to the facility. \n\nTo request getReservationDetail endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId and reservationId. \n\n- SiteId can be retrieved from getSites endpoint (SiteModelId). \n- ReservationId can be retrieved from getReservations endpoint (ReservationModelId).\n\nResponse model for getReservationDetails can be viwed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Reservation\n\nAND\n\nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/UnitReservation",
+        "description": "GetReservationDetails is an endpoint that's related to the detailed information of all reservations belonging to the facility. \n\nTo request getReservationDetail endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId and reservationId. \n\n- SiteId can be retrieved from getSites endpoint (Site Model Id). \n- ReservationId can be retrieved from getReservations endpoint (Reservation Model Id).\n\n\n",
         "security": [
           {
             "BearerToken": []
@@ -1721,7 +1723,7 @@
         "parameters": [
           {
             "schema": {
-              "type": "string"
+              "type": "integer"
             },
             "in": "header",
             "name": "Authorization",
@@ -1756,7 +1758,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Response model for getSpecialsForUnitType can be viewed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Special",
             "content": {
               "application/json": {
                 "schema": {
@@ -1952,7 +1954,7 @@
           }
         },
         "operationId": "get-api-partner-name-getspecialsforunittype",
-        "description": "GetSpecialsForUnitType is an endpoint that's related to all the specials created for each type of units belonging to the facility. \n\nTo request getSpecialsForUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId and unitTypeId. \n\n- SiteId can be retrieved from getSites endpoint (SiteModelId).\n- UnitTypeId can be retrieved from getUnits endpoint (UnitModelId).\n\n Response model for getSpecialsForUnitType can be viewed below: \n https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Special",
+        "description": "GetSpecialsForUnitType is an endpoint that's related to all the specials created for each type of units belonging to the facility. \n\nTo request getSpecialsForUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId and unitTypeId. \n\n- SiteId can be retrieved from getSites endpoint (Site Model Id).\n- UnitTypeId can be retrieved from getUnits endpoint (Unit Model Id).\n",
         "security": [
           {
             "BearerToken": []
