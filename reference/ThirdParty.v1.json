@@ -981,7 +981,7 @@
           }
         },
         "operationId": "get-api-partner-name-getunits",
-        "description": "GetUnits is an endpoint that responds to a collection of objects related to all units belonging to the facility whether they're being occupied or available.\n\nTTo request getUnits endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId). \n\nResponse model for getUnits can be viwed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Unit",
+        "description": "GetUnits is an endpoint that responds to a collection of objects related to all units belonging to the facility whether they're being occupied or available.\n\nTo request getUnits endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId). \n\nResponse model for getUnits can be viwed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Unit",
         "security": [
           {
             "BearerToken": []

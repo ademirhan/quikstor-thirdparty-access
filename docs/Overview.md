@@ -19,10 +19,3 @@ Provided below are web links to additional resources related to using the API.
 - XML Wikipedia Page: http://en.wikipedia.org/wiki/XML
 - REST Wikipedia Page: http://en.wikipedia.org/wiki/Representational_state_transfer
 
-
-# Overview 
-
-
-
-# Authentication
-
