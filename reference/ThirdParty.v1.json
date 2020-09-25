@@ -143,16 +143,20 @@
                             "type": "integer"
                           },
                           "streetAddress": {
-                            "type": "string"
+                            "type": "string",
+                            "pattern": "[-a-zA-Z0-9_.,#/ ]*"
                           },
                           "streetAddress2": {
-                            "type": "string"
+                            "type": "string",
+                            "pattern": "[-a-zA-Z0-9_.,#/ ]*"
                           },
                           "city": {
-                            "type": "string"
+                            "type": "string",
+                            "pattern": "[-a-zA-Z'.,_ ]*"
                           },
                           "zip": {
-                            "type": "string"
+                            "type": "string",
+                            "pattern": "[-a-zA-Z0-9/ ]*"
                           },
                           "stateId": {
                             "type": "integer"
@@ -881,7 +885,7 @@
           }
         },
         "operationId": "get-api-partner-name-getavailableunittypes",
-        "description": "GetAvailableUnitTypes is an endpoint are types of units that are available to be rented belonging to the facility. \n\nTo request getAvailableUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId). \n\n",
+        "description": "GetAvailableUnitTypes is an endpoint are types of units that are available to be rented belonging to the facility. \n\nTo request getAvailableUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId). \n\nResponse model for GetAvailableUnitTypes can be viewed:\n\n",
         "parameters": [
           {
             "schema": {
@@ -1487,9 +1491,6 @@
                       "unitReservationId": {
                         "type": "integer"
                       },
-                      "truckReservationId": {
-                        "type": "integer"
-                      },
                       "dateTime": {
                         "type": "string",
                         "format": "date-time"
@@ -1513,37 +1514,41 @@
                         "type": "integer"
                       },
                       "unitReservation": {
-                        "type": "object",
-                        "required": [
-                          "customerId",
-                          "leaseId",
-                          "hasMoveIn"
-                        ],
-                        "properties": {
-                          "customerId": {
-                            "type": "integer"
-                          },
-                          "leaseId": {
-                            "type": "integer"
-                          },
-                          "expiresAt": {
-                            "type": "string",
-                            "format": "date-time"
-                          },
-                          "rentAtMoveIn": {
-                            "type": "number"
-                          },
-                          "rentDeposit": {
-                            "type": "string"
-                          },
-                          "securityDeposit": {
-                            "type": "number"
-                          },
-                          "setupFee": {
-                            "type": "number"
-                          },
-                          "hasMoveIn": {
-                            "type": "boolean"
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "unitId": {
+                              "type": "integer"
+                            },
+                            "customerId": {
+                              "type": "integer"
+                            },
+                            "leaseId": {
+                              "type": "integer"
+                            },
+                            "expiresAt": {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "rentAtMoveIn": {
+                              "type": "number"
+                            },
+                            "rentDeposit": {
+                              "type": "number"
+                            },
+                            "securityDeposit": {
+                              "type": "number"
+                            },
+                            "setupFee": {
+                              "type": "number"
+                            },
+                            "hasMovedIn": {
+                              "type": "boolean"
+                            }
                           }
                         }
                       }
@@ -1556,8 +1561,7 @@
                       "notes",
                       "isEcomReservation",
                       "isActive",
-                      "isDeleted",
-                      "unitReservation"
+                      "isDeleted"
                     ]
                   }
                 }
@@ -2013,29 +2017,28 @@
       "Address": {
         "title": "Address",
         "type": "object",
+        "x-tags": [
+          "Models"
+        ],
         "properties": {
           "id": {
             "type": "integer"
           },
           "streetAddress": {
             "type": "string",
-            "pattern": "[-a-zA-Z0-9_.,# ]*",
-            "maxLength": 50
+            "pattern": "[-a-zA-Z0-9_.,# ]*"
           },
           "streetAddress2": {
             "type": "string",
-            "pattern": "[-a-zA-Z0-9_.,# ]*",
-            "maxLength": 50
+            "pattern": "[-a-zA-Z0-9_.,# ]*"
           },
           "city": {
             "type": "string",
-            "pattern": "[-a-zA-Z0-9_.,# ]*",
-            "maxLength": 20
+            "pattern": "[-a-zA-Z0-9_.,# ]*"
           },
           "zip": {
             "type": "string",
-            "pattern": "[-a-zA-Z0-9_.,# ]*",
-            "maxLength": 20
+            "pattern": "[-a-zA-Z0-9_.,# ]*"
           },
           "stateId": {
             "type": "integer"
@@ -2056,13 +2059,15 @@
             "type": "string"
           }
         },
-        "x-tags": [
-          "Models"
-        ]
+        "description": "Response model for getSites and getTenants request."
       },
       "Site": {
         "title": "Site",
         "type": "object",
+        "description": "Response model for units, unit types, available unit types, tenants, inventory items, reservations, reservation details",
+        "x-tags": [
+          "Models"
+        ],
         "properties": {
           "id": {
             "type": "integer"
@@ -2113,7 +2118,11 @@
             "type": "integer"
           },
           "paymentSchemeIncrement": {
-            "type": "integer"
+            "type": "integer",
+            "enum": [
+              "Months",
+              "Days"
+            ]
           },
           "paymentSchemeDaysInMonth": {
             "type": "integer"
@@ -2149,22 +2158,25 @@
             "type": "integer"
           },
           "bankName": {
-            "type": "string"
+            "type": "string",
+            "pattern": "-a-zA-Z0-9._\\'& ]*"
           },
           "bankAccountNumber": {
-            "type": "string"
+            "type": "string",
+            "pattern": "[0-9/\\\\-]*"
           },
           "bankAddressId": {
             "type": "string"
           },
           "delinquencyPolicy": {
-            "type": "integer"
+            "type": "integer",
+            "enum": [
+              "RELEASE_ON_PAYMENT = 1",
+              "CONTINUE_ON_PAYMENT",
+              "EVALUATE_ON_PAYMENT"
+            ]
           }
-        },
-        "description": "Response model for units, unit types, available unit types, tenants, inventory items, reservations, reservation details",
-        "x-tags": [
-          "Models"
-        ]
+        }
       },
       "UnitType": {
         "title": "UnitType",
@@ -2241,7 +2253,41 @@
             "type": "string"
           },
           "leaseAgreement": {
-            "type": "integer"
+            "type": "integer",
+            "enum": [
+              "LEASE_AGREEMENT = 1",
+              "AUTO_BILLING_AGREEMENT",
+              "RENT_CHANGE_LETTER",
+              "NSF_LETTER",
+              "FIRST_LATE_NOTICE",
+              "SECOND_LATE_NOTICE",
+              "THIRD_LATE_NOTICE",
+              "PRE_LIEN_NOTICE",
+              "LIEN_SALE_NOTICE",
+              "INSURANCE_CERTIFICATE",
+              "INSURANCE_PRE_CANCELLATION_NOTICE",
+              "INSURANCE_CANCELLATION_NOTICE",
+              "INVOICE",
+              "RESERVATION_RECEIPT",
+              "PAYMENT_RECEIPT",
+              "REFUND_RECEIPT",
+              "TRANSFER_RECEIPT",
+              "RETAIL_SALE_RECEIPT",
+              "MOVE_IN_RECEIPT",
+              "MOVE_OUT_RECEIPT",
+              "SKIP_LETTER",
+              "VACATE_TENANT_REPORT",
+              "RETAIL_SALE_RECEIPT_NON_TENANT",
+              "SECONDARY_LEASE_AGREEMENT",
+              "SECONDARY_INSURANCE_CERTIFICATE",
+              "TEANANT_COMMUNICATION",
+              "LINKED_INVOICE",
+              "CUSTOM1 =101",
+              "CUSTOM2",
+              "CUSTOM3",
+              "CUSTOM4",
+              "CUSTOM5"
+            ]
           },
           "insuranceCertificate": {
             "type": "integer",
@@ -2306,7 +2352,7 @@
         "x-tags": [
           "Models"
         ],
-        "description": "",
+        "description": "Response model for getSpecialsForUnitType request",
         "properties": {
           "id": {
             "type": "integer"
@@ -2416,6 +2462,9 @@
           "id": {
             "type": "integer"
           },
+          "unitId": {
+            "type": "integer"
+          },
           "customerId": {
             "type": "integer"
           },
@@ -2423,11 +2472,11 @@
             "type": "integer"
           },
           "expiresAt": {
-            "type": "string"
-          },
-          "rentAtMoveIn": {
             "type": "string",
             "format": "date-time"
+          },
+          "rentAtMoveIn": {
+            "type": "number"
           },
           "rentDeposit": {
             "type": "number"
@@ -2438,13 +2487,12 @@
           "setupFee": {
             "type": "number"
           },
-          "hasMoveIn": {
+          "hasMovedIn": {
             "type": "boolean"
           }
         },
         "required": [
-          "id",
-          "customerId"
+          "id"
         ]
       },
       "PreferredReporting": {
@@ -2506,7 +2554,8 @@
         },
         "x-tags": [
           "Models"
-        ]
+        ],
+        "description": "Response model for getTenants request."
       },
       "Tenant": {
         "title": "Tenant",
@@ -2640,7 +2689,8 @@
         },
         "x-tags": [
           "Models"
-        ]
+        ],
+        "description": "Response model for getTenant request"
       },
       "Language": {
         "title": "Language",
@@ -2661,7 +2711,8 @@
         },
         "x-tags": [
           "Models"
-        ]
+        ],
+        "description": "Response model for the getSites request."
       },
       "Picture": {
         "title": "Picture",
@@ -2679,7 +2730,8 @@
         },
         "x-tags": [
           "models"
-        ]
+        ],
+        "description": "Response model for getTenants request."
       },
       "Feature": {
         "title": "Feature",
@@ -2701,7 +2753,8 @@
         },
         "x-tags": [
           "Models"
-        ]
+        ],
+        "description": "Response model for getUnits, getUnitTypes and getAvailableUnitType request."
       },
       "InventoryItem": {
         "title": "InventoryItem",
@@ -2740,7 +2793,8 @@
         },
         "x-tags": [
           "Models"
-        ]
+        ],
+        "description": "Response model for getInventoryItems request"
       },
       "Reservation": {
         "title": "Reservation",
@@ -2786,7 +2840,8 @@
           "receiptId": {
             "type": "integer"
           }
-        }
+        },
+        "description": "Response model for getReservations request"
       },
       "Units": {
         "title": "Units",
@@ -2904,7 +2959,8 @@
           "duration": {
             "type": "integer"
           }
-        }
+        },
+        "description": "Response model for getSpecialsForUnitType request"
       }
     },
     "securitySchemes": {
