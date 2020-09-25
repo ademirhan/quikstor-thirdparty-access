@@ -16,3 +16,12 @@ Provided below are web links to additional resources related to using the API.
 - JSON.NET: http://www.newtonsoft.com/json (also available as a NuGet in Visual Studio)
 - REST Wikipedia Page: http://en.wikipedia.org/wiki/Representational_state_transfer
 
+
+# Overview
+
+Code | Description
+---------|----------
+ 200 | OK or Success.  
+ 400 | Bad Request. Usually the result of an action with a bad result.
+ 401 | Unathorized. The authorization token is invalid or expired, or the authorization information for QuikStor is incorrect.
+ 500 | Internal Server Error. 
