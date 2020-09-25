@@ -885,7 +885,7 @@
           }
         },
         "operationId": "get-api-partner-name-getavailableunittypes",
-        "description": "GetAvailableUnitTypes is an endpoint are types of units that are available to be rented belonging to the facility. \n\nTo request getAvailableUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId). \n\nResponse model for GetAvailableUnitTypes can be viewed:\n\n",
+        "description": "GetAvailableUnitTypes is an endpoint are types of units that are available to be rented belonging to the facility. \n\nTo request getAvailableUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId). \n\nResponse model for GetAvailableUnitTypes can be viewed below:\nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/UnitType\n",
         "parameters": [
           {
             "schema": {
@@ -1327,7 +1327,7 @@
           }
         },
         "operationId": "get-api-partner-name-gettenants",
-        "description": "GetTenants is an endpoint that's related to all tenant's information belonging to a unit in the facility. You'd be able to filter tenants based on the move-in date by passing fromDate or toDate parameters.\n\nTo request getTenants endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n",
+        "description": "GetTenants is an endpoint that's related to all tenant's information belonging to a unit in the facility. You'd be able to filter tenants based on the move-in date by passing fromDate or toDate parameters.\n\nTo request getTenants endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n\nResponse model for getTenants can be viwed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Tenants",
         "security": [
           {
             "BearerToken": []
@@ -1952,7 +1952,7 @@
           }
         },
         "operationId": "get-api-partner-name-getspecialsforunittype",
-        "description": "GetSpecialsForUnitType is an endpoint that's related to all the specials created for each type of units belonging to the facility. \n\nTo request getSpecialsForUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId and unitTypeId. \n\n- SiteId can be retrieved from getSites endpoint (SiteModelId).\n- UnitTypeId can be retrieved from getUnits endpoint (UnitModelId).\n\n ",
+        "description": "GetSpecialsForUnitType is an endpoint that's related to all the specials created for each type of units belonging to the facility. \n\nTo request getSpecialsForUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId and unitTypeId. \n\n- SiteId can be retrieved from getSites endpoint (SiteModelId).\n- UnitTypeId can be retrieved from getUnits endpoint (UnitModelId).\n\n Response model for getSpecialsForUnitType can be viewed below: \n https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Special",
         "security": [
           {
             "BearerToken": []
