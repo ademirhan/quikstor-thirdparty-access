@@ -1992,7 +1992,7 @@
     },
     "/api/<partner-name>/postcreatelead": {
       "post": {
-        "summary": "Post Create Lead",
+        "summary": "PostCreateLead",
         "operationId": "post-createlead",
         "responses": {
           "200": {
@@ -2074,7 +2074,10 @@
             }
           }
         },
-        "description": ""
+        "description": "",
+        "tags": [
+          "Lead Endpoints"
+        ]
       },
       "parameters": []
     }
@@ -3089,6 +3092,9 @@
     },
     {
       "name": "Login"
+    },
+    {
+      "name": "Lead Endpoints"
     }
   ]
 }
