@@ -7,8 +7,7 @@ QuikStor API is a Hybrid between REST (Representational State Transfer) and cust
 Before getting started with the API there are a few things you as the developer should be familiar with.
 
 - JavaScript Object Notation (JSON): All returned data objects are in this form by default.
-: All returned data objects (except the AuthToken) can be in
-this form if requested from the API.
+: All returned data objects (except the AuthToken) can be in this form if requested from the API.
 - OAuth 2.0: API authorization is handled by OAuth validation and tokens. 
 
 Provided below are web links to additional resources related to using the API.
