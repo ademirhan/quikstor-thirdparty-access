@@ -1990,9 +1990,9 @@
         ]
       }
     },
-    "/createlead": {
+    "/api/<partner-name>/postcreatelead": {
       "post": {
-        "summary": "",
+        "summary": "Post Create Lead",
         "operationId": "post-createlead",
         "responses": {
           "200": {
@@ -2075,7 +2075,8 @@
           }
         },
         "description": ""
-      }
+      },
+      "parameters": []
     }
   },
   "components": {
