@@ -1323,7 +1323,7 @@
           }
         },
         "operationId": "get-api-partner-name-gettenants",
-        "description": "GetTenants is an endpoint that responds to a collection of objects related to all tenant's information belonging to a unit in the facility. The list of tenants are retrieved bbased on the identifier (id) parameters that are being passed through siteId. You'd be able to filter tenants based on the move-in date by passing fromDate or toDate parameters which can be viewed at:\n\nTo request getTenants endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId, fromDate, and toDate. SiteId can be retrieved from getSites endpoint (SiteModelId).\n",
+        "description": "GetTenants is an endpoint that's related to all tenant's information belonging to a unit in the facility. You'd be able to filter tenants based on the move-in date by passing fromDate or toDate parameters.\n\nTo request getTenants endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n",
         "security": [
           {
             "BearerToken": []
@@ -1432,7 +1432,7 @@
           }
         },
         "operationId": "get-api-partner-name-getinventoryitems",
-        "description": "GetInventoryItems is an endpoint that responds to a collection of objects related to all inventory items located in the facility. \n\nTo request getInventoryItems endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n",
+        "description": "GetInventoryItems is an endpoint that's related to all inventory items located in the facility. \n\nTo request getInventoryItems endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n",
         "security": [
           {
             "BearerToken": []
@@ -1566,7 +1566,7 @@
           }
         },
         "operationId": "get-api-partner-name-getreservations",
-        "description": "GetReservations is an endpoint that reponds to a collection of objects related to all reservations information belonging to the facility.\n\nTo request getReservations endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n",
+        "description": "GetReservations is an endpoint that's related to all reservations information belonging to the facility.\n\nTo request getReservations endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (SiteModelId).\n",
         "security": [
           {
             "BearerToken": []
@@ -1948,7 +1948,7 @@
           }
         },
         "operationId": "get-api-partner-name-getspecialsforunittype",
-        "description": "GetSpecialsForUnitType is an endpoint that reponds to a collection of objects related to all the specials created for each type of units belonging to the facility. \n\nTo request getSpecialsForUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId and unitTypeId. \n\n- SiteId can be retrieved from getSites endpoint (SiteModelId).\n- UnitTypeId can be retrieved from getUnits endpoint (UnitModelId).\n\n ",
+        "description": "GetSpecialsForUnitType is an endpoint that's related to all the specials created for each type of units belonging to the facility. \n\nTo request getSpecialsForUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId and unitTypeId. \n\n- SiteId can be retrieved from getSites endpoint (SiteModelId).\n- UnitTypeId can be retrieved from getUnits endpoint (UnitModelId).\n\n ",
         "security": [
           {
             "BearerToken": []
