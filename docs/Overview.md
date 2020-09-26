@@ -17,7 +17,7 @@ Provided below are web links to additional resources related to using the API.
 - REST Wikipedia Page: http://en.wikipedia.org/wiki/Representational_state_transfer
 
 
-# Overview
+# Standard API HTTP Return Codes
 
 Code | Description
 ---------|----------
