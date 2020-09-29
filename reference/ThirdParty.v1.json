@@ -2055,18 +2055,6 @@
                     },
                     "unitTypeIds": {
                       "type": "string"
-                    },
-                    "notes": {
-                      "type": "string"
-                    },
-                    "messages": {
-                      "type": "string"
-                    },
-                    "tenant": {
-                      "type": "string"
-                    },
-                    "unitId": {
-                      "type": "string"
                     }
                   }
                 }
@@ -2077,7 +2065,134 @@
         "description": "",
         "tags": [
           "Lead Endpoints"
-        ]
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "siteId": {
+                    "type": "string"
+                  },
+                  "sourceId": {
+                    "type": "string"
+                  },
+                  "probability": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "type": "string"
+                  },
+                  "holdUntil": {
+                    "type": "string"
+                  },
+                  "created": {
+                    "type": "string"
+                  },
+                  "updated": {
+                    "type": "string"
+                  },
+                  "createdById": {
+                    "type": "string"
+                  },
+                  "updatedById": {
+                    "type": "string"
+                  },
+                  "createdBy": {
+                    "type": "string"
+                  },
+                  "updateBy": {
+                    "type": "string"
+                  },
+                  "firstName": {
+                    "type": "string"
+                  },
+                  "lastName": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "phoneNumber": {
+                    "type": "string"
+                  },
+                  "source": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "siteId": {
+                        "type": "string"
+                      },
+                      "Name": {
+                        "type": "string"
+                      },
+                      "displayInChart": {
+                        "type": "string"
+                      },
+                      "displayOrder": {
+                        "type": "string"
+                      },
+                      "isActive": {
+                        "type": "string"
+                      },
+                      "isDeleted": {
+                        "type": "string"
+                      },
+                      "costs": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string"
+                            },
+                            "tenantSourceId": {
+                              "type": "string"
+                            },
+                            "year": {
+                              "type": "string"
+                            },
+                            "month": {
+                              "type": "string"
+                            },
+                            "amount": {
+                              "type": "string"
+                            },
+                            "created": {
+                              "type": "string"
+                            },
+                            "updated": {
+                              "type": "string"
+                            },
+                            "tenantSource": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "unitTypeId": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          },
+          "description": ""
+        }
       },
       "parameters": []
     }
