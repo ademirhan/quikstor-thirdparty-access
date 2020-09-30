@@ -603,7 +603,7 @@
           },
           {
             "schema": {
-              "type": "integer"
+              "type": "string"
             },
             "in": "header",
             "description": "Header values to be bearer token in a format \"bearer access-token\"",
@@ -890,7 +890,7 @@
           },
           {
             "schema": {
-              "type": "integer"
+              "type": "string"
             },
             "in": "header",
             "name": "Authorization",
@@ -992,7 +992,7 @@
         "parameters": [
           {
             "schema": {
-              "type": "integer"
+              "type": "string"
             },
             "in": "header",
             "name": "Authorization",
@@ -1338,7 +1338,7 @@
         "parameters": [
           {
             "schema": {
-              "type": "integer"
+              "type": "string"
             },
             "in": "header",
             "name": "Authorization",
@@ -1447,7 +1447,7 @@
         "parameters": [
           {
             "schema": {
-              "type": "integer"
+              "type": "string"
             },
             "in": "header",
             "name": "Authorization",
@@ -1581,7 +1581,7 @@
         "parameters": [
           {
             "schema": {
-              "type": "integer"
+              "type": "string"
             },
             "in": "header",
             "name": "Authorization",
@@ -1723,7 +1723,7 @@
         "parameters": [
           {
             "schema": {
-              "type": "integer"
+              "type": "string"
             },
             "in": "header",
             "name": "Authorization",
@@ -1963,7 +1963,7 @@
         "parameters": [
           {
             "schema": {
-              "type": "integer"
+              "type": "string"
             },
             "in": "header",
             "name": "Authorization",
