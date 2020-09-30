@@ -2195,6 +2195,48 @@
         }
       },
       "parameters": []
+    },
+    "/api/<partner-name>/postcreatereservations": {
+      "post": {
+        "summary": "Post Create Reservations",
+        "operationId": "post-api-partner-name-postcreatereservations",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Reservation Endpoints"
+        ]
+      }
+    },
+    "/api/<partner-name>/postmovein": {
+      "post": {
+        "summary": "Post Move In",
+        "operationId": "post-api-partner-name-postmovein",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Unit Actions Endpoints"
+        ]
+      }
+    },
+    "/api/<partner-name>/postmoveout": {
+      "post": {
+        "summary": "Post Move Out",
+        "operationId": "post-api-partner-name-postmoveout",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Unit Actions Endpoints"
+        ]
+      }
     }
   },
   "components": {
@@ -3210,6 +3252,9 @@
     },
     {
       "name": "Lead Endpoints"
+    },
+    {
+      "name": "Unit Actions Endpoints"
     }
   ]
 }
