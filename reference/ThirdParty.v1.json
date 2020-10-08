@@ -387,7 +387,7 @@
       },
       "parameters": []
     },
-    "/api/<partner-name>/getunittypes": {
+    "quikstor_online/api/<partner-name>/getunittypes": {
       "get": {
         "summary": "GetUnitTypes",
         "responses": {
@@ -611,9 +611,10 @@
             "required": true
           }
         ]
-      }
+      },
+      "parameters": []
     },
-    "/api/<partner-name>/getavailableunittypes": {
+    "quikstor_online/api/<partner-name>/getavailableunittypes": {
       "get": {
         "summary": "GetAvailableUnitTypes",
         "responses": {
@@ -901,9 +902,10 @@
         "tags": [
           "Unit & Unit Type Endpoints"
         ]
-      }
+      },
+      "parameters": []
     },
-    "/api/<partner-name>/getunits": {
+    "quikstor_online/api/<partner-name>/getunits": {
       "get": {
         "summary": "GetUnits",
         "tags": [
@@ -1008,7 +1010,8 @@
             "required": true
           }
         ]
-      }
+      },
+      "parameters": []
     },
     "/api/<partner-name>/gettenants": {
       "get": {
@@ -1372,7 +1375,7 @@
         ]
       }
     },
-    "/api/<partner-name>/getinventoryitems": {
+    "quikstor_online/api/<partner-name>/getinventoryitems": {
       "get": {
         "summary": "GetInventoryItems",
         "tags": [
@@ -1463,7 +1466,8 @@
             "required": true
           }
         ]
-      }
+      },
+      "parameters": []
     },
     "/api/<partner-name>/getreservations": {
       "get": {
