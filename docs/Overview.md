@@ -23,5 +23,5 @@ Code | Description
 ---------|----------
  200 | OK or Success.  
  400 | Bad Request. This indicates that the request could not be understood by the server. 
- 401 | Unathorized. The authorization token is invalid or expired, and that the requested resource requires authentication.
+ 401 | Unathorized. The authorization token is invalid or expired, and that the requested resource requires authentication or a new token for that siteId by loging out and logging back in.
  500 | Internal Server Error. This indicates that the error has occured on the server. You may need to contact QuikStor administration to continue by sending an email to support@quikstor.com or call us at (818)922-2000. You can also contact us by visiting: https://quikstor.com/contact-support.
