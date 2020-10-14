@@ -590,7 +590,7 @@
             "BearerToken": []
           }
         ],
-        "description": "GetUnitTypes is an endpoint is related to types of units in a facility, such as the type of storage, width, length and height of the unit.\n\nTo request getUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (Site Model Id).\n",
+        "description": "GetAvailableUnitTypes is an endpoint related to types of units that are vacant and available to be rented by the facility. \n\nTo request getAvailableUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. \n\n\n",
         "parameters": [
           {
             "schema": {
@@ -598,7 +598,7 @@
             },
             "in": "query",
             "name": "siteId",
-            "description": "",
+            "description": "SiteId can be retrieved from getSites endpoint (Site Model Id). ",
             "required": true
           },
           {
@@ -879,7 +879,7 @@
           }
         },
         "operationId": "get-api-partner-name-getavailableunittypes",
-        "description": "GetAvailableUnitTypes is an endpoint are types of units that are available to be rented belonging to the facility. \n\nTo request getAvailableUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (Site Model Id). \n\n\n",
+        "description": "GetAvailableUnitTypes is an endpoint related to types of units that are vacant and available to be rented by the facility. \n\nTo request getAvailableUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. \n\n\n",
         "parameters": [
           {
             "schema": {
@@ -887,7 +887,8 @@
             },
             "in": "query",
             "name": "siteId",
-            "required": true
+            "required": true,
+            "description": "SiteId can be retrieved from getSites endpoint (Site Model Id). "
           },
           {
             "schema": {
@@ -985,7 +986,7 @@
           }
         },
         "operationId": "get-api-partner-name-getunits",
-        "description": "GetUnits is an endpoint that responds to a collection of objects related to all units belonging to the facility whether they're being occupied or available.\n\nTo request getUnits endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (Site Model Id). \n\n",
+        "description": "GetUnits is an endpoint that responds to a collection of objects related to all units belonging to the facility whether they're being occupied or available.\n\nTo request getUnits endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. \n\n",
         "security": [
           {
             "BearerToken": []
@@ -1007,7 +1008,8 @@
             },
             "in": "query",
             "name": "siteId",
-            "required": true
+            "required": true,
+            "description": "SiteId can be retrieved from getSites endpoint (Site Model Id). "
           }
         ]
       },
@@ -1332,7 +1334,7 @@
           }
         },
         "operationId": "get-api-partner-name-gettenants",
-        "description": "GetTenants is an endpoint that's related to all tenant's information belonging to a unit in the facility. You'd be able to filter tenants based on the move-in date by passing fromDate or toDate parameters.\n\nTo request getTenants endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (Site Model Id).\n\n",
+        "description": "GetTenants is an endpoint related to all tenant's information belonging to a unit in the facility. \n\nTo request getTenants endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. \n",
         "security": [
           {
             "BearerToken": []
@@ -1354,7 +1356,8 @@
             },
             "in": "query",
             "name": "siteId",
-            "required": true
+            "required": true,
+            "description": "SiteId can be retrieved from getSites endpoint (Site Model Id)."
           },
           {
             "schema": {
@@ -1362,7 +1365,8 @@
               "format": "date-time"
             },
             "in": "query",
-            "name": "fromDate"
+            "name": "fromDate",
+            "description": "To filter tenants based on the move-in date by passing fromDate parameters."
           },
           {
             "schema": {
@@ -1370,7 +1374,8 @@
               "format": "date-time"
             },
             "in": "query",
-            "name": "toDate"
+            "name": "toDate",
+            "description": "To filter tenants based on the move-in date by passing toDate parameters."
           }
         ]
       }
@@ -1441,7 +1446,7 @@
           }
         },
         "operationId": "get-api-partner-name-getinventoryitems",
-        "description": "GetInventoryItems is an endpoint that's related to all inventory items located in the facility. \n\nTo request getInventoryItems endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (Site Model Id).\n\n\n",
+        "description": "GetInventoryItems is an endpoint related to all inventory items located in the facility. \n\nTo request getInventoryItems endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. \n\n\n",
         "security": [
           {
             "BearerToken": []
@@ -1463,7 +1468,8 @@
             },
             "in": "query",
             "name": "siteId",
-            "required": true
+            "required": true,
+            "description": "SiteId can be retrieved from getSites endpoint (Site Model Id)."
           }
         ]
       },
@@ -1576,7 +1582,7 @@
           }
         },
         "operationId": "get-api-partner-name-getreservations",
-        "description": "GetReservations is an endpoint that's related to all reservations information belonging to the facility.\n\nTo request getReservations endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId. SiteId can be retrieved from getSites endpoint (Site Model Id).\n",
+        "description": "GetReservations is an endpoint that's related to all reservations information belonging to the facility.\n\nTo request getReservations endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId.\n",
         "security": [
           {
             "BearerToken": []
@@ -1598,7 +1604,8 @@
             },
             "in": "query",
             "name": "siteId",
-            "required": true
+            "required": true,
+            "description": "SiteId can be retrieved from getSites endpoint (Site Model Id)."
           }
         ]
       }
@@ -1718,7 +1725,7 @@
           }
         },
         "operationId": "get-api-partner-name-getreservationsdetails",
-        "description": "GetReservationDetails is an endpoint that's related to the detailed information of all reservations belonging to the facility. \n\nTo request getReservationDetail endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId and reservationId. \n\n- SiteId can be retrieved from getSites endpoint (Site Model Id). \n- ReservationId can be retrieved from getReservations endpoint (Reservation Model Id).\n\n\n",
+        "description": "GetReservationDetails is an endpoint that's related to the detailed information of all reservations belonging to the facility. \n\nTo request getReservationDetail endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId and reservationId. \n\n\n\n",
         "security": [
           {
             "BearerToken": []
@@ -1740,7 +1747,8 @@
             },
             "in": "query",
             "name": "siteId",
-            "required": true
+            "required": true,
+            "description": "SiteId can be retrieved from getSites endpoint (Site Model Id)."
           },
           {
             "schema": {
@@ -1748,7 +1756,8 @@
             },
             "in": "query",
             "name": "reservationId",
-            "required": true
+            "required": true,
+            "description": "ReservationId can be retrieved from getReservations endpoint (Reservation Model Id)."
           }
         ]
       },
@@ -1958,7 +1967,7 @@
           }
         },
         "operationId": "get-api-partner-name-getspecialsforunittype",
-        "description": "GetSpecialsForUnitType is an endpoint that's related to all the specials created for each type of units belonging to the facility. \n\nTo request getSpecialsForUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId and unitTypeId. \n\n- SiteId can be retrieved from getSites endpoint (Site Model Id).\n- UnitTypeId can be retrieved from getUnits endpoint (Unit Model Id).\n",
+        "description": "GetSpecialsForUnitType is an endpoint that's related to all the specials created for each type of units belonging to the facility. \n\nTo request getSpecialsForUnitType endpoint, you need to pass the 'id' of the site you are requesting through a query parameter called siteId and unitTypeId. \n\n",
         "security": [
           {
             "BearerToken": []
@@ -1980,7 +1989,7 @@
             },
             "in": "query",
             "name": "siteId",
-            "description": "",
+            "description": "SiteId can be retrieved from getSites endpoint (Site Model Id).",
             "required": true
           },
           {
@@ -1989,7 +1998,8 @@
             },
             "in": "query",
             "name": "unitTypeId",
-            "required": true
+            "required": true,
+            "description": "UnitTypeId can be retrieved from getUnits endpoint (Unit Model Id)."
           }
         ]
       }
