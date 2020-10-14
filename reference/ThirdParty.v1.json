@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "http://api-test.quikstor.com",
+      "url": "http://api-test.quikstor.com/quikstor_online",
       "description": "api-test"
     }
   ],
