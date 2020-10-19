@@ -2004,7 +2004,7 @@
         ]
       }
     },
-    "/api/<partner-name>/postcreatelead": {
+    "/api/<partner-name>/createlead": {
       "post": {
         "summary": "PostCreateLead",
         "operationId": "post-createlead",
@@ -2076,7 +2076,7 @@
             }
           }
         },
-        "description": "PostCreateLead is a response to Lead data request for any upcoming tenant interested in possibly renting with the facility in the future. ",
+        "description": "CreateLead is a response to Lead data request for any upcoming tenant interested in possibly renting with the facility in the future. ",
         "tags": [
           "Lead Endpoints"
         ],
@@ -2210,7 +2210,7 @@
       },
       "parameters": []
     },
-    "/api/<partner-name>/postmovein": {
+    "/api/<partner-name>/movein": {
       "post": {
         "summary": "Post Move In",
         "operationId": "post-api-partner-name-postmovein",
@@ -2319,9 +2319,10 @@
           }
         },
         "description": "PostMoveIn is a response to "
-      }
+      },
+      "parameters": []
     },
-    "/api/<partner-name>/postmoveout": {
+    "/api/<partner-name>/moveout": {
       "post": {
         "summary": "Post Move Out",
         "operationId": "post-api-partner-name-postmoveout",
@@ -2604,7 +2605,8 @@
           }
         },
         "description": ""
-      }
+      },
+      "parameters": []
     }
   },
   "components": {
