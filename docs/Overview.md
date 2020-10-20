@@ -1,11 +1,17 @@
 # QuikStor Third-Party API Documentation
 
-The QuikStor API model will allow vendors to integrate QuikStor Cloud Application with any third-party self storage property management system. The API documentation gives you access to all supported functions of our service. The simple web requests over HTTP protocols (GET, POST and PUT methods) encoded in JSON formatted data allows us to provide access to the system accross multiple platform and devices.
+The purpose of this document is to illustrate the available integration points and processess for managing QuikStor connected third-party self storage management products via the available Application Programming interface ("API") model. This API documentation gives you access to directly integrate the activation and management functions of our service via third-party software application.  
 
-QuikStor API is a Hybrid between REST (Representational State Transfer) and customized API based cloud service for requesting data and sending data to our QuikStor database. 
+QuikStor API is a Hybrid between REST (Representational State Transfer) and customized API based cloud service that requests data and sends data to our QuikStor database using simple web requests over HTTPS protocols (GET, POST and PUT methods) encoded in JSON formatted data allows us to provide access to the system accross multiple platform and devices. 
+
+#Overview
 
 Before getting started with the API there are a few things you as the developer should be familiar with.
 
+- HTTPS 
+- HTTP GET
+- HTTP POST
+- Authentication 
 - JavaScript Object Notation (JSON): All returned data objects are in this form by default.
 : All returned data objects (except the AuthToken) can be in this form if requested from the API.
 - OAuth 2.0: API authorization is handled by OAuth validation and tokens. 
