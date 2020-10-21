@@ -8,7 +8,7 @@ QuikStor API is a Hybrid between REST (Representational State Transfer) and cust
 
 Before getting started with the API there are a few things you as the developer should be familiar with.
 
-- # HTTPS 
+# HTTPS 
 - HTTP GET
 - HTTP POST
 - Authentication 
