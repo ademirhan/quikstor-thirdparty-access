@@ -1,6 +1,6 @@
 # Authentication
 
-QuikStor use a standards- compliant OAuth 2.0 (https://oauth.net/2/) authorization server. Our implementation also allows users to manage their own connections.
+QuikStor use a standards-compliant OAuth 2.0 (https://oauth.net/2/) authorization server. Our implementation also allows users to manage their own connections.
 
 If you are new to OAuth, you can read more at http://oauth.net. 
 
