@@ -8,11 +8,16 @@ QuikStor API is a Hybrid between REST (Representational State Transfer) and cust
 
 Before getting started with the API there are a few things you as the developer should be familiar with.
 
-######  HTTPS 
-- HTTP GET
-- HTTP POST
-- Authentication 
-- JavaScript Object Notation (JSON): All returned data objects are in this form by default.
+#### HTTPS 
+All web API requests must use an HTTPS connection. All usecured requests received by the API will receive an error response.
+
+#### HTTP GET
+#### HTTP POST
+All requests to the web API must use the HTTP POST method. All information passed to the server through HTTP GET and DELETE methods are inherently insecure as browsers and mobile devices may cache request URLs.  While this breaks RESTful API conventions, it is necessary to meet the security requirements of the API.
+
+#### Authentication 
+#### JavaScript Object Notation (JSON)
+All returned data objects are in this form by default.
 : All returned data objects (except the AuthToken) can be in this form if requested from the API.
 - OAuth 2.0: API authorization is handled by OAuth validation and tokens. 
 
