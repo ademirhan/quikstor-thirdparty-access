@@ -4,25 +4,23 @@ The purpose of this document is to illustrate the available integration points a
 
 QuikStor API is a Hybrid between REST (Representational State Transfer) and customized API based cloud service that requests data and sends data to our QuikStor database using simple web requests over HTTPS protocols (GET, POST and PUT methods) encoded in JSON formatted data allows us to provide access to the system accross multiple platform and devices. 
 
-#Overview
-
+#### Overview
 Before getting started with the API there are a few things you as the developer should be familiar with.
 
 #### HTTPS 
 All web API requests must use an HTTPS connection. All usecured requests received by the API will receive an error response.
 
-#### HTTP GET
 #### HTTP POST
 All requests to the web API must use the HTTP POST method. All information passed to the server through HTTP GET and DELETE methods are inherently insecure as browsers and mobile devices may cache request URLs.  While this breaks RESTful API conventions, it is necessary to meet the security requirements of the API.
 
 #### Authentication 
+All requests made to the API must supply an authentication token using the OAuth 2.0 API authorization, which are being handled by OAuth validation and tokens. To receive an API token, a platform must successfully authenticate with the API using the Authenticate API method. 
+
 #### JavaScript Object Notation (JSON)
 All returned data objects are in this form by default.
 : All returned data objects (except the AuthToken) can be in this form if requested from the API.
-- OAuth 2.0: API authorization is handled by OAuth validation and tokens. 
 
 Provided below are web links to additional resources related to using the API.
-
 - JSON Overview: http://www.json.org
 - JSON.NET: http://www.newtonsoft.com/json (also available as a NuGet in Visual Studio)
 - REST Wikipedia Page: http://en.wikipedia.org/wiki/Representational_state_transfer
