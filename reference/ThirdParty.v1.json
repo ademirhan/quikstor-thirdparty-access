@@ -2076,7 +2076,7 @@
             }
           }
         },
-        "description": "CreateLead is a response to Lead data request for any upcoming tenant interested in possibly renting with the facility in the future. ",
+        "description": "CreateLead POST endpoint is used to request data from the server to identify tenants intersted and reserving a unit at that facility. ",
         "tags": [
           "Lead Endpoints"
         ],
@@ -2318,7 +2318,7 @@
             }
           }
         },
-        "description": "PostMoveIn is a response to "
+        "description": "The MoveIn POST endpoint is used to request data from ther server to identify all tenants moving into the facility. "
       },
       "parameters": []
     },

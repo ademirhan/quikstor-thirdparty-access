@@ -16,6 +16,8 @@ All requests to the web API must use the HTTP POST method. All information passe
 #### Authentication 
 All requests made to the API must supply an authentication token using the OAuth 2.0 API authorization, which are being handled by OAuth validation and tokens. To receive an API token, a platform must successfully authenticate with the API using the Authenticate API method. 
 
+OAuth 2.0 API authorization authenticates an API license and returns an API token if successful.
+
 #### JavaScript Object Notation (JSON)
 All returned data objects are in this form by default.
 : All returned data objects (except the AuthToken) can be in this form if requested from the API.
