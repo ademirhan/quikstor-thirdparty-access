@@ -11,13 +11,19 @@ To make calls from our API you will need an access token. To get an access token
 
 To begin, you will need to send the user to the authorization endpoint. Here’s an example request:
 
+username=email@quikstor.com&password=typepassword&grant_type=password
 
-
-```json http
 {
-  "method": "POST",
-  "url": "http://api-test.quikstor.com/quikstor_online"
+  "title": "Authentication",
+  "nested": {
+    "id": 7,
+    "siteId": true,
+    "userId": Array[3][
+      "list of",
+      "fake strings",
+      "and fake keys"
+    ], 
+    "token:: 0
+  }
 }
-```
-
 

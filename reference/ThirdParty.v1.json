@@ -2006,11 +2006,11 @@
     },
     "/api/<partner-name>/createlead": {
       "post": {
-        "summary": "PostCreateLead",
+        "summary": "CreateLead",
         "operationId": "post-createlead",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Response model for createLead can be viewed below:",
             "content": {
               "application/json": {
                 "schema": {
@@ -2205,8 +2205,31 @@
               }
             }
           },
-          "description": ""
-        }
+          "description": "Request model for createLead can be viewed below:\nhttps://"
+        },
+        "security": [
+          {
+            "BearerToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "Header values to be bearer token in a format \"bearer access-token\""
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "siteId",
+            "description": "SiteId can be retrieved from getSites endpoint (Site Model Id)."
+          }
+        ]
       },
       "parameters": []
     },
@@ -2318,7 +2341,22 @@
             }
           }
         },
-        "description": "The MoveIn POST endpoint is used to request data from ther server to identify all tenants moving into the facility. "
+        "description": "The MoveIn POST endpoint is used to request data from ther server to identify all tenants moving into the facility. ",
+        "security": [
+          {
+            "BearerToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "description": "Header values to be bearer token in a format \"bearer access-token\"",
+            "name": "Authorization"
+          }
+        ]
       },
       "parameters": []
     },
@@ -2604,7 +2642,22 @@
             }
           }
         },
-        "description": ""
+        "description": "",
+        "security": [
+          {
+            "BearerToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "description": "Header values to be bearer token in a format \"bearer access-token\"",
+            "name": "Authorization"
+          }
+        ]
       },
       "parameters": []
     }
