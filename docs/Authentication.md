@@ -13,6 +13,7 @@ To begin, you will need to send the user to the authorization endpoint. Here’s
 
 username=email@quikstor.com&password=typepassword&grant_type=password
 
+```json
 {
   "title": "Authentication",
   "nested": {
@@ -26,4 +27,7 @@ username=email@quikstor.com&password=typepassword&grant_type=password
     "token:: 0
   }
 }
+```
+
+
 
