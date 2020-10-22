@@ -11,12 +11,12 @@ To make calls from our API you will need an access token. To get an access token
 
 To begin, you will need to send the user to the authorization endpoint. Here’s an example request:
 
-Request URL: https://cloud.quikstor.com/Login
+
 
 ```json http
 {
-  "method": "get",
-  "url": "https://cloud.quikstor.com/Login"
+  "method": "POST",
+  "url": "http://api-test.quikstor.com/quikstor_online"
 }
 ```
 
