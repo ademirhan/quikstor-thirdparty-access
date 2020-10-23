@@ -2087,31 +2087,43 @@
                 "type": "object",
                 "properties": {
                   "id": {
-                    "type": "string"
+                    "type": "integer"
                   },
                   "siteId": {
-                    "type": "string"
+                    "type": "integer"
                   },
                   "sourceId": {
-                    "type": "string"
+                    "type": "integer"
                   },
                   "probability": {
-                    "type": "string"
+                    "type": "number",
+                    "enum": [
+                      "Hot = 1",
+                      "Warm",
+                      "Cold"
+                    ]
                   },
                   "status": {
-                    "type": "string"
+                    "type": "number",
+                    "enum": [
+                      "New = 1",
+                      "Attempted"
+                    ]
                   },
                   "holdUntil": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "date-time"
                   },
                   "created": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "date-time"
                   },
                   "updated": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "date-time"
                   },
                   "createdById": {
-                    "type": "string"
+                    "type": "integer"
                   },
                   "updatedById": {
                     "type": "string"
@@ -2138,22 +2150,22 @@
                     "type": "object",
                     "properties": {
                       "id": {
-                        "type": "string"
+                        "type": "integer"
                       },
                       "siteId": {
-                        "type": "string"
+                        "type": "integer"
                       },
                       "Name": {
                         "type": "string"
                       },
                       "displayInChart": {
-                        "type": "string"
+                        "type": "boolean"
                       },
                       "displayOrder": {
-                        "type": "string"
+                        "type": "number"
                       },
                       "isActive": {
-                        "type": "string"
+                        "type": "boolean"
                       },
                       "isDeleted": {
                         "type": "string"
@@ -2164,38 +2176,272 @@
                           "type": "object",
                           "properties": {
                             "id": {
-                              "type": "string"
+                              "type": "integer"
                             },
                             "tenantSourceId": {
-                              "type": "string"
+                              "type": "integer"
                             },
                             "year": {
-                              "type": "string"
+                              "type": "number"
                             },
                             "month": {
-                              "type": "string"
+                              "type": "number"
                             },
                             "amount": {
-                              "type": "string"
+                              "type": "number"
                             },
                             "created": {
-                              "type": "string"
+                              "type": "string",
+                              "format": "date-time"
                             },
                             "updated": {
-                              "type": "string"
+                              "type": "string",
+                              "format": "date-time"
                             },
                             "tenantSource": {
-                              "type": "string"
+                              "type": "object",
+                              "required": [
+                                "siteId",
+                                "name",
+                                "isActive"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": "integer"
+                                },
+                                "siteId": {
+                                  "type": "integer"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "displayInChart": {
+                                  "type": "boolean"
+                                },
+                                "displayOrder": {
+                                  "type": "number"
+                                },
+                                "isActive": {
+                                  "type": "boolean"
+                                },
+                                "isDeleted": {
+                                  "type": "boolean"
+                                }
+                              }
                             }
+                          },
+                          "required": [
+                            "tenantSourceId",
+                            "year",
+                            "month",
+                            "amount",
+                            "created",
+                            "updated",
+                            "tenantSource"
+                          ]
+                        }
+                      }
+                    },
+                    "required": [
+                      "siteId",
+                      "Name",
+                      "isActive",
+                      "isDeleted"
+                    ]
+                  },
+                  "unitTypeId": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer"
+                    }
+                  },
+                  "tenant": {
+                    "required": [
+                      "siteId",
+                      "firstName",
+                      "lastName",
+                      "dateofBirth",
+                      "gender",
+                      "email",
+                      "cellPhone",
+                      "isActiveMilitary",
+                      "militaryInfo"
+                    ],
+                    "type": "object",
+                    "properties": {
+                      "siteId": {
+                        "type": "integer"
+                      },
+                      "firstName": {
+                        "type": "string",
+                        "pattern": "\"[-a-zA-Z0-9'.,_() ]*\"",
+                        "maxLength": 50
+                      },
+                      "middleName": {
+                        "type": "string",
+                        "pattern": "\"[-a-zA-Z0-9'.,_() ]*\"",
+                        "maxLength": 50
+                      },
+                      "lastName": {
+                        "type": "string",
+                        "pattern": "\"[-a-zA-Z0-9'.,_() ]*\"",
+                        "maxLength": 50
+                      },
+                      "dateofBirth": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "gender": {
+                        "type": "string",
+                        "enum": [
+                          "M",
+                          "F"
+                        ]
+                      },
+                      "driversLicense": {
+                        "type": "string"
+                      },
+                      "drivingLicenceStateId": {
+                        "type": "integer"
+                      },
+                      "email": {
+                        "type": "string"
+                      },
+                      "socialSecurityNumber": {
+                        "type": "string"
+                      },
+                      "cellPhone": {
+                        "type": "string",
+                        "pattern": "\"[-0-9() ]*\"",
+                        "maxLength": 15
+                      },
+                      "homePhone": {
+                        "type": "string",
+                        "pattern": "\"[-0-9() ]*\"",
+                        "maxLength": 15
+                      },
+                      "workPhone": {
+                        "type": "string",
+                        "pattern": "\"[-0-9() ]*\"",
+                        "maxLength": 15
+                      },
+                      "faxNumber": {
+                        "type": "string"
+                      },
+                      "lastReceiptNumber": {
+                        "type": "string"
+                      },
+                      "customerNumber": {
+                        "type": "string"
+                      },
+                      "profileType": {
+                        "type": "string"
+                      },
+                      "address": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "streetAddress": {
+                            "type": "string"
+                          },
+                          "streetAddress2": {
+                            "type": "string"
+                          },
+                          "city": {
+                            "type": "string"
+                          },
+                          "zip": {
+                            "type": "string"
+                          },
+                          "stateId": {
+                            "type": "integer"
+                          },
+                          "state": {
+                            "type": "string"
+                          },
+                          "stateCode": {
+                            "type": "string"
+                          },
+                          "countryId": {
+                            "type": "string"
+                          },
+                          "country": {
+                            "type": "string"
+                          },
+                          "countryCode": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "optOutOfNotifications": {
+                        "type": "string"
+                      },
+                      "units": {
+                        "type": "string"
+                      },
+                      "isActiveMilitary": {
+                        "type": "string"
+                      },
+                      "militaryInfo": {
+                        "required": [
+                          "id",
+                          "customerId",
+                          "etsDate",
+                          "unitPhoneNumber",
+                          "commandingOfficer",
+                          "unitName"
+                        ],
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "customerId": {
+                            "type": "integer"
+                          },
+                          "etsDate": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "unitPhoneNumber": {
+                            "type": "string",
+                            "pattern": "\"[-0-9() ]*\"",
+                            "maxLength": 15
+                          },
+                          "commandingOfficer": {
+                            "type": "string",
+                            "pattern": "\"[-a-zA-Z0-9'.,_() ]*\"",
+                            "maxLength": 150
+                          },
+                          "unitName": {
+                            "type": "string",
+                            "pattern": "\"[-a-zA-Z0-9'.,_() ]*\"",
+                            "maxLength": 150
                           }
                         }
                       }
                     }
                   },
-                  "unitTypeId": {
+                  "unitId": {
+                    "type": "integer"
+                  },
+                  "unitNumber": {
                     "type": "string"
                   }
-                }
+                },
+                "required": [
+                  "siteId",
+                  "status",
+                  "createdById",
+                  "updatedById",
+                  "firstName",
+                  "lastName",
+                  "email",
+                  "phoneNumber",
+                  "tenant"
+                ]
               }
             },
             "application/xml": {
