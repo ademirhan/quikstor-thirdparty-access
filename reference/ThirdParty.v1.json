@@ -2660,6 +2660,65 @@
         ]
       },
       "parameters": []
+    },
+    "/api/<partner-name>/createreservation": {
+      "post": {
+        "summary": "Create Reservations",
+        "operationId": "post-api-partner-name-createreservation",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "Header values to be bearer token in a format \"bearer access-token\""
+          }
+        ],
+        "description": "The createReservation POST endpoint is used to request data to create a new reservation for new tenants for a facility. ",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "siteId": {
+                      "type": "integer"
+                    },
+                    "userId": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "description": "Data that are required to be passed in order to create a new reservation. "
+        }
+      }
+    },
+    "/api/<partner-name>/editreservation": {
+      "put": {
+        "summary": "",
+        "operationId": "put-api-partner-name-editreservation",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
