@@ -2998,6 +2998,34 @@
         },
         "description": "The editReservation PUT endpoint is used to update/edit data to existing reserved future tenants for a facility."
       }
+    },
+    "/api/<partner-name>/createtenant": {
+      "post": {
+        "summary": "Create Tenant",
+        "operationId": "post-api-partner-name-createtenant",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Tenant Endpoints"
+        ]
+      }
+    },
+    "/api/<partner-name>/edittenant": {
+      "post": {
+        "summary": "Edit Tenant",
+        "operationId": "post-api-partner-name-edittenant",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Tenant Endpoints"
+        ]
+      }
     }
   },
   "components": {
