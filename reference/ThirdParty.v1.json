@@ -2866,6 +2866,9 @@
                       },
                       "tenantFiles": {
                         "type": "string"
+                      },
+                      "testthismovein": {
+                        "type": "string"
                       }
                     }
                   }
@@ -2886,8 +2889,19 @@
                   "type": "object"
                 }
               }
+            },
+            "application/xml": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "testthismovein2": {
+                    "type": "string"
+                  }
+                }
+              }
             }
-          }
+          },
+          "description": ""
         },
         "description": "The MoveIn POST endpoint is used to request data from ther server to identify all tenants moving into the facility. ",
         "security": [
@@ -3352,16 +3366,90 @@
                 "items": {
                   "type": "object",
                   "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
                     "siteId": {
                       "type": "integer"
                     },
                     "userId": {
                       "type": "integer"
                     },
-                    "test123": {
+                    "unitReservationId": {
+                      "type": "integer"
+                    },
+                    "dateTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "notes": {
                       "type": "string"
+                    },
+                    "isEcomReservation": {
+                      "type": "boolean"
+                    },
+                    "isActive": {
+                      "type": "boolean"
+                    },
+                    "isDeleted": {
+                      "type": "boolean"
+                    },
+                    "transactionId": {
+                      "type": "integer"
+                    },
+                    "receiptId": {
+                      "type": "integer"
+                    },
+                    "unitReservation": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "unitId": {
+                            "type": "integer"
+                          },
+                          "customerId": {
+                            "type": "integer"
+                          },
+                          "leaseId": {
+                            "type": "integer"
+                          },
+                          "expiresAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "rentAtMoveIn": {
+                            "type": "number"
+                          },
+                          "rentDeposit": {
+                            "type": "number"
+                          },
+                          "securityDeposit": {
+                            "type": "number"
+                          },
+                          "setupFee": {
+                            "type": "number"
+                          },
+                          "hasMovedIn": {
+                            "type": "boolean"
+                          }
+                        }
+                      }
                     }
-                  }
+                  },
+                  "required": [
+                    "id",
+                    "siteId",
+                    "userId",
+                    "dateTime",
+                    "notes",
+                    "isEcomReservation",
+                    "isActive",
+                    "isDeleted"
+                  ]
                 }
               }
             }
@@ -3385,7 +3473,7 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                   "id": {
+                    "id": {
                       "type": "integer"
                     },
                     "siteId": {
