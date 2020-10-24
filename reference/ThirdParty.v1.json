@@ -3239,18 +3239,95 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "siteid": {
-                      "type": "string"
+                     "id": {
+                        "type": "integer"
+                      },
+                      "siteId": {
+                        "type": "integer"
+                      },
+                      "userId": {
+                        "type": "integer"
+                      },
+                      "unitReservationId": {
+                        "type": "integer"
+                      },
+                      "dateTime": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "notes": {
+                        "type": "string"
+                      },
+                      "isEcomReservation": {
+                        "type": "boolean"
+                      },
+                      "isActive": {
+                        "type": "boolean"
+                      },
+                      "isDeleted": {
+                        "type": "boolean"
+                      },
+                      "transactionId": {
+                        "type": "integer"
+                      },
+                      "receiptId": {
+                        "type": "integer"
+                      },
+                      "unitReservation": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "unitId": {
+                              "type": "integer"
+                            },
+                            "customerId": {
+                              "type": "integer"
+                            },
+                            "leaseId": {
+                              "type": "integer"
+                            },
+                            "expiresAt": {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "rentAtMoveIn": {
+                              "type": "number"
+                            },
+                            "rentDeposit": {
+                              "type": "number"
+                            },
+                            "securityDeposit": {
+                              "type": "number"
+                            },
+                            "setupFee": {
+                              "type": "number"
+                            },
+                            "hasMovedIn": {
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      }
                     },
-                    "test1234": {
-                      "type": "string"
-                    }
+                    "required": [
+                      "id",
+                      "siteId",
+                      "userId",
+                      "dateTime",
+                      "notes",
+                      "isEcomReservation",
+                      "isActive",
+                      "isDeleted"
+                    ]
                   }
                 }
               }
             }
-          }
-        },
+          },
         "security": [
           {
             "BearerToken": []
@@ -3275,20 +3352,94 @@
                 "items": {
                   "type": "object",
                   "properties": {
-                    "siteId": {
-                      "type": "integer"
+                     "id": {
+                        "type": "integer"
+                      },
+                      "siteId": {
+                        "type": "integer"
+                      },
+                      "userId": {
+                        "type": "integer"
+                      },
+                      "unitReservationId": {
+                        "type": "integer"
+                      },
+                      "dateTime": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "notes": {
+                        "type": "string"
+                      },
+                      "isEcomReservation": {
+                        "type": "boolean"
+                      },
+                      "isActive": {
+                        "type": "boolean"
+                      },
+                      "isDeleted": {
+                        "type": "boolean"
+                      },
+                      "transactionId": {
+                        "type": "integer"
+                      },
+                      "receiptId": {
+                        "type": "integer"
+                      },
+                      "unitReservation": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "unitId": {
+                              "type": "integer"
+                            },
+                            "customerId": {
+                              "type": "integer"
+                            },
+                            "leaseId": {
+                              "type": "integer"
+                            },
+                            "expiresAt": {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "rentAtMoveIn": {
+                              "type": "number"
+                            },
+                            "rentDeposit": {
+                              "type": "number"
+                            },
+                            "securityDeposit": {
+                              "type": "number"
+                            },
+                            "setupFee": {
+                              "type": "number"
+                            },
+                            "hasMovedIn": {
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      }
                     },
-                    "userId": {
-                      "type": "integer"
-                    },
-                    "test123": {
-                      "type": "string"
-                    }
+                    "required": [
+                      "id",
+                      "siteId",
+                      "userId",
+                      "dateTime",
+                      "notes",
+                      "isEcomReservation",
+                      "isActive",
+                      "isDeleted"
+                    ]
                   }
                 }
               }
-            }
-          },
+            },
           "description": "The createReservation body are required data parameters that neeeds to be passed in order to create a new reservation. "
         },
         "tags": [
