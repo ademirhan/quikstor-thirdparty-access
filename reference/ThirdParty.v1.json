@@ -3239,95 +3239,95 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                     "id": {
-                        "type": "integer"
-                      },
-                      "siteId": {
-                        "type": "integer"
-                      },
-                      "userId": {
-                        "type": "integer"
-                      },
-                      "unitReservationId": {
-                        "type": "integer"
-                      },
-                      "dateTime": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "notes": {
-                        "type": "string"
-                      },
-                      "isEcomReservation": {
-                        "type": "boolean"
-                      },
-                      "isActive": {
-                        "type": "boolean"
-                      },
-                      "isDeleted": {
-                        "type": "boolean"
-                      },
-                      "transactionId": {
-                        "type": "integer"
-                      },
-                      "receiptId": {
-                        "type": "integer"
-                      },
-                      "unitReservation": {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "unitId": {
-                              "type": "integer"
-                            },
-                            "customerId": {
-                              "type": "integer"
-                            },
-                            "leaseId": {
-                              "type": "integer"
-                            },
-                            "expiresAt": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "rentAtMoveIn": {
-                              "type": "number"
-                            },
-                            "rentDeposit": {
-                              "type": "number"
-                            },
-                            "securityDeposit": {
-                              "type": "number"
-                            },
-                            "setupFee": {
-                              "type": "number"
-                            },
-                            "hasMovedIn": {
-                              "type": "boolean"
-                            }
+                    "id": {
+                      "type": "integer"
+                    },
+                    "siteId": {
+                      "type": "integer"
+                    },
+                    "userId": {
+                      "type": "integer"
+                    },
+                    "unitReservationId": {
+                      "type": "integer"
+                    },
+                    "dateTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "notes": {
+                      "type": "string"
+                    },
+                    "isEcomReservation": {
+                      "type": "boolean"
+                    },
+                    "isActive": {
+                      "type": "boolean"
+                    },
+                    "isDeleted": {
+                      "type": "boolean"
+                    },
+                    "transactionId": {
+                      "type": "integer"
+                    },
+                    "receiptId": {
+                      "type": "integer"
+                    },
+                    "unitReservation": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "unitId": {
+                            "type": "integer"
+                          },
+                          "customerId": {
+                            "type": "integer"
+                          },
+                          "leaseId": {
+                            "type": "integer"
+                          },
+                          "expiresAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "rentAtMoveIn": {
+                            "type": "number"
+                          },
+                          "rentDeposit": {
+                            "type": "number"
+                          },
+                          "securityDeposit": {
+                            "type": "number"
+                          },
+                          "setupFee": {
+                            "type": "number"
+                          },
+                          "hasMovedIn": {
+                            "type": "boolean"
                           }
                         }
                       }
-                    },
-                    "required": [
-                      "id",
-                      "siteId",
-                      "userId",
-                      "dateTime",
-                      "notes",
-                      "isEcomReservation",
-                      "isActive",
-                      "isDeleted"
-                    ]
-                  }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "siteId",
+                    "userId",
+                    "dateTime",
+                    "notes",
+                    "isEcomReservation",
+                    "isActive",
+                    "isDeleted"
+                  ]
                 }
               }
             }
-          },
+          }
+        },
         "security": [
           {
             "BearerToken": []
@@ -3352,94 +3352,20 @@
                 "items": {
                   "type": "object",
                   "properties": {
-                     "id": {
-                        "type": "integer"
-                      },
-                      "siteId": {
-                        "type": "integer"
-                      },
-                      "userId": {
-                        "type": "integer"
-                      },
-                      "unitReservationId": {
-                        "type": "integer"
-                      },
-                      "dateTime": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "notes": {
-                        "type": "string"
-                      },
-                      "isEcomReservation": {
-                        "type": "boolean"
-                      },
-                      "isActive": {
-                        "type": "boolean"
-                      },
-                      "isDeleted": {
-                        "type": "boolean"
-                      },
-                      "transactionId": {
-                        "type": "integer"
-                      },
-                      "receiptId": {
-                        "type": "integer"
-                      },
-                      "unitReservation": {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "unitId": {
-                              "type": "integer"
-                            },
-                            "customerId": {
-                              "type": "integer"
-                            },
-                            "leaseId": {
-                              "type": "integer"
-                            },
-                            "expiresAt": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "rentAtMoveIn": {
-                              "type": "number"
-                            },
-                            "rentDeposit": {
-                              "type": "number"
-                            },
-                            "securityDeposit": {
-                              "type": "number"
-                            },
-                            "setupFee": {
-                              "type": "number"
-                            },
-                            "hasMovedIn": {
-                              "type": "boolean"
-                            }
-                          }
-                        }
-                      }
+                    "siteId": {
+                      "type": "integer"
                     },
-                    "required": [
-                      "id",
-                      "siteId",
-                      "userId",
-                      "dateTime",
-                      "notes",
-                      "isEcomReservation",
-                      "isActive",
-                      "isDeleted"
-                    ]
+                    "userId": {
+                      "type": "integer"
+                    },
+                    "test123": {
+                      "type": "string"
+                    }
                   }
                 }
               }
-            },
+            }
+          },
           "description": "The createReservation body are required data parameters that neeeds to be passed in order to create a new reservation. "
         },
         "tags": [
@@ -3453,7 +3379,99 @@
         "operationId": "put-api-partner-name-editreservation",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                   "id": {
+                      "type": "integer"
+                    },
+                    "siteId": {
+                      "type": "integer"
+                    },
+                    "userId": {
+                      "type": "integer"
+                    },
+                    "unitReservationId": {
+                      "type": "integer"
+                    },
+                    "dateTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "notes": {
+                      "type": "string"
+                    },
+                    "isEcomReservation": {
+                      "type": "boolean"
+                    },
+                    "isActive": {
+                      "type": "boolean"
+                    },
+                    "isDeleted": {
+                      "type": "boolean"
+                    },
+                    "transactionId": {
+                      "type": "integer"
+                    },
+                    "receiptId": {
+                      "type": "integer"
+                    },
+                    "unitReservation": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "unitId": {
+                            "type": "integer"
+                          },
+                          "customerId": {
+                            "type": "integer"
+                          },
+                          "leaseId": {
+                            "type": "integer"
+                          },
+                          "expiresAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "rentAtMoveIn": {
+                            "type": "number"
+                          },
+                          "rentDeposit": {
+                            "type": "number"
+                          },
+                          "securityDeposit": {
+                            "type": "number"
+                          },
+                          "setupFee": {
+                            "type": "number"
+                          },
+                          "hasMovedIn": {
+                            "type": "boolean"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "siteId",
+                    "userId",
+                    "dateTime",
+                    "notes",
+                    "isEcomReservation",
+                    "isActive",
+                    "isDeleted"
+                  ]
+                }
+              }
+            }
           }
         },
         "tags": [
@@ -3479,7 +3497,91 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "properties": {}
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "siteId": {
+                    "type": "integer"
+                  },
+                  "userId": {
+                    "type": "integer"
+                  },
+                  "unitReservationId": {
+                    "type": "integer"
+                  },
+                  "dateTime": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "notes": {
+                    "type": "string"
+                  },
+                  "isEcomReservation": {
+                    "type": "boolean"
+                  },
+                  "isActive": {
+                    "type": "boolean"
+                  },
+                  "isDeleted": {
+                    "type": "boolean"
+                  },
+                  "transactionId": {
+                    "type": "integer"
+                  },
+                  "receiptId": {
+                    "type": "integer"
+                  },
+                  "unitReservation": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "unitId": {
+                          "type": "integer"
+                        },
+                        "customerId": {
+                          "type": "integer"
+                        },
+                        "leaseId": {
+                          "type": "integer"
+                        },
+                        "expiresAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "rentAtMoveIn": {
+                          "type": "number"
+                        },
+                        "rentDeposit": {
+                          "type": "number"
+                        },
+                        "securityDeposit": {
+                          "type": "number"
+                        },
+                        "setupFee": {
+                          "type": "number"
+                        },
+                        "hasMovedIn": {
+                          "type": "boolean"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "id",
+                  "siteId",
+                  "userId",
+                  "dateTime",
+                  "notes",
+                  "isEcomReservation",
+                  "isActive",
+                  "isDeleted"
+                ]
               }
             }
           },
@@ -3500,307 +3602,307 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                   "id": {
-                    "type": "integer"
-                  },
-                  "siteId": {
-                    "type": "integer"
-                  },
-                  "primaryAddressId": {
-                    "type": "integer"
-                  },
-                  "languageId": {
-                    "type": "integer"
-                  },
-                  "profileId": {
-                    "type": "integer"
-                  },
-                  "sourceId": {
-                    "type": "integer"
-                  },
-                  "firstName": {
-                    "type": "string",
-                    "pattern": "[-a-zA-Z0-9'.,_() ]*",
-                    "maxLength": 50
-                  },
-                  "middleName": {
-                    "type": "string",
-                    "pattern": "[-a-zA-Z0-9'.,_() ]*",
-                    "maxLength": 50
-                  },
-                  "lastName": {
-                    "type": "string",
-                    "pattern": "[-a-zA-Z0-9'.,_() ]*",
-                    "maxLength": 50
-                  },
-                  "dateOfBirth": {
-                    "type": "string",
-                    "format": "date-time"
-                  },
-                  "gender": {
-                    "type": "string"
-                  },
-                  "driversLicense": {
-                    "type": "string",
-                    "maxLength": 15
-                  },
-                  "drivingLicenseStateId": {
-                    "type": "integer"
-                  },
-                  "companyName": {
-                    "type": "string",
-                    "maxLength": 50
-                  },
-                  "email": {
-                    "type": "string",
-                    "maxLength": 50
-                  },
-                  "socialSecurityNumber": {
-                    "type": "string",
-                    "maxLength": 11
-                  },
-                  "ssnChanged": {
-                    "type": "string",
-                    "pattern": "[-0-9() ]*"
-                  },
-                  "cellPhone": {
-                    "type": "string",
-                    "pattern": "[-0-9() ]*",
-                    "maxLength": 15
-                  },
-                  "homePhone": {
-                    "type": "string",
-                    "pattern": "[-0-9() ]*",
-                    "maxLength": 15
-                  },
-                  "workPhone": {
-                    "type": "string",
-                    "pattern": "[-0-9() ]*",
-                    "maxLength": 15
-                  },
-                  "faxNumber": {
-                    "type": "string"
-                  },
-                  "lastReceiptNumber": {
-                    "type": "string"
-                  },
-                  "customerNumber": {
-                    "type": "string"
-                  },
-                  "profileType": {
-                    "type": "string"
-                  },
-                  "hasWebPassword": {
-                    "type": "boolean"
-                  },
-                  "address": {
-                    "type": "object",
-                    "required": [
-                      "id ",
-                      "streetAddress",
-                      "streetAddress2",
-                      "city",
-                      "zip",
-                      "state",
-                      "stateCode",
-                      "country",
-                      "countryCode"
-                    ],
-                    "properties": {
-                      "id ": {
-                        "type": "integer"
-                      },
-                      "streetAddress": {
-                        "type": "string",
-                        "pattern": "[-a-zA-Z0-9_.,# ]*",
-                        "maxLength": 50
-                      },
-                      "streetAddress2": {
-                        "type": "string",
-                        "pattern": "[-a-zA-Z0-9_.,# ]*",
-                        "maxLength": 50
-                      },
-                      "city": {
-                        "type": "string",
-                        "pattern": "[-a-zA-Z0-9_.,# ]*",
-                        "maxLength": 20
-                      },
-                      "zip": {
-                        "type": "string",
-                        "maxLength": 20,
-                        "pattern": "[-a-zA-Z0-9_.,# ]*"
-                      },
-                      "stateId": {
-                        "type": "integer"
-                      },
-                      "state": {
-                        "type": "string"
-                      },
-                      "stateCode": {
-                        "type": "string"
-                      },
-                      "countryId": {
-                        "type": "integer"
-                      },
-                      "country": {
-                        "type": "string"
-                      },
-                      "countryCode": {
-                        "type": "string"
-                      }
-                    }
-                  },
-                  "optOutOfNotifications": {
-                    "type": "boolean"
-                  },
-                  "milesFromSite": {
-                    "type": "number",
-                    "format": "float"
-                  },
-                  "units": {
-                    "type": "string"
-                  },
-                  "isActiveMilitary": {
-                    "type": "boolean"
-                  },
-                  "militaryInfo": {
-                    "type": "object",
-                    "required": [
-                      "id",
-                      "customer Id",
-                      "etsDate",
-                      "unitName",
-                      "unitPhoneNumber",
-                      "commandingOfficer"
-                    ],
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "customer Id": {
-                        "type": "integer"
-                      },
-                      "etsDate": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "unitName": {
-                        "type": "string",
-                        "pattern": "[-a-zA-Z0-9'.,_() ]*",
-                        "maxLength": 150
-                      },
-                      "unitPhoneNumber": {
-                        "type": "string",
-                        "pattern": "[-0-9() ]*",
-                        "maxLength": 15
-                      },
-                      "commandingOfficer": {
-                        "type": "string",
-                        "pattern": "[-a-zA-Z0-9'.,_() ]*",
-                        "maxLength": 150
-                      }
-                    }
-                  },
-                  "preferredReporting": {
-                    "type": "array",
-                    "uniqueItems": false,
-                    "items": {
-                      "type": [
-                        "object",
-                        "integer"
+                    "id": {
+                      "type": "integer"
+                    },
+                    "siteId": {
+                      "type": "integer"
+                    },
+                    "primaryAddressId": {
+                      "type": "integer"
+                    },
+                    "languageId": {
+                      "type": "integer"
+                    },
+                    "profileId": {
+                      "type": "integer"
+                    },
+                    "sourceId": {
+                      "type": "integer"
+                    },
+                    "firstName": {
+                      "type": "string",
+                      "pattern": "[-a-zA-Z0-9'.,_() ]*",
+                      "maxLength": 50
+                    },
+                    "middleName": {
+                      "type": "string",
+                      "pattern": "[-a-zA-Z0-9'.,_() ]*",
+                      "maxLength": 50
+                    },
+                    "lastName": {
+                      "type": "string",
+                      "pattern": "[-a-zA-Z0-9'.,_() ]*",
+                      "maxLength": 50
+                    },
+                    "dateOfBirth": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "gender": {
+                      "type": "string"
+                    },
+                    "driversLicense": {
+                      "type": "string",
+                      "maxLength": 15
+                    },
+                    "drivingLicenseStateId": {
+                      "type": "integer"
+                    },
+                    "companyName": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "email": {
+                      "type": "string",
+                      "maxLength": 50
+                    },
+                    "socialSecurityNumber": {
+                      "type": "string",
+                      "maxLength": 11
+                    },
+                    "ssnChanged": {
+                      "type": "string",
+                      "pattern": "[-0-9() ]*"
+                    },
+                    "cellPhone": {
+                      "type": "string",
+                      "pattern": "[-0-9() ]*",
+                      "maxLength": 15
+                    },
+                    "homePhone": {
+                      "type": "string",
+                      "pattern": "[-0-9() ]*",
+                      "maxLength": 15
+                    },
+                    "workPhone": {
+                      "type": "string",
+                      "pattern": "[-0-9() ]*",
+                      "maxLength": 15
+                    },
+                    "faxNumber": {
+                      "type": "string"
+                    },
+                    "lastReceiptNumber": {
+                      "type": "string"
+                    },
+                    "customerNumber": {
+                      "type": "string"
+                    },
+                    "profileType": {
+                      "type": "string"
+                    },
+                    "hasWebPassword": {
+                      "type": "boolean"
+                    },
+                    "address": {
+                      "type": "object",
+                      "required": [
+                        "id ",
+                        "streetAddress",
+                        "streetAddress2",
+                        "city",
+                        "zip",
+                        "state",
+                        "stateCode",
+                        "country",
+                        "countryCode"
                       ],
-                      "enum": [
-                        "customerId = tenantId",
-                        "channelId = channelId",
-                        "reportingType = reportingType"
+                      "properties": {
+                        "id ": {
+                          "type": "integer"
+                        },
+                        "streetAddress": {
+                          "type": "string",
+                          "pattern": "[-a-zA-Z0-9_.,# ]*",
+                          "maxLength": 50
+                        },
+                        "streetAddress2": {
+                          "type": "string",
+                          "pattern": "[-a-zA-Z0-9_.,# ]*",
+                          "maxLength": 50
+                        },
+                        "city": {
+                          "type": "string",
+                          "pattern": "[-a-zA-Z0-9_.,# ]*",
+                          "maxLength": 20
+                        },
+                        "zip": {
+                          "type": "string",
+                          "maxLength": 20,
+                          "pattern": "[-a-zA-Z0-9_.,# ]*"
+                        },
+                        "stateId": {
+                          "type": "integer"
+                        },
+                        "state": {
+                          "type": "string"
+                        },
+                        "stateCode": {
+                          "type": "string"
+                        },
+                        "countryId": {
+                          "type": "integer"
+                        },
+                        "country": {
+                          "type": "string"
+                        },
+                        "countryCode": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "optOutOfNotifications": {
+                      "type": "boolean"
+                    },
+                    "milesFromSite": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "units": {
+                      "type": "string"
+                    },
+                    "isActiveMilitary": {
+                      "type": "boolean"
+                    },
+                    "militaryInfo": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "customer Id",
+                        "etsDate",
+                        "unitName",
+                        "unitPhoneNumber",
+                        "commandingOfficer"
                       ],
                       "properties": {
                         "id": {
                           "type": "integer"
                         },
-                        "customerId": {
+                        "customer Id": {
                           "type": "integer"
                         },
-                        "channelId": {
-                          "type": "integer"
+                        "etsDate": {
+                          "type": "string",
+                          "format": "date-time"
                         },
-                        "reportingType": {
-                          "type": "integer",
-                          "enum": [
-                            "receipts = 1",
-                            "bills = 2",
-                            "notices = 3",
-                            "other"
-                          ]
+                        "unitName": {
+                          "type": "string",
+                          "pattern": "[-a-zA-Z0-9'.,_() ]*",
+                          "maxLength": 150
+                        },
+                        "unitPhoneNumber": {
+                          "type": "string",
+                          "pattern": "[-0-9() ]*",
+                          "maxLength": 15
+                        },
+                        "commandingOfficer": {
+                          "type": "string",
+                          "pattern": "[-a-zA-Z0-9'.,_() ]*",
+                          "maxLength": 150
                         }
-                      },
-                      "required": [
-                        "id",
-                        "customerId",
-                        "channelId",
-                        "reportingType"
-                      ]
+                      }
+                    },
+                    "preferredReporting": {
+                      "type": "array",
+                      "uniqueItems": false,
+                      "items": {
+                        "type": [
+                          "object",
+                          "integer"
+                        ],
+                        "enum": [
+                          "customerId = tenantId",
+                          "channelId = channelId",
+                          "reportingType = reportingType"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "customerId": {
+                            "type": "integer"
+                          },
+                          "channelId": {
+                            "type": "integer"
+                          },
+                          "reportingType": {
+                            "type": "integer",
+                            "enum": [
+                              "receipts = 1",
+                              "bills = 2",
+                              "notices = 3",
+                              "other"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "customerId",
+                          "channelId",
+                          "reportingType"
+                        ]
+                      }
+                    },
+                    "NSFCount": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "isActive": {
+                      "type": "boolean"
+                    },
+                    "isDeleted": {
+                      "type": "boolean"
+                    },
+                    "hasPassword": {
+                      "type": "boolean"
+                    },
+                    "noEmail": {
+                      "type": "boolean"
+                    },
+                    "noPhoneNumber": {
+                      "type": "boolean"
                     }
                   },
-                  "NSFCount": {
-                    "type": "number",
-                    "format": "float"
-                  },
-                  "isActive": {
-                    "type": "boolean"
-                  },
-                  "isDeleted": {
-                    "type": "boolean"
-                  },
-                  "hasPassword": {
-                    "type": "boolean"
-                  },
-                  "noEmail": {
-                    "type": "boolean"
-                  },
-                  "noPhoneNumber": {
-                    "type": "boolean"
-                  }
-                },
-                "required": [
-                  "id",
-                  "siteId",
-                  "firstName",
-                  "middleName",
-                  "lastName",
-                  "gender",
-                  "driversLicense",
-                  "drivingLicenseStateId",
-                  "companyName",
-                  "email",
-                  "socialSecurityNumber",
-                  "ssnChanged",
-                  "homePhone",
-                  "workPhone",
-                  "faxNumber",
-                  "lastReceiptNumber",
-                  "customerNumber",
-                  "profileType",
-                  "hasWebPassword",
-                  "address",
-                  "optOutOfNotifications",
-                  "milesFromSite",
-                  "units",
-                  "isActiveMilitary",
-                  "militaryInfo",
-                  "preferredReporting",
-                  "NSFCount",
-                  "isActive",
-                  "isDeleted",
-                  "hasPassword",
-                  "noEmail",
-                  "noPhoneNumber"
-                ]
+                  "required": [
+                    "id",
+                    "siteId",
+                    "firstName",
+                    "middleName",
+                    "lastName",
+                    "gender",
+                    "driversLicense",
+                    "drivingLicenseStateId",
+                    "companyName",
+                    "email",
+                    "socialSecurityNumber",
+                    "ssnChanged",
+                    "homePhone",
+                    "workPhone",
+                    "faxNumber",
+                    "lastReceiptNumber",
+                    "customerNumber",
+                    "profileType",
+                    "hasWebPassword",
+                    "address",
+                    "optOutOfNotifications",
+                    "milesFromSite",
+                    "units",
+                    "isActiveMilitary",
+                    "militaryInfo",
+                    "preferredReporting",
+                    "NSFCount",
+                    "isActive",
+                    "isDeleted",
+                    "hasPassword",
+                    "noEmail",
+                    "noPhoneNumber"
+                  ]
+                }
               }
             }
           }
-        }
-      },
+        },
         "tags": [
           "Tenant Endpoints"
         ],
