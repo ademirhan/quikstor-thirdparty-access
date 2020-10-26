@@ -2377,7 +2377,7 @@
             }
           }
         },
-        "description": "CreateLead POST endpoint is used to request data from the server to identify tenants intersted and reserving a unit at that facility. ",
+        "description": "CreateLead POST method sends data quikstor server to create a new Lead for tenants who are interested to reserve a unit at that facility. ",
         "tags": [
           "Lead Endpoints"
         ],
@@ -3467,7 +3467,7 @@
         "operationId": "put-api-partner-name-editreservation",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "API request model for editReservation can be viewed below:\n\nSee (https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Site)",
             "content": {
               "application/json": {
                 "schema": {
