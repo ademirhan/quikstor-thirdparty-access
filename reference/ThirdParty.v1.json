@@ -2901,7 +2901,7 @@
               }
             }
           },
-          "description": ""
+          "description": "API request model for createLead can be viewed below:\n\nSee (https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Site)"
         },
         "description": "The MoveIn POST endpoint is used to request data from ther server to identify all tenants moving into the facility. ",
         "security": [
@@ -3247,7 +3247,7 @@
         "operationId": "post-api-partner-name-createreservation",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Response model for getReservations can be viewed below: \n\nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Reservation",
             "content": {
               "application/json": {
                 "schema": {
@@ -3467,7 +3467,7 @@
         "operationId": "put-api-partner-name-editreservation",
         "responses": {
           "200": {
-            "description": "API request model for editReservation can be viewed below:\n\nSee (https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Site)",
+            "description": "Response model for getReservations can be viewed below: \n\nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Reservation",
             "content": {
               "application/json": {
                 "schema": {
@@ -3675,7 +3675,7 @@
           },
           "description": "The editReservation body are required parameters to update/edit data for an existing reserved tenants."
         },
-        "description": "The editReservation PUT endpoint is used to update/edit data to existing reserved future tenants for a facility."
+        "description": "The editReservation PUT method is used to update/edit data to existing reserved future tenants for a facility."
       }
     },
     "/api/<partner-name>/createtenant": {
@@ -3684,7 +3684,7 @@
         "operationId": "post-api-partner-name-createtenant",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Response model for getTenants can be viewed below: \n\nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Tenant",
             "content": {
               "application/json": {
                 "schema": {
@@ -4018,7 +4018,7 @@
             "required": true
           }
         ],
-        "description": "",
+        "description": "Create Tenant POST method sends data to the QuikStor server to create new tenant information to be added to the database. ",
         "requestBody": {
           "content": {
             "application/json": {
@@ -4333,7 +4333,7 @@
         "operationId": "post-api-partner-name-edittenant",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Response model for getTenants can be viewed below: \n\nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Tenant",
             "content": {
               "application/json": {
                 "schema": {
@@ -4971,8 +4971,10 @@
                 ]
               }
             }
-          }
-        }
+          },
+          "description": ""
+        },
+        "description": "EditTenant POST method modifies and update the tenant information that exist in QuikStor database."
       }
     }
   },
