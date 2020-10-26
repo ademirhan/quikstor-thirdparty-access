@@ -3366,9 +3366,6 @@
                 "items": {
                   "type": "object",
                   "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
                     "siteId": {
                       "type": "integer"
                     },
@@ -3441,7 +3438,6 @@
                     }
                   },
                   "required": [
-                    "id",
                     "siteId",
                     "userId",
                     "dateTime",
@@ -3586,9 +3582,6 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "id": {
-                    "type": "integer"
-                  },
                   "siteId": {
                     "type": "integer"
                   },
@@ -3661,7 +3654,6 @@
                   }
                 },
                 "required": [
-                  "id",
                   "siteId",
                   "userId",
                   "dateTime",
@@ -4025,22 +4017,7 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "id": {
-                    "type": "integer"
-                  },
                   "siteId": {
-                    "type": "integer"
-                  },
-                  "primaryAddressId": {
-                    "type": "integer"
-                  },
-                  "languageId": {
-                    "type": "integer"
-                  },
-                  "profileId": {
-                    "type": "integer"
-                  },
-                  "sourceId": {
                     "type": "integer"
                   },
                   "firstName": {
@@ -4084,10 +4061,6 @@
                     "type": "string",
                     "maxLength": 11
                   },
-                  "ssnChanged": {
-                    "type": "string",
-                    "pattern": "[-0-9() ]*"
-                  },
                   "cellPhone": {
                     "type": "string",
                     "pattern": "[-0-9() ]*",
@@ -4114,9 +4087,6 @@
                   },
                   "profileType": {
                     "type": "string"
-                  },
-                  "hasWebPassword": {
-                    "type": "boolean"
                   },
                   "address": {
                     "type": "object",
@@ -4225,70 +4195,9 @@
                         "maxLength": 150
                       }
                     }
-                  },
-                  "preferredReporting": {
-                    "type": "array",
-                    "uniqueItems": false,
-                    "items": {
-                      "type": [
-                        "object",
-                        "integer"
-                      ],
-                      "enum": [
-                        "customerId = tenantId",
-                        "channelId = channelId",
-                        "reportingType = reportingType"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "customerId": {
-                          "type": "integer"
-                        },
-                        "channelId": {
-                          "type": "integer"
-                        },
-                        "reportingType": {
-                          "type": "integer",
-                          "enum": [
-                            "receipts = 1",
-                            "bills = 2",
-                            "notices = 3",
-                            "other"
-                          ]
-                        }
-                      },
-                      "required": [
-                        "id",
-                        "customerId",
-                        "channelId",
-                        "reportingType"
-                      ]
-                    }
-                  },
-                  "NSFCount": {
-                    "type": "number",
-                    "format": "float"
-                  },
-                  "isActive": {
-                    "type": "boolean"
-                  },
-                  "isDeleted": {
-                    "type": "boolean"
-                  },
-                  "hasPassword": {
-                    "type": "boolean"
-                  },
-                  "noEmail": {
-                    "type": "boolean"
-                  },
-                  "noPhoneNumber": {
-                    "type": "boolean"
                   }
                 },
                 "required": [
-                  "id",
                   "siteId",
                   "firstName",
                   "middleName",
@@ -4299,27 +4208,18 @@
                   "companyName",
                   "email",
                   "socialSecurityNumber",
-                  "ssnChanged",
                   "homePhone",
                   "workPhone",
                   "faxNumber",
                   "lastReceiptNumber",
                   "customerNumber",
                   "profileType",
-                  "hasWebPassword",
                   "address",
                   "optOutOfNotifications",
                   "milesFromSite",
                   "units",
                   "isActiveMilitary",
-                  "militaryInfo",
-                  "preferredReporting",
-                  "NSFCount",
-                  "isActive",
-                  "isDeleted",
-                  "hasPassword",
-                  "noEmail",
-                  "noPhoneNumber"
+                  "militaryInfo"
                 ]
               }
             }
@@ -4673,9 +4573,6 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "id": {
-                    "type": "integer"
-                  },
                   "siteId": {
                     "type": "integer"
                   },
@@ -4936,7 +4833,6 @@
                   }
                 },
                 "required": [
-                  "id",
                   "siteId",
                   "firstName",
                   "middleName",
