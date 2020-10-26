@@ -4890,6 +4890,108 @@
         },
         "description": "EditTenant PUT method modifies and update the tenant information that exist in QuikStor database."
       }
+    },
+    "/api/<partner-name>/retailcheckout": {
+      "get": {
+        "summary": "Post Retail Checkout",
+        "tags": [
+          "Retail Endpoints"
+        ],
+        "responses": {},
+        "operationId": "get-api-partner-name-retailcheckout",
+        "security": [
+          {
+            "BearerToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": ""
+          }
+        ],
+        "description": "Retail Checkout POST method is used to re",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "siteId": {
+                    "type": "integer"
+                  },
+                  "selectedLeaseId": {
+                    "type": "integer",
+                    "description": "Request to make payment only"
+                  },
+                  "specialId": {
+                    "type": "integer"
+                  },
+                  "releaseDelingquecyStatus": {
+                    "type": "boolean"
+                  },
+                  "hasProrate": {
+                    "type": "boolean"
+                  },
+                  "signatureSetting": {
+                    "type": "string",
+                    "enum": [
+                      "Email = 1",
+                      "DisplayOnScreen",
+                      "SignLater",
+                      "TenantFacingPortal",
+                      "None"
+                    ]
+                  },
+                  "payments": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer"
+                    }
+                  },
+                  "leaseAllocations": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer"
+                    }
+                  },
+                  "otherCharges": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer"
+                    }
+                  },
+                  "receiptOptions": {
+                    "type": "object"
+                  },
+                  "inventoryPurchases": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer"
+                    }
+                  },
+                  "refundAmount": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "siteId",
+                  "payments",
+                  "leaseAllocations",
+                  "receiptOptions"
+                ]
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
