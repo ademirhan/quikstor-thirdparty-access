@@ -3675,7 +3675,7 @@
           },
           "description": "The editReservation body are required parameters to update/edit data for an existing reserved tenants."
         },
-        "description": "The editReservation PUT method is used to update/edit data to existing reserved future tenants for a facility."
+        "description": "The editReservation PUT method is used to modifies and update data to existing reserved future tenants for a facility."
       }
     },
     "/api/<partner-name>/createtenant": {
