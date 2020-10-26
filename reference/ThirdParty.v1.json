@@ -4328,9 +4328,9 @@
       }
     },
     "/api/<partner-name>/edittenant": {
-      "post": {
+      "put": {
         "summary": "Edit Tenant",
-        "operationId": "post-api-partner-name-edittenant",
+        "operationId": "put-api-partner-name-edittenant",
         "responses": {
           "200": {
             "description": "Response model for getTenants can be viewed below: \n\nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Tenant",
@@ -4974,7 +4974,7 @@
           },
           "description": ""
         },
-        "description": "EditTenant POST method modifies and update the tenant information that exist in QuikStor database."
+        "description": "EditTenant PUT method modifies and update the tenant information that exist in QuikStor database."
       }
     }
   },
