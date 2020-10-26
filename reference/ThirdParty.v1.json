@@ -3355,6 +3355,15 @@
             "in": "header",
             "name": "Authorization",
             "description": "Header values to be bearer token in a format \"bearer access-token\""
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "siteId",
+            "description": "SiteId can be retrieved from getSites endpoint (Site Model Id).",
+            "required": true
           }
         ],
         "description": "The createReservation POST endpoint is used to request data to create a new reservation for new tenants for a facility. ",
@@ -3574,6 +3583,15 @@
             "in": "header",
             "name": "Authorization",
             "description": "Header values to be bearer token in a format \"bearer access-token\""
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "siteId",
+            "description": "SiteId can be retrieved from getSites endpoint (Site Model Id).",
+            "required": true
           }
         ],
         "requestBody": {
