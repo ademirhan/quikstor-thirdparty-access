@@ -15,16 +15,9 @@ username=email@quikstor.com&password=typepassword&grant_type=password
 
 ```json
 {
-  "title": "Authentication",
-  "nested": {
-    "id": 7,
-    "siteId": true,
-    "userId": Array[3][
-      "list of",
-      "fake strings",
-      "and fake keys"
-    ], 
-    "token:: 0
+  "username": "email@quikstor.com",
+  "password": " ",
+  "grant_type":password
   }
 }
 ```
