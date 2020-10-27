@@ -3338,22 +3338,23 @@
                           "type": "string"
                         },
                         "siteId": {
-                          "type": "string"
+                          "type": "integer"
                         },
                         "selectLeaseId": {
-                          "type": "string"
+                          "type": "integer"
                         },
                         "specialId": {
-                          "type": "string"
+                          "type": "integer"
                         },
                         "releaseDelinquencyStatus": {
-                          "type": "string"
+                          "type": "boolean",
+                          "description": ""
                         },
                         "hasProrate": {
-                          "type": "string"
+                          "type": "boolean"
                         },
                         "signatureSetting": {
-                          "type": "string",
+                          "type": "boolean",
                           "enum": [
                             "Email = 1",
                             "DisplayOnScreen",
@@ -3364,10 +3365,138 @@
                         },
                         "payments": {
                           "type": "array",
+                          "description": "New payment data.",
                           "items": {
                             "type": "object",
                             "properties": {
-                              "": {
+                              "amount": {
+                                "type": "string"
+                              },
+                              "salesTax": {
+                                "type": "string"
+                              },
+                              "amountWhitoutDiscount": {
+                                "type": "string"
+                              },
+                              "methodId": {
+                                "type": "string",
+                                "enum": [
+                                  "Credit_Card = 1",
+                                  "ACH = 2",
+                                  "Check = 3",
+                                  "Cash = 4",
+                                  "Token = 5",
+                                  "CardReader = 6"
+                                ]
+                              },
+                              "setAsAutoBilling": {
+                                "type": "boolean"
+                              },
+                              "savePaymentMethod": {
+                                "type": "boolean"
+                              },
+                              "creditCardInfo": {
+                                "type": "object",
+                                "properties": {
+                                  "type": {
+                                    "type": "integer"
+                                  },
+                                  "number": {
+                                    "type": "string",
+                                    "minLength": 14
+                                  },
+                                  "cvv": {
+                                    "type": "string"
+                                  },
+                                  "expirationMonth": {
+                                    "type": "integer"
+                                  },
+                                  "expirationYear": {
+                                    "type": "integer"
+                                  }
+                                }
+                              },
+                              "encryptedCreditCardInfo": {
+                                "type": "string"
+                              },
+                              "achInfo": {
+                                "type": "object",
+                                "properties": {
+                                  "accountType": {
+                                    "type": "string"
+                                  },
+                                  "accountNumber": {
+                                    "type": "string"
+                                  },
+                                  "routingNumber": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "checkInfo": {
+                                "type": "object",
+                                "properties": {
+                                  "bankNumber": {
+                                    "type": "string",
+                                    "pattern": "[a-zA-Z0-9/\\\\- ]*"
+                                  },
+                                  "checkNumber": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "autoBillingInfoId": {
+                                "type": "integer"
+                              },
+                              "billingInfo": {
+                                "type": "object",
+                                "properties": {
+                                  "firstName": {
+                                    "type": "string",
+                                    "pattern": "[-a-zA-Z0-9'., ]*",
+                                    "minLength": 1
+                                  },
+                                  "lastName": {
+                                    "type": "string",
+                                    "pattern": "[-a-zA-Z0-9'., ]*",
+                                    "minLength": 1
+                                  },
+                                  "streetAddress": {
+                                    "type": "string",
+                                    "minLength": 2
+                                  },
+                                  "city": {
+                                    "type": "string",
+                                    "pattern": "[-a-zA-Z0-9'., ]*",
+                                    "minLength": 2
+                                  },
+                                  "stateId": {
+                                    "type": "integer"
+                                  },
+                                  "stateCode": {
+                                    "type": "string"
+                                  },
+                                  "countryId": {
+                                    "type": "integer"
+                                  },
+                                  "countryCode": {
+                                    "type": "string"
+                                  },
+                                  "zip": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "linkedPayment": {
+                                "type": "boolean"
+                              },
+                              "token": {
+                                "type": "string"
+                              },
+                              "referenceNumber": {
+                                "type": "string"
+                              },
+                              "channelResponse": {
                                 "type": "string"
                               }
                             }
@@ -3582,7 +3711,7 @@
                           }
                         },
                         "refundAmount": {
-                          "type": "string"
+                          "type": "number"
                         }
                       }
                     },
