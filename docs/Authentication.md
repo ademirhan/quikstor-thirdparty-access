@@ -18,7 +18,7 @@ username=email@quikstor.com&password=typepassword&grant_type=password
   "username": "email@quikstor.com",
   "password": " ",
   "grant_type":password
-  }
+  
 }
 ```
 
