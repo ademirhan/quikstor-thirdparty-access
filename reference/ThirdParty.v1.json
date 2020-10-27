@@ -3251,92 +3251,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "siteId": {
-                      "type": "integer"
-                    },
-                    "userId": {
-                      "type": "integer"
-                    },
-                    "unitReservationId": {
-                      "type": "integer"
-                    },
-                    "dateTime": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "notes": {
-                      "type": "string"
-                    },
-                    "isEcomReservation": {
-                      "type": "boolean"
-                    },
-                    "isActive": {
-                      "type": "boolean"
-                    },
-                    "isDeleted": {
-                      "type": "boolean"
-                    },
-                    "transactionId": {
-                      "type": "integer"
-                    },
-                    "receiptId": {
-                      "type": "integer"
-                    },
-                    "unitReservation": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "unitId": {
-                            "type": "integer"
-                          },
-                          "customerId": {
-                            "type": "integer"
-                          },
-                          "leaseId": {
-                            "type": "integer"
-                          },
-                          "expiresAt": {
-                            "type": "string",
-                            "format": "date-time"
-                          },
-                          "rentAtMoveIn": {
-                            "type": "number"
-                          },
-                          "rentDeposit": {
-                            "type": "number"
-                          },
-                          "securityDeposit": {
-                            "type": "number"
-                          },
-                          "setupFee": {
-                            "type": "number"
-                          },
-                          "hasMovedIn": {
-                            "type": "boolean"
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "siteId",
-                    "userId",
-                    "dateTime",
-                    "notes",
-                    "isEcomReservation",
-                    "isActive",
-                    "isDeleted"
-                  ]
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
                 }
               }
             }
@@ -3404,10 +3322,138 @@
                     }
                   },
                   "payment": {
-                    "type": "string"
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string"
+                      },
+                      "siteId": {
+                        "type": "string"
+                      },
+                      "payment": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "amount": {
+                              "type": "number"
+                            },
+                            "salesTax": {
+                              "type": "number"
+                            },
+                            "amountWithoutDiscoung": {
+                              "type": "number"
+                            },
+                            "methodId": {
+                              "type": "string",
+                              "enum": [
+                                "Credit_Card = 1",
+                                "ACH = 2",
+                                "Check = 3",
+                                "Cash = 4",
+                                "Token = 5",
+                                "CardReader = 6"
+                              ]
+                            },
+                            "setAsAutoBilling": {
+                              "type": "boolean"
+                            },
+                            "savePaymentMethod": {
+                              "type": "boolean"
+                            },
+                            "creditCardInfo": {
+                              "type": "object",
+                              "required": [
+                                "type",
+                                "number",
+                                "cVV",
+                                "expirationMonth",
+                                "expirationYear"
+                              ],
+                              "properties": {
+                                "type": {
+                                  "type": "integer"
+                                },
+                                "number": {
+                                  "type": "string",
+                                  "minLength": 14
+                                },
+                                "cVV": {
+                                  "type": "string",
+                                  "pattern": "[0-9]*",
+                                  "maxLength": 5
+                                },
+                                "expirationMonth": {
+                                  "type": "integer"
+                                },
+                                "expirationYear": {
+                                  "type": "integer"
+                                }
+                              }
+                            },
+                            "encryptCreditCardInfo": {
+                              "type": "string"
+                            },
+                            "achInfo": {
+                              "type": "object"
+                            },
+                            "checkInfo": {
+                              "type": "object"
+                            },
+                            "autoBillingInfoId": {
+                              "type": "object"
+                            },
+                            "billingInfo": {
+                              "type": "string"
+                            },
+                            "linkedPayment": {
+                              "type": "string"
+                            },
+                            "token": {
+                              "type": "string"
+                            },
+                            "referenceNumber": {
+                              "type": "string"
+                            },
+                            "channelResponse": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "amount",
+                            "creditCardInfo"
+                          ]
+                        }
+                      },
+                      "receiptOption": {
+                        "type": "object",
+                        "properties": {
+                          "printCopiesCount": {
+                            "type": "string"
+                          },
+                          "toEmail": {
+                            "type": "string"
+                          },
+                          "sendEmail": {
+                            "type": "string"
+                          },
+                          "toSMS": {
+                            "type": "string"
+                          },
+                          "shouldSendSMS": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "required": [
+                      "type"
+                    ]
                   },
                   "amountTowardsRent": {
-                    "type": "string"
+                    "type": "number",
+                    "description": "If there are no payment, send the value as 0",
+                    "default": 0
                   }
                 },
                 "required": [
