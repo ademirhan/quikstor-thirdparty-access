@@ -3255,11 +3255,6 @@
                   "properties": {
                     "reservation": {
                       "type": "object",
-                      "required": [
-                        "id",
-                        "siteId",
-                        "isEcomReservation"
-                      ],
                       "properties": {
                         "id": {
                           "type": "integer"
@@ -3332,11 +3327,7 @@
                             "hasMovedIn": {
                               "type": "boolean"
                             }
-                          },
-                          "required": [
-                            "unitId",
-                            "tenantId"
-                          ]
+                          }
                         }
                       }
                     },
@@ -3487,10 +3478,10 @@
                             "type": "object",
                             "properties": {
                               "id": {
-                                "type": "string"
+                                "type": "integer"
                               },
                               "clientId": {
-                                "type": "string"
+                                "type": "integer"
                               },
                               "name": {
                                 "type": "string"
@@ -3498,8 +3489,35 @@
                               "description": {
                                 "type": "string"
                               },
-                              "": {
-                                "type": "string"
+                              "fixedAmount": {
+                                "type": "number"
+                              },
+                              "percentAmount": {
+                                "type": "number",
+                                "format": "float"
+                              },
+                              "isOneTimeCharge": {
+                                "type": "boolean"
+                              },
+                              "isEditable": {
+                                "type": "boolean"
+                              },
+                              "amount": {
+                                "type": "number"
+                              },
+                              "startDate": {
+                                "type": "string",
+                                "format": "date-time"
+                              },
+                              "endDate": {
+                                "type": "string",
+                                "format": "date-time"
+                              },
+                              "isActive": {
+                                "type": "boolean"
+                              },
+                              "isDeleted": {
+                                "type": "boolean"
                               }
                             }
                           }
