@@ -2387,9 +2387,6 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "id": {
-                    "type": "integer"
-                  },
                   "siteId": {
                     "type": "integer"
                   },
@@ -2450,9 +2447,6 @@
                   "source": {
                     "type": "object",
                     "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
                       "siteId": {
                         "type": "integer"
                       },
@@ -2476,9 +2470,6 @@
                         "items": {
                           "type": "object",
                           "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
                             "tenantSourceId": {
                               "type": "integer"
                             },
@@ -2507,9 +2498,6 @@
                                 "isActive"
                               ],
                               "properties": {
-                                "id": {
-                                  "type": "integer"
-                                },
                                 "siteId": {
                                   "type": "integer"
                                 },
@@ -2557,6 +2545,7 @@
                     }
                   },
                   "tenant": {
+                    "type": "object",
                     "required": [
                       "siteId",
                       "firstName",
@@ -2568,7 +2557,6 @@
                       "isActiveMilitary",
                       "militaryInfo"
                     ],
-                    "type": "object",
                     "properties": {
                       "siteId": {
                         "type": "integer"
@@ -2641,9 +2629,6 @@
                       "address": {
                         "type": "object",
                         "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
                           "streetAddress": {
                             "type": "string"
                           },
@@ -2686,19 +2671,15 @@
                         "type": "string"
                       },
                       "militaryInfo": {
+                        "type": "object",
                         "required": [
-                          "id",
                           "customerId",
                           "etsDate",
                           "unitPhoneNumber",
                           "commandingOfficer",
                           "unitName"
                         ],
-                        "type": "object",
                         "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
                           "customerId": {
                             "type": "integer"
                           },
@@ -3818,7 +3799,7 @@
                             "salesTax": {
                               "type": "number"
                             },
-                            "amountWithoutDiscoung": {
+                            "amountWithoutDiscount": {
                               "type": "number"
                             },
                             "methodId": {
@@ -4053,7 +4034,7 @@
               }
             }
           },
-          "description": "The createReservation body are required data parameters that neeeds to be passed in order to create a new reservation. "
+          "description": "The createReservation body request are required data parameters that neeeds to be passed in order to create a new reservation. "
         },
         "tags": [
           "Reservation Endpoints"
@@ -4082,6 +4063,9 @@
                       "type": "integer"
                     },
                     "unitReservationId": {
+                      "type": "integer"
+                    },
+                    "truckReservationId": {
                       "type": "integer"
                     },
                     "dateTime": {
@@ -4145,17 +4129,7 @@
                         }
                       }
                     }
-                  },
-                  "required": [
-                    "id",
-                    "siteId",
-                    "userId",
-                    "dateTime",
-                    "notes",
-                    "isEcomReservation",
-                    "isActive",
-                    "isDeleted"
-                  ]
+                  }
                 }
               }
             }
@@ -4194,85 +4168,15 @@
               "schema": {
                 "type": "object",
                 "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
                   "siteId": {
                     "type": "integer"
-                  },
-                  "userId": {
-                    "type": "integer"
-                  },
-                  "unitReservationId": {
-                    "type": "integer"
-                  },
-                  "dateTime": {
-                    "type": "string",
-                    "format": "date-time"
-                  },
-                  "notes": {
-                    "type": "string"
-                  },
-                  "isEcomReservation": {
-                    "type": "boolean"
-                  },
-                  "isActive": {
-                    "type": "boolean"
-                  },
-                  "isDeleted": {
-                    "type": "boolean"
-                  },
-                  "transactionId": {
-                    "type": "integer"
-                  },
-                  "receiptId": {
-                    "type": "integer"
-                  },
-                  "unitReservation": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "unitId": {
-                          "type": "integer"
-                        },
-                        "customerId": {
-                          "type": "integer"
-                        },
-                        "leaseId": {
-                          "type": "integer"
-                        },
-                        "expiresAt": {
-                          "type": "string",
-                          "format": "date-time"
-                        },
-                        "rentAtMoveIn": {
-                          "type": "number"
-                        },
-                        "rentDeposit": {
-                          "type": "number"
-                        },
-                        "securityDeposit": {
-                          "type": "number"
-                        },
-                        "setupFee": {
-                          "type": "number"
-                        },
-                        "hasMovedIn": {
-                          "type": "boolean"
-                        }
-                      }
-                    }
                   }
                 },
                 "required": [
-                  "siteId",
-                  "userId",
-                  "dateTime",
-                  "notes",
-                  "isEcomReservation",
-                  "isActive",
-                  "isDeleted"
+                  "siteId"
                 ]
               }
             }
@@ -4294,9 +4198,6 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
                     "siteId": {
                       "type": "integer"
                     },
@@ -4389,21 +4290,7 @@
                     },
                     "address": {
                       "type": "object",
-                      "required": [
-                        "id ",
-                        "streetAddress",
-                        "streetAddress2",
-                        "city",
-                        "zip",
-                        "state",
-                        "stateCode",
-                        "country",
-                        "countryCode"
-                      ],
                       "properties": {
-                        "id ": {
-                          "type": "integer"
-                        },
                         "streetAddress": {
                           "type": "string",
                           "pattern": "[-a-zA-Z0-9_.,# ]*",
@@ -4459,18 +4346,7 @@
                     },
                     "militaryInfo": {
                       "type": "object",
-                      "required": [
-                        "id",
-                        "customer Id",
-                        "etsDate",
-                        "unitName",
-                        "unitPhoneNumber",
-                        "commandingOfficer"
-                      ],
                       "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
                         "customer Id": {
                           "type": "integer"
                         },
@@ -4509,9 +4385,6 @@
                           "reportingType = reportingType"
                         ],
                         "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
                           "customerId": {
                             "type": "integer"
                           },
@@ -4527,13 +4400,7 @@
                               "other"
                             ]
                           }
-                        },
-                        "required": [
-                          "id",
-                          "customerId",
-                          "channelId",
-                          "reportingType"
-                        ]
+                        }
                       }
                     },
                     "NSFCount": {
@@ -4555,41 +4422,7 @@
                     "noPhoneNumber": {
                       "type": "boolean"
                     }
-                  },
-                  "required": [
-                    "id",
-                    "siteId",
-                    "firstName",
-                    "middleName",
-                    "lastName",
-                    "gender",
-                    "driversLicense",
-                    "drivingLicenseStateId",
-                    "companyName",
-                    "email",
-                    "socialSecurityNumber",
-                    "ssnChanged",
-                    "homePhone",
-                    "workPhone",
-                    "faxNumber",
-                    "lastReceiptNumber",
-                    "customerNumber",
-                    "profileType",
-                    "hasWebPassword",
-                    "address",
-                    "optOutOfNotifications",
-                    "milesFromSite",
-                    "units",
-                    "isActiveMilitary",
-                    "militaryInfo",
-                    "preferredReporting",
-                    "NSFCount",
-                    "isActive",
-                    "isDeleted",
-                    "hasPassword",
-                    "noEmail",
-                    "noPhoneNumber"
-                  ]
+                  }
                 }
               }
             }
@@ -4702,17 +4535,6 @@
                   },
                   "address": {
                     "type": "object",
-                    "required": [
-                      "id ",
-                      "streetAddress",
-                      "streetAddress2",
-                      "city",
-                      "zip",
-                      "state",
-                      "stateCode",
-                      "country",
-                      "countryCode"
-                    ],
                     "properties": {
                       "id ": {
                         "type": "integer"
@@ -4772,14 +4594,6 @@
                   },
                   "militaryInfo": {
                     "type": "object",
-                    "required": [
-                      "id",
-                      "customer Id",
-                      "etsDate",
-                      "unitName",
-                      "unitPhoneNumber",
-                      "commandingOfficer"
-                    ],
                     "properties": {
                       "id": {
                         "type": "integer"
@@ -4812,30 +4626,14 @@
                 "required": [
                   "siteId",
                   "firstName",
-                  "middleName",
                   "lastName",
-                  "gender",
-                  "driversLicense",
-                  "drivingLicenseStateId",
-                  "companyName",
                   "email",
-                  "socialSecurityNumber",
-                  "homePhone",
-                  "workPhone",
-                  "faxNumber",
-                  "lastReceiptNumber",
-                  "customerNumber",
-                  "profileType",
-                  "address",
-                  "optOutOfNotifications",
-                  "milesFromSite",
-                  "units",
-                  "isActiveMilitary",
-                  "militaryInfo"
+                  "cellPhone"
                 ]
               }
             }
-          }
+          },
+          "description": "The createTenant body request are required data parameters that neeeds to be passed when adding a new tenant into a facility. "
         }
       }
     },
@@ -4946,17 +4744,6 @@
                     },
                     "address": {
                       "type": "object",
-                      "required": [
-                        "id ",
-                        "streetAddress",
-                        "streetAddress2",
-                        "city",
-                        "zip",
-                        "state",
-                        "stateCode",
-                        "country",
-                        "countryCode"
-                      ],
                       "properties": {
                         "id ": {
                           "type": "integer"
@@ -5016,14 +4803,6 @@
                     },
                     "militaryInfo": {
                       "type": "object",
-                      "required": [
-                        "id",
-                        "customer Id",
-                        "etsDate",
-                        "unitName",
-                        "unitPhoneNumber",
-                        "commandingOfficer"
-                      ],
                       "properties": {
                         "id": {
                           "type": "integer"
@@ -5084,13 +4863,7 @@
                               "other"
                             ]
                           }
-                        },
-                        "required": [
-                          "id",
-                          "customerId",
-                          "channelId",
-                          "reportingType"
-                        ]
+                        }
                       }
                     },
                     "NSFCount": {
@@ -5112,41 +4885,7 @@
                     "noPhoneNumber": {
                       "type": "boolean"
                     }
-                  },
-                  "required": [
-                    "id",
-                    "siteId",
-                    "firstName",
-                    "middleName",
-                    "lastName",
-                    "gender",
-                    "driversLicense",
-                    "drivingLicenseStateId",
-                    "companyName",
-                    "email",
-                    "socialSecurityNumber",
-                    "ssnChanged",
-                    "homePhone",
-                    "workPhone",
-                    "faxNumber",
-                    "lastReceiptNumber",
-                    "customerNumber",
-                    "profileType",
-                    "hasWebPassword",
-                    "address",
-                    "optOutOfNotifications",
-                    "milesFromSite",
-                    "units",
-                    "isActiveMilitary",
-                    "militaryInfo",
-                    "preferredReporting",
-                    "NSFCount",
-                    "isActive",
-                    "isDeleted",
-                    "hasPassword",
-                    "noEmail",
-                    "noPhoneNumber"
-                  ]
+                  }
                 }
               }
             }
@@ -5185,6 +4924,9 @@
               "schema": {
                 "type": "object",
                 "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
                   "siteId": {
                     "type": "integer"
                   },
@@ -5480,7 +5222,7 @@
               }
             }
           },
-          "description": ""
+          "description": "The editTenant body request are required parameters to update/edit data for an existing reserved tenants."
         },
         "description": "EditTenant PUT method modifies and update the tenant information that exist in QuikStor database."
       }
