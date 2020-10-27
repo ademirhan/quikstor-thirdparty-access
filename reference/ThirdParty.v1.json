@@ -3328,10 +3328,11 @@
                         "type": "string"
                       },
                       "siteId": {
-                        "type": "string"
+                        "type": "integer"
                       },
-                      "payment": {
+                      "payments": {
                         "type": "array",
+                        "description": "New payment data",
                         "items": {
                           "type": "object",
                           "properties": {
@@ -3476,25 +3477,32 @@
                               "type": "object",
                               "properties": {
                                 "firstName": {
-                                  "type": "string"
+                                  "type": "string",
+                                  "pattern": "-a-zA-Z0-9'., ]*",
+                                  "minLength": 1
                                 },
                                 "lastName": {
-                                  "type": "string"
+                                  "type": "string",
+                                  "pattern": "-a-zA-Z0-9'., ]*",
+                                  "minLength": 1
                                 },
                                 "streetAddress": {
-                                  "type": "string"
+                                  "type": "string",
+                                  "minLength": 2
                                 },
                                 "city": {
-                                  "type": "string"
+                                  "type": "string",
+                                  "pattern": "-a-zA-Z0-9'., ]*",
+                                  "minLength": 2
                                 },
                                 "stateId": {
-                                  "type": "string"
+                                  "type": "integer"
                                 },
                                 "stateCode": {
                                   "type": "string"
                                 },
                                 "countryId": {
-                                  "type": "string"
+                                  "type": "integer"
                                 },
                                 "countryCode": {
                                   "type": "string"
@@ -3502,7 +3510,14 @@
                                 "zip": {
                                   "type": "string"
                                 }
-                              }
+                              },
+                              "required": [
+                                "firstName",
+                                "lastName",
+                                "streetAddress",
+                                "city",
+                                "zip"
+                              ]
                             },
                             "linkedPayment": {
                               "type": "boolean"
@@ -3523,7 +3538,7 @@
                           ]
                         }
                       },
-                      "receiptOption": {
+                      "receiptOptions": {
                         "type": "object",
                         "properties": {
                           "printCopiesCount": {
@@ -3545,7 +3560,8 @@
                       }
                     },
                     "required": [
-                      "type"
+                      "type",
+                      "siteId"
                     ]
                   },
                   "amountTowardsRent": {
