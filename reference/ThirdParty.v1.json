@@ -3385,22 +3385,182 @@
                         "leaseAllocations": {
                           "type": "array",
                           "items": {
-                            "type": "object"
+                            "type": "object",
+                            "properties": {
+                              "leaseId": {
+                                "type": "integer"
+                              },
+                              "amount": {
+                                "type": "number"
+                              },
+                              "appliedCredit": {
+                                "type": "number"
+                              },
+                              "receivableAllocations": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object"
+                                }
+                              },
+                              "receivableCategories": {
+                                "type": "object",
+                                "properties": {
+                                  "rent": {
+                                    "type": "number"
+                                  },
+                                  "securityDeposit": {
+                                    "type": "number"
+                                  },
+                                  "credit": {
+                                    "type": "number"
+                                  },
+                                  "accountCharges": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "entityId": {
+                                          "type": "number"
+                                        },
+                                        "amount": {
+                                          "type": "number"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "prorate": {
+                                    "type": "number"
+                                  },
+                                  "debit": {
+                                    "type": "number"
+                                  },
+                                  "adminFree": {
+                                    "type": "number"
+                                  },
+                                  "lateFee": {
+                                    "type": "number"
+                                  },
+                                  "preLienFee": {
+                                    "type": "number"
+                                  },
+                                  "lienFee": {
+                                    "type": "number"
+                                  },
+                                  "cutLockFees": {
+                                    "type": "number"
+                                  },
+                                  "nsfFee": {
+                                    "type": "number"
+                                  },
+                                  "advertisementCharges": {
+                                    "type": "number"
+                                  },
+                                  "salesTax": {
+                                    "type": "number"
+                                  },
+                                  "inventory": {
+                                    "type": "number"
+                                  },
+                                  "reservationDeposit": {
+                                    "type": "number"
+                                  },
+                                  "reservationSetupFee": {
+                                    "type": "number"
+                                  },
+                                  "insurance": {
+                                    "type": "number"
+                                  },
+                                  "previousCharge": {
+                                    "type": "number"
+                                  },
+                                  "transferFee": {
+                                    "type": "number"
+                                  }
+                                }
+                              }
+                            }
                           }
                         },
                         "otherCharges": {
                           "type": "array",
                           "items": {
-                            "type": "object"
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "clientId": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "description": {
+                                "type": "string"
+                              },
+                              "": {
+                                "type": "string"
+                              }
+                            }
                           }
                         },
                         "receiptOptions": {
-                          "type": "object"
+                          "type": "object",
+                          "properties": {
+                            "printCopiesCount": {
+                              "type": "integer"
+                            },
+                            "toEmail": {
+                              "type": "string"
+                            },
+                            "sendEmail": {
+                              "type": "boolean"
+                            },
+                            "toSMS": {
+                              "type": "string"
+                            },
+                            "shouldSendSMS": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "printCopiesCount"
+                          ]
                         },
                         "inventoryPurchases": {
                           "type": "array",
                           "items": {
-                            "type": "object"
+                            "type": "object",
+                            "properties": {
+                              "customerId": {
+                                "type": "integer"
+                              },
+                              "inventoryId": {
+                                "type": "integer"
+                              },
+                              "quantity": {
+                                "type": "integer"
+                              },
+                              "price": {
+                                "type": "number"
+                              },
+                              "freeTax": {
+                                "type": "boolean"
+                              },
+                              "action": {
+                                "type": "string",
+                                "enum": [
+                                  "Unknown",
+                                  "Sold",
+                                  "Received",
+                                  "InternalUse",
+                                  "Adjustment",
+                                  "Added",
+                                  "Edited",
+                                  "Deleted"
+                                ]
+                              }
+                            }
                           }
                         },
                         "refundAmount": {
