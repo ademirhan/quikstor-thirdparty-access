@@ -3292,11 +3292,11 @@
                 "type": "object",
                 "properties": {
                   "reservation": {
+                    "type": "object",
                     "required": [
                       "siteId",
                       "unitReservation"
                     ],
-                    "type": "object",
                     "properties": {
                       "siteId": {
                         "type": "string"
@@ -3395,19 +3395,117 @@
                               "type": "string"
                             },
                             "achInfo": {
-                              "type": "object"
+                              "type": "object",
+                              "properties": {
+                                "accountType": {
+                                  "type": "string"
+                                },
+                                "accountNumber": {
+                                  "type": "string"
+                                },
+                                "routingNumber": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "accountType",
+                                "accountNumber",
+                                "routingNumber"
+                              ]
                             },
                             "checkInfo": {
-                              "type": "object"
+                              "type": "object",
+                              "properties": {
+                                "bankNumber": {
+                                  "type": "string",
+                                  "pattern": "[a-zA-Z0-9/\\\\- ]*"
+                                },
+                                "checkNumber": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "bankNumber",
+                                "checkNumber"
+                              ]
                             },
                             "autoBillingInfoId": {
-                              "type": "object"
+                              "type": "object",
+                              "properties": {
+                                "firstName": {
+                                  "type": "string",
+                                  "pattern": "-a-zA-Z0-9'.,_ ]*",
+                                  "minLength": 1
+                                },
+                                "lastName": {
+                                  "type": "string",
+                                  "pattern": "-a-zA-Z0-9'.,_ ]*",
+                                  "minLength": 1
+                                },
+                                "streetAddress": {
+                                  "type": "string",
+                                  "minLength": 2
+                                },
+                                "city": {
+                                  "type": "string",
+                                  "pattern": "-a-zA-Z0-9'.,_ ]*",
+                                  "minLength": 2
+                                },
+                                "stateId": {
+                                  "type": "integer"
+                                },
+                                "stateCode": {
+                                  "type": "string"
+                                },
+                                "countryId": {
+                                  "type": "integer"
+                                },
+                                "countryCode": {
+                                  "type": "string"
+                                },
+                                "zip": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "countryId",
+                                "zip"
+                              ]
                             },
                             "billingInfo": {
-                              "type": "string"
+                              "type": "object",
+                              "properties": {
+                                "firstName": {
+                                  "type": "string"
+                                },
+                                "lastName": {
+                                  "type": "string"
+                                },
+                                "streetAddress": {
+                                  "type": "string"
+                                },
+                                "city": {
+                                  "type": "string"
+                                },
+                                "stateId": {
+                                  "type": "string"
+                                },
+                                "stateCode": {
+                                  "type": "string"
+                                },
+                                "countryId": {
+                                  "type": "string"
+                                },
+                                "countryCode": {
+                                  "type": "string"
+                                },
+                                "zip": {
+                                  "type": "string"
+                                }
+                              }
                             },
                             "linkedPayment": {
-                              "type": "string"
+                              "type": "boolean"
                             },
                             "token": {
                               "type": "string"
