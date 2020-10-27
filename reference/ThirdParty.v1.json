@@ -3371,91 +3371,49 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "siteId": {
-                      "type": "integer"
-                    },
-                    "userId": {
-                      "type": "integer"
-                    },
-                    "unitReservationId": {
-                      "type": "integer"
-                    },
-                    "dateTime": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "notes": {
-                      "type": "string"
-                    },
-                    "isEcomReservation": {
-                      "type": "boolean"
-                    },
-                    "isActive": {
-                      "type": "boolean"
-                    },
-                    "isDeleted": {
-                      "type": "boolean"
-                    },
-                    "transactionId": {
-                      "type": "integer"
-                    },
-                    "receiptId": {
-                      "type": "integer"
-                    },
-                    "unitReservation": {
-                      "type": "array",
-                      "items": {
+                "type": "object",
+                "properties": {
+                  "reservation": {
+                    "required": [
+                      "siteId",
+                      "unitReservation"
+                    ],
+                    "type": "object",
+                    "properties": {
+                      "siteId": {
+                        "type": "string"
+                      },
+                      "unitReservation": {
                         "type": "object",
+                        "required": [
+                          "unitId",
+                          "tenantId"
+                        ],
                         "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
                           "unitId": {
                             "type": "integer"
                           },
-                          "customerId": {
+                          "tenantId": {
                             "type": "integer"
-                          },
-                          "leaseId": {
-                            "type": "integer"
-                          },
-                          "expiresAt": {
-                            "type": "string",
-                            "format": "date-time"
                           },
                           "rentAtMoveIn": {
                             "type": "number"
-                          },
-                          "rentDeposit": {
-                            "type": "number"
-                          },
-                          "securityDeposit": {
-                            "type": "number"
-                          },
-                          "setupFee": {
-                            "type": "number"
-                          },
-                          "hasMovedIn": {
-                            "type": "boolean"
                           }
                         }
                       }
                     }
                   },
-                  "required": [
-                    "siteId",
-                    "userId",
-                    "dateTime",
-                    "notes",
-                    "isEcomReservation",
-                    "isActive",
-                    "isDeleted"
-                  ]
-                }
+                  "payment": {
+                    "type": "string"
+                  },
+                  "amountTowardsRent": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "reservation",
+                  "amountTowardsRent"
+                ]
               }
             }
           },
