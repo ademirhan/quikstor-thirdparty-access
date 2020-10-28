@@ -4370,57 +4370,6 @@
                           "maxLength": 150
                         }
                       }
-                    },
-                    "preferredReporting": {
-                      "type": "array",
-                      "uniqueItems": false,
-                      "items": {
-                        "type": [
-                          "object",
-                          "integer"
-                        ],
-                        "enum": [
-                          "customerId = tenantId",
-                          "channelId = channelId",
-                          "reportingType = reportingType"
-                        ],
-                        "properties": {
-                          "customerId": {
-                            "type": "integer"
-                          },
-                          "channelId": {
-                            "type": "integer"
-                          },
-                          "reportingType": {
-                            "type": "integer",
-                            "enum": [
-                              "receipts = 1",
-                              "bills = 2",
-                              "notices = 3",
-                              "other"
-                            ]
-                          }
-                        }
-                      }
-                    },
-                    "NSFCount": {
-                      "type": "number",
-                      "format": "float"
-                    },
-                    "isActive": {
-                      "type": "boolean"
-                    },
-                    "isDeleted": {
-                      "type": "boolean"
-                    },
-                    "hasPassword": {
-                      "type": "boolean"
-                    },
-                    "noEmail": {
-                      "type": "boolean"
-                    },
-                    "noPhoneNumber": {
-                      "type": "boolean"
                     }
                   }
                 }
