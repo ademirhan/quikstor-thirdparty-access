@@ -5090,17 +5090,14 @@
                   "militaryInfo": {
                     "type": "object",
                     "required": [
-                      "id",
                       "customer Id",
                       "etsDate",
                       "unitName",
                       "unitPhoneNumber",
                       "commandingOfficer"
                     ],
+                    "description": "Will only be enabled IF isActiveMilitary is true.",
                     "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
                       "customer Id": {
                         "type": "integer"
                       },
@@ -5125,64 +5122,10 @@
                       }
                     }
                   },
-                  "preferredReporting": {
-                    "type": "array",
-                    "uniqueItems": false,
-                    "items": {
-                      "type": [
-                        "object",
-                        "integer"
-                      ],
-                      "enum": [
-                        "customerId = tenantId",
-                        "channelId = channelId",
-                        "reportingType = reportingType"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "customerId": {
-                          "type": "integer"
-                        },
-                        "channelId": {
-                          "type": "integer"
-                        },
-                        "reportingType": {
-                          "type": "integer",
-                          "enum": [
-                            "receipts = 1",
-                            "bills = 2",
-                            "notices = 3",
-                            "other"
-                          ]
-                        }
-                      },
-                      "required": [
-                        "id",
-                        "customerId",
-                        "channelId",
-                        "reportingType"
-                      ]
-                    }
-                  },
-                  "NSFCount": {
-                    "type": "number",
-                    "format": "float"
-                  },
                   "isActive": {
                     "type": "boolean"
                   },
                   "isDeleted": {
-                    "type": "boolean"
-                  },
-                  "hasPassword": {
-                    "type": "boolean"
-                  },
-                  "noEmail": {
-                    "type": "boolean"
-                  },
-                  "noPhoneNumber": {
                     "type": "boolean"
                   }
                 },
@@ -5211,13 +5154,8 @@
                   "units",
                   "isActiveMilitary",
                   "militaryInfo",
-                  "preferredReporting",
-                  "NSFCount",
                   "isActive",
-                  "isDeleted",
-                  "hasPassword",
-                  "noEmail",
-                  "noPhoneNumber"
+                  "isDeleted"
                 ]
               }
             }
