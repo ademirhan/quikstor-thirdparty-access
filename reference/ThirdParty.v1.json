@@ -2186,6 +2186,7 @@
                       }
                     },
                     "tenant": {
+                      "type": "object",
                       "required": [
                         "siteId",
                         "firstName",
@@ -2197,7 +2198,6 @@
                         "isActiveMilitary",
                         "militaryInfo"
                       ],
-                      "type": "object",
                       "properties": {
                         "siteId": {
                           "type": "integer"
@@ -2315,6 +2315,7 @@
                           "type": "string"
                         },
                         "militaryInfo": {
+                          "type": "object",
                           "required": [
                             "id",
                             "customerId",
@@ -2323,7 +2324,6 @@
                             "commandingOfficer",
                             "unitName"
                           ],
-                          "type": "object",
                           "properties": {
                             "id": {
                               "type": "integer"
@@ -2359,6 +2359,9 @@
                     },
                     "unitNumber": {
                       "type": "string"
+                    },
+                    "test1234": {
+                      "type": "string"
                     }
                   },
                   "required": [
@@ -2377,7 +2380,7 @@
             }
           }
         },
-        "description": "CreateLead POST method sends data quikstor server to create a new Lead for tenants who are interested to reserve a unit at that facility. ",
+        "description": "CreateLead POST method sends data to quikstor server to create a new Lead for prospects who are interested to reserve a unit at that facility. ",
         "tags": [
           "Lead Endpoints"
         ],
@@ -6087,6 +6090,22 @@
           }
         },
         "description": "Response model for getSpecialsForUnitType request"
+      },
+      "Lead": {
+        "title": "Lead",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "siteId": {
+            "type": "string"
+          },
+          "": {
+            "type": "string"
+          }
+        },
+        "description": "Response model for createLead"
       }
     },
     "securitySchemes": {
