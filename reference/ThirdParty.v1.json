@@ -6137,7 +6137,10 @@
           "unitNumber": {
             "type": "string"
           }
-        }
+        },
+        "x-tags": [
+          "Models"
+        ]
       }
     },
     "securitySchemes": {
