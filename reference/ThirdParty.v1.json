@@ -3249,12 +3249,6 @@
                         "userId": {
                           "type": "integer"
                         },
-                        "unitReservationId": {
-                          "type": "integer"
-                        },
-                        "truckReservationId": {
-                          "type": "integer"
-                        },
                         "dateTime": {
                           "type": "string",
                           "format": "date-time"
@@ -3763,17 +3757,7 @@
                       },
                       "unitReservation": {
                         "type": "object",
-                        "required": [
-                          "unitId",
-                          "tenantId"
-                        ],
                         "properties": {
-                          "unitId": {
-                            "type": "integer"
-                          },
-                          "tenantId": {
-                            "type": "integer"
-                          },
                           "rentAtMoveIn": {
                             "type": "number"
                           }
@@ -3958,14 +3942,8 @@
                                 "stateId": {
                                   "type": "integer"
                                 },
-                                "stateCode": {
-                                  "type": "string"
-                                },
                                 "countryId": {
                                   "type": "integer"
-                                },
-                                "countryCode": {
-                                  "type": "string"
                                 },
                                 "zip": {
                                   "type": "string"
@@ -6094,6 +6072,7 @@
       "Lead": {
         "title": "Lead",
         "type": "object",
+        "description": "Response model for createLead request. ",
         "properties": {
           "id": {
             "type": "string"
@@ -6101,11 +6080,64 @@
           "siteId": {
             "type": "string"
           },
-          "": {
+          "sourceId": {
+            "type": "string"
+          },
+          "probability": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "holdUntil": {
+            "type": "string"
+          },
+          "created": {
+            "type": "string"
+          },
+          "updated": {
+            "type": "string"
+          },
+          "createdById": {
+            "type": "string"
+          },
+          "updatedById": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "phoneNumber": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "unitTypeIds": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "messages": {
+            "type": "string"
+          },
+          "tenant": {
+            "type": "string"
+          },
+          "unitId": {
+            "type": "string"
+          },
+          "unitNumber": {
             "type": "string"
           }
-        },
-        "description": "Response model for createLead"
+        }
       }
     },
     "securitySchemes": {
