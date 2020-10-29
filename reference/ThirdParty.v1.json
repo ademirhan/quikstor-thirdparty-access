@@ -2089,7 +2089,7 @@
             }
           }
         },
-        "description": "CreateLead POST method sends data to quikstor server to create a new Lead for prospects who are interested to reserve a unit at that facility. ",
+        "description": "CreateLead POST method create a new Lead for prospects who are interested in reserving a unit at that facility. ",
         "tags": [
           "Lead Endpoints"
         ],
@@ -2174,7 +2174,7 @@
               }
             }
           },
-          "description": "API request model for createLead can be viewed below:\n\nSee (https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Site)"
+          "description": "API request model for Lead can be viewed below:\n\nSee (https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Lead)"
         },
         "security": [
           {
