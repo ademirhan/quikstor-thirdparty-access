@@ -2010,7 +2010,7 @@
         "operationId": "post-createlead",
         "responses": {
           "200": {
-            "description": "Response model for createLead can be viewed below:",
+            "description": "Response model for createLead can be viewed below:\n(https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Lead)",
             "content": {
               "application/json": {
                 "schema": {
@@ -2034,7 +2034,15 @@
                       "type": "number",
                       "enum": [
                         "New = 1",
-                        "Attempted"
+                        "Attempted",
+                        "Engaged",
+                        "Waitlist",
+                        "Reserved",
+                        "MovedIn",
+                        "NoContact",
+                        "Disqualified",
+                        "Deleted",
+                        "AbandonedCart"
                       ]
                     },
                     "holdUntil": {
@@ -2114,7 +2122,15 @@
                     "type": "number",
                     "enum": [
                       "New = 1",
-                      "Attempted"
+                      "Attempted",
+                      "Engaged",
+                      "Waitlist",
+                      "Reserved",
+                      "MovedIn",
+                      "NoContact",
+                      "Disqualified",
+                      "Deleted",
+                      "AbandonedCart"
                     ]
                   },
                   "holdUntil": {
@@ -5511,35 +5527,55 @@
         "title": "Lead",
         "type": "object",
         "description": "Response model for createLead request. ",
+        "x-tags": [
+          "Models"
+        ],
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "siteId": {
-            "type": "string"
-          },
-          "sourceId": {
-            "type": "string"
+            "type": "integer"
           },
           "probability": {
-            "type": "string"
+            "type": "number",
+            "enum": [
+              "Hot = 1",
+              "Warm",
+              "Cold"
+            ]
           },
           "status": {
-            "type": "string"
+            "type": "number",
+            "enum": [
+              "New = 1",
+              "Attempted",
+              "Engaged",
+              "Waitlist",
+              "Reserved",
+              "MovedIn",
+              "NoContact",
+              "Disqualified",
+              "Deleted",
+              "AbandonedCart"
+            ]
           },
           "holdUntil": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "created": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "updated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
             "type": "string"
           },
-          "createdById": {
-            "type": "string"
-          },
-          "updatedById": {
+          "updateBy": {
             "type": "string"
           },
           "firstName": {
@@ -5554,31 +5590,16 @@
           "phoneNumber": {
             "type": "string"
           },
-          "source": {
+          "unitNumber": {
             "type": "string"
           },
           "unitTypeIds": {
-            "type": "string"
-          },
-          "notes": {
-            "type": "string"
-          },
-          "messages": {
-            "type": "string"
-          },
-          "tenant": {
-            "type": "string"
-          },
-          "unitId": {
-            "type": "string"
-          },
-          "unitNumber": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
           }
-        },
-        "x-tags": [
-          "Models"
-        ]
+        }
       }
     },
     "securitySchemes": {
