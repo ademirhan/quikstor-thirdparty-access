@@ -3642,12 +3642,6 @@
                     "languageId": {
                       "type": "integer"
                     },
-                    "profileId": {
-                      "type": "integer"
-                    },
-                    "sourceId": {
-                      "type": "integer"
-                    },
                     "firstName": {
                       "type": "string",
                       "pattern": "[-a-zA-Z0-9'.,_() ]*",
@@ -3752,16 +3746,10 @@
                         "state": {
                           "type": "string"
                         },
-                        "stateCode": {
-                          "type": "string"
-                        },
                         "countryId": {
                           "type": "integer"
                         },
                         "country": {
-                          "type": "string"
-                        },
-                        "countryCode": {
                           "type": "string"
                         }
                       }
@@ -3949,16 +3937,10 @@
                       "state": {
                         "type": "string"
                       },
-                      "stateCode": {
-                        "type": "string"
-                      },
                       "countryId": {
                         "type": "integer"
                       },
                       "country": {
-                        "type": "string"
-                      },
-                      "countryCode": {
                         "type": "string"
                       }
                     }
