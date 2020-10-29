@@ -2022,9 +2022,6 @@
                     "siteId": {
                       "type": "integer"
                     },
-                    "sourceId": {
-                      "type": "integer"
-                    },
                     "probability": {
                       "type": "number",
                       "enum": [
@@ -2052,12 +2049,6 @@
                       "type": "string",
                       "format": "date-time"
                     },
-                    "createdById": {
-                      "type": "integer"
-                    },
-                    "updatedById": {
-                      "type": "integer"
-                    },
                     "createdBy": {
                       "type": "string"
                     },
@@ -2079,15 +2070,15 @@
                     "unitNumber": {
                       "type": "string"
                     },
-                    "test1234": {
-                      "type": "string"
+                    "unitTypeIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer"
+                      }
                     }
                   },
                   "required": [
-                    "siteId",
                     "status",
-                    "createdById",
-                    "updatedById",
                     "firstName",
                     "lastName",
                     "email",
@@ -2109,9 +2100,6 @@
                 "type": "object",
                 "properties": {
                   "siteId": {
-                    "type": "integer"
-                  },
-                  "sourceId": {
                     "type": "integer"
                   },
                   "probability": {
@@ -2141,12 +2129,6 @@
                     "type": "string",
                     "format": "date-time"
                   },
-                  "createdById": {
-                    "type": "integer"
-                  },
-                  "updatedById": {
-                    "type": "integer"
-                  },
                   "createdBy": {
                     "type": "string"
                   },
@@ -2167,13 +2149,17 @@
                   },
                   "unitNumber": {
                     "type": "string"
+                  },
+                  "unitTypeIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer"
+                    }
                   }
                 },
                 "required": [
                   "siteId",
                   "status",
-                  "createdById",
-                  "updatedById",
                   "firstName",
                   "lastName",
                   "email",
