@@ -15,12 +15,22 @@ username=email@quikstor.com&password=typepassword&grant_type=password
 
 ```json
 {
+  // Pass the username of the account
   "username": "email@quikstor.com",
+  // Pass the password of the account
   "password": " ",
+  // Pass the type of authorization
   "grant_type":password
   
 }
 ```
 
+#### Connections by HTTP and HTTPS
+
+Access to the REST API uses HTTPS only by default. HTTP access is not permitted. Any attempt to access any of the API endpoints using HTTP will result in *403 Forbidden error*
+
+You must configure HTTPS before attempting to access the API endpoints. 
+
+Please take a look at configuring REST API by using SSL certificates below: 
 
 
