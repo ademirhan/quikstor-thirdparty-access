@@ -1,4 +1,4 @@
-# How-To-Create-Lead-and-New-Tenant
+# How To-Create Lead and New Tenant
 
 #### To Create New Lead
 

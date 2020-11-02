@@ -1,4 +1,4 @@
-# How-To-Reserve
+# How To Reserve
 
 To create a reservation, you would first create tenant information. 
 
