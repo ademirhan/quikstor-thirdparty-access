@@ -3497,12 +3497,6 @@
                     "userId": {
                       "type": "integer"
                     },
-                    "unitReservationId": {
-                      "type": "integer"
-                    },
-                    "truckReservationId": {
-                      "type": "integer"
-                    },
                     "dateTime": {
                       "type": "string",
                       "format": "date-time"
@@ -3518,9 +3512,6 @@
                     },
                     "isDeleted": {
                       "type": "boolean"
-                    },
-                    "transactionId": {
-                      "type": "integer"
                     },
                     "receiptId": {
                       "type": "integer"
@@ -3608,6 +3599,15 @@
                   },
                   "siteId": {
                     "type": "integer"
+                  },
+                  "userId": {
+                    "type": "string"
+                  },
+                  "dateTime": {
+                    "type": "string"
+                  },
+                  "": {
+                    "type": "string"
                   }
                 },
                 "required": [
@@ -3616,7 +3616,7 @@
               }
             }
           },
-          "description": "The editReservation body are required parameters to update/edit data for an existing reserved tenants."
+          "description": "The editReservation body are required parameters to update/edit data for an existing reserved tenants using Reservation data objects. \n\nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Reservation"
         },
         "description": "The editReservation PUT method is used to modifies and update data to existing reserved future tenants for a facility."
       }
@@ -5643,6 +5643,28 @@
             "items": {
               "type": "integer"
             }
+          }
+        }
+      },
+      "ReservationDetails": {
+        "title": "Reservation Data Object",
+        "type": "object",
+        "description": "ReservationDetails model reponse to getReservationDetails GET method and EditReservation POST method",
+        "properties": {
+          "amountTowardsRent": {
+            "type": "number"
+          },
+          "securityDepositAmount": {
+            "type": "number"
+          },
+          "setupAmount": {
+            "type": "number"
+          },
+          "specialId": {
+            "type": "integer"
+          },
+          "leadId": {
+            "type": "integer"
           }
         }
       }
