@@ -5667,6 +5667,104 @@
             "type": "integer"
           }
         }
+      },
+      "PaymentRequestDataObjects": {
+        "title": "PaymentRequestDataObjects",
+        "type": "object",
+        "description": "",
+        "properties": {
+          "siteId": {
+            "type": "string"
+          },
+          "selectedLeaseId": {
+            "type": "string"
+          },
+          "specialId": {
+            "type": "string"
+          },
+          "releaseDelinquencyStatus": {
+            "type": "string"
+          },
+          "hasProrate": {
+            "type": "string"
+          },
+          "signatureSetting": {
+            "type": "string"
+          },
+          "refundAmount": {
+            "type": "string"
+          }
+        }
+      },
+      "NewPaymentData": {
+        "title": "NewPaymentData",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      },
+      "LeaseAllocationData": {
+        "title": "LeaseAllocationData",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      },
+      "MonthlyChargeData": {
+        "title": "MonthlyChargeData",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      },
+      "ReceiptOptionData": {
+        "title": "ReceiptOptionData",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      },
+      "InventoryPurchaseData": {
+        "title": "InventoryPurchaseData",
+        "type": "object",
+        "properties": {
+          "customerId": {
+            "type": "integer"
+          },
+          "inventoryId": {
+            "type": "integer"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "price": {
+            "type": "number"
+          },
+          "freeTax": {
+            "type": "boolean"
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "Unknown",
+              "Sold",
+              "Received",
+              "InternalUse",
+              "Adjustment",
+              "Added",
+              "Edited",
+              "Deleted"
+            ]
+          }
+        }
       }
     },
     "securitySchemes": {
