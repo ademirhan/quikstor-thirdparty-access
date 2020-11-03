@@ -3604,10 +3604,56 @@
                     "type": "string"
                   },
                   "dateTime": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "notes": {
                     "type": "string"
                   },
-                  "": {
-                    "type": "string"
+                  "isEcomReservation": {
+                    "type": "boolean"
+                  },
+                  "isActive": {
+                    "type": "boolean"
+                  },
+                  "isDeleted": {
+                    "type": "boolean"
+                  },
+                  "receiptId": {
+                    "type": "integer"
+                  },
+                  "unitReservation": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "unitId": {
+                        "type": "integer"
+                      },
+                      "customerId": {
+                        "type": "integer"
+                      },
+                      "leaseId": {
+                        "type": "integer"
+                      },
+                      "expiresAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "rentDeposit": {
+                        "type": "number"
+                      },
+                      "securityDeposit": {
+                        "type": "number"
+                      },
+                      "setupFee": {
+                        "type": "number"
+                      },
+                      "hasMovedIn": {
+                        "type": "boolean"
+                      }
+                    }
                   }
                 },
                 "required": [
