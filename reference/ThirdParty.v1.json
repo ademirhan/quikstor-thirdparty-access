@@ -2757,7 +2757,7 @@
             "required": true
           }
         ],
-        "description": "The createReservation POST endpoint is used to request data to create a new reservation for new tenants for a facility. ",
+        "description": "The createReservation POST method requests Reservation data to create a new reservation for new tenants for a facility. ",
         "requestBody": {
           "content": {
             "application/json": {
@@ -3394,7 +3394,7 @@
               }
             }
           },
-          "description": "The createReservation body request are required Reservation data parameters that neeeds to be passed in order to create a new reservation. The difference between Reservation and Reservation data is that it consist of Reservation and Payment objects, whereas Reservation only consist of Reservation objects. "
+          "description": "The createReservation body request are required Reservation data object that neeeds to be passed in order to create a new reservation. The difference between Reservation and Reservation data is that it consist of Reservation and Payment objects, whereas Reservation only consist of Reservation objects. "
         },
         "tags": [
           "Reservation Endpoints"
@@ -3589,7 +3589,7 @@
           },
           "description": "The editReservation body are required parameters to update/edit data for an existing reserved tenants using Reservation data objects. \n\nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Reservation"
         },
-        "description": "The editReservation PUT method is used to modifies and update data to existing reserved future tenants for a facility."
+        "description": "The editReservation PUT method modifies and update data to existing reserved prospective tenants for a facility."
       }
     },
     "/api/<partner-name>/createtenant": {
@@ -3799,7 +3799,7 @@
             "required": true
           }
         ],
-        "description": "Create Tenant POST method sends data to the QuikStor server to create new tenant information to be added to the database. ",
+        "description": "Create Tenant POST method sends tenant information to the server in order to create a new tenant into the database. ",
         "requestBody": {
           "content": {
             "application/json": {
@@ -4142,6 +4142,7 @@
                     },
                     "militaryInfo": {
                       "type": "object",
+                      "description": "This will only be available if isActiveMilitary is marked as True",
                       "properties": {
                         "id": {
                           "type": "integer"
@@ -4501,7 +4502,7 @@
           },
           "description": "The editTenant body request are required parameters to update/edit data for an existing reserved tenants."
         },
-        "description": "EditTenant PUT method modifies and update the tenant information that exist in QuikStor database."
+        "description": "EditTenant PUT method modifies and update exisiting tenant information in the database. An 'id' and 'siteId' objects are required to be passed in order to get the requested content. "
       }
     },
     "/api/<partner-name>/lockunit": {
