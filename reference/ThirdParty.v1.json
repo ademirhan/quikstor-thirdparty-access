@@ -3391,7 +3391,7 @@
               }
             }
           },
-          "description": "The createReservation body request are required Reservation data object that neeeds to be passed in order to create a new reservation. The difference between Reservation and Reservation data is that it consist of Reservation and Payment objects, whereas Reservation only consist of Reservation objects. "
+          "description": "The createReservation body request are required Reservation data object that neeeds to be passed in order to create a new reservation. The difference between Reservation and Reservation data is that it consist of Reservation and Payment objects, whereas Reservation only consist of Reservation objects. \n\nReservation details data models are located below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/ReservationDetails\n\nPayment data models are located below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/PaymentRequestDataObjects"
         },
         "tags": [
           "Reservation Endpoints"
