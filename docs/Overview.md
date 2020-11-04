@@ -1,4 +1,4 @@
-# QuikStor Third-Party API Documentation
+# I. QuikStor Third-Party API Documentation
 
 The purpose of this document is to illustrate the available integration points and processess for managing QuikStor connected third-party self storage management products via the available Application Programming interface ("API") model. This API documentation gives you access to directly integrate the activation and management functions of our service via third-party software application.  
 
