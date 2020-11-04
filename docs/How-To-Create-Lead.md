@@ -1,4 +1,4 @@
-# How To-Create Lead and New Tenant
+# How To Create Lead
 
 #### To Create New Lead
 
@@ -13,5 +13,3 @@ When Lead gets converted to a Tenant account, the request body must include site
 
 Please see EditTenant PUT Method below: 
 
-
-#### To Create New Tenant
