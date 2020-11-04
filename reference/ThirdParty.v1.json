@@ -3740,6 +3740,7 @@
                     },
                     "militaryInfo": {
                       "type": "object",
+                      "description": "This will only be available if isActiveMilitary is marked as True",
                       "properties": {
                         "customer Id": {
                           "type": "integer"
@@ -3931,6 +3932,7 @@
                   },
                   "militaryInfo": {
                     "type": "object",
+                    "description": "This will only be available if isActiveMilitary is marked as True",
                     "properties": {
                       "id": {
                         "type": "integer"
