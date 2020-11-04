@@ -5,7 +5,7 @@ To create new tenant a user account needs to be created in QuikStor API applicat
 
 If you're not familiar with the Login or Authentication process, please go to the link below: 
 
-
+https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/docs/Authentication.md
 
 
 
