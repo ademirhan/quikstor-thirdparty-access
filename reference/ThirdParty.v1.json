@@ -2724,443 +2724,8 @@
                         },
                         "receiptId": {
                           "type": "integer"
-                        },
-                        "unitReservation": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "unitId": {
-                              "type": "integer"
-                            },
-                            "tenantId": {
-                              "type": "integer"
-                            },
-                            "leaseId": {
-                              "type": "integer"
-                            },
-                            "expiresAt": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "rentAtMoveIn": {
-                              "type": "number"
-                            },
-                            "rentDeposit": {
-                              "type": "number"
-                            },
-                            "securityDeposit": {
-                              "type": "number"
-                            },
-                            "setupFee": {
-                              "type": "number"
-                            },
-                            "hasMovedIn": {
-                              "type": "boolean"
-                            }
-                          }
                         }
                       }
-                    },
-                    "payment": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string"
-                        },
-                        "siteId": {
-                          "type": "integer"
-                        },
-                        "selectLeaseId": {
-                          "type": "integer"
-                        },
-                        "specialId": {
-                          "type": "integer"
-                        },
-                        "releaseDelinquencyStatus": {
-                          "type": "boolean",
-                          "description": ""
-                        },
-                        "hasProrate": {
-                          "type": "boolean"
-                        },
-                        "signatureSetting": {
-                          "type": "boolean",
-                          "enum": [
-                            "Email = 1",
-                            "DisplayOnScreen",
-                            "SignLater",
-                            "TenantFacingPortal",
-                            "None"
-                          ]
-                        },
-                        "payments": {
-                          "type": "array",
-                          "description": "New payment data.",
-                          "items": {
-                            "type": "object",
-                            "properties": {
-                              "amount": {
-                                "type": "string"
-                              },
-                              "salesTax": {
-                                "type": "string"
-                              },
-                              "amountWhitoutDiscount": {
-                                "type": "string"
-                              },
-                              "methodId": {
-                                "type": "string",
-                                "enum": [
-                                  "Credit_Card = 1",
-                                  "ACH = 2",
-                                  "Check = 3",
-                                  "Cash = 4",
-                                  "Token = 5",
-                                  "CardReader = 6"
-                                ]
-                              },
-                              "setAsAutoBilling": {
-                                "type": "boolean"
-                              },
-                              "savePaymentMethod": {
-                                "type": "boolean"
-                              },
-                              "creditCardInfo": {
-                                "type": "object",
-                                "properties": {
-                                  "type": {
-                                    "type": "integer"
-                                  },
-                                  "number": {
-                                    "type": "string",
-                                    "minLength": 14
-                                  },
-                                  "cvv": {
-                                    "type": "string"
-                                  },
-                                  "expirationMonth": {
-                                    "type": "integer"
-                                  },
-                                  "expirationYear": {
-                                    "type": "integer"
-                                  }
-                                }
-                              },
-                              "encryptedCreditCardInfo": {
-                                "type": "string"
-                              },
-                              "achInfo": {
-                                "type": "object",
-                                "properties": {
-                                  "accountType": {
-                                    "type": "string"
-                                  },
-                                  "accountNumber": {
-                                    "type": "string"
-                                  },
-                                  "routingNumber": {
-                                    "type": "string"
-                                  }
-                                }
-                              },
-                              "checkInfo": {
-                                "type": "object",
-                                "properties": {
-                                  "bankNumber": {
-                                    "type": "string",
-                                    "pattern": "[a-zA-Z0-9/\\\\- ]*"
-                                  },
-                                  "checkNumber": {
-                                    "type": "string"
-                                  }
-                                }
-                              },
-                              "autoBillingInfoId": {
-                                "type": "integer"
-                              },
-                              "billingInfo": {
-                                "type": "object",
-                                "properties": {
-                                  "firstName": {
-                                    "type": "string",
-                                    "pattern": "[-a-zA-Z0-9'., ]*",
-                                    "minLength": 1
-                                  },
-                                  "lastName": {
-                                    "type": "string",
-                                    "pattern": "[-a-zA-Z0-9'., ]*",
-                                    "minLength": 1
-                                  },
-                                  "streetAddress": {
-                                    "type": "string",
-                                    "minLength": 2
-                                  },
-                                  "city": {
-                                    "type": "string",
-                                    "pattern": "[-a-zA-Z0-9'., ]*",
-                                    "minLength": 2
-                                  },
-                                  "stateId": {
-                                    "type": "integer"
-                                  },
-                                  "stateCode": {
-                                    "type": "string"
-                                  },
-                                  "countryId": {
-                                    "type": "integer"
-                                  },
-                                  "countryCode": {
-                                    "type": "string"
-                                  },
-                                  "zip": {
-                                    "type": "string"
-                                  }
-                                }
-                              },
-                              "linkedPayment": {
-                                "type": "boolean"
-                              },
-                              "token": {
-                                "type": "string"
-                              },
-                              "referenceNumber": {
-                                "type": "string"
-                              },
-                              "channelResponse": {
-                                "type": "string"
-                              }
-                            }
-                          }
-                        },
-                        "leaseAllocations": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "properties": {
-                              "leaseId": {
-                                "type": "integer"
-                              },
-                              "amount": {
-                                "type": "number"
-                              },
-                              "appliedCredit": {
-                                "type": "number"
-                              },
-                              "receivableAllocations": {
-                                "type": "array",
-                                "items": {
-                                  "type": "object"
-                                }
-                              },
-                              "receivableCategories": {
-                                "type": "object",
-                                "properties": {
-                                  "rent": {
-                                    "type": "number"
-                                  },
-                                  "securityDeposit": {
-                                    "type": "number"
-                                  },
-                                  "credit": {
-                                    "type": "number"
-                                  },
-                                  "accountCharges": {
-                                    "type": "array",
-                                    "items": {
-                                      "type": "object",
-                                      "properties": {
-                                        "entityId": {
-                                          "type": "number"
-                                        },
-                                        "amount": {
-                                          "type": "number"
-                                        }
-                                      }
-                                    }
-                                  },
-                                  "prorate": {
-                                    "type": "number"
-                                  },
-                                  "debit": {
-                                    "type": "number"
-                                  },
-                                  "adminFree": {
-                                    "type": "number"
-                                  },
-                                  "lateFee": {
-                                    "type": "number"
-                                  },
-                                  "preLienFee": {
-                                    "type": "number"
-                                  },
-                                  "lienFee": {
-                                    "type": "number"
-                                  },
-                                  "cutLockFees": {
-                                    "type": "number"
-                                  },
-                                  "nsfFee": {
-                                    "type": "number"
-                                  },
-                                  "advertisementCharges": {
-                                    "type": "number"
-                                  },
-                                  "salesTax": {
-                                    "type": "number"
-                                  },
-                                  "inventory": {
-                                    "type": "number"
-                                  },
-                                  "reservationDeposit": {
-                                    "type": "number"
-                                  },
-                                  "reservationSetupFee": {
-                                    "type": "number"
-                                  },
-                                  "insurance": {
-                                    "type": "number"
-                                  },
-                                  "previousCharge": {
-                                    "type": "number"
-                                  },
-                                  "transferFee": {
-                                    "type": "number"
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "otherCharges": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "properties": {
-                              "id": {
-                                "type": "integer"
-                              },
-                              "clientId": {
-                                "type": "integer"
-                              },
-                              "name": {
-                                "type": "string"
-                              },
-                              "description": {
-                                "type": "string"
-                              },
-                              "fixedAmount": {
-                                "type": "number"
-                              },
-                              "percentAmount": {
-                                "type": "number",
-                                "format": "float"
-                              },
-                              "isOneTimeCharge": {
-                                "type": "boolean"
-                              },
-                              "isEditable": {
-                                "type": "boolean"
-                              },
-                              "amount": {
-                                "type": "number"
-                              },
-                              "startDate": {
-                                "type": "string",
-                                "format": "date-time"
-                              },
-                              "endDate": {
-                                "type": "string",
-                                "format": "date-time"
-                              },
-                              "isActive": {
-                                "type": "boolean"
-                              },
-                              "isDeleted": {
-                                "type": "boolean"
-                              }
-                            }
-                          }
-                        },
-                        "receiptOptions": {
-                          "type": "object",
-                          "properties": {
-                            "printCopiesCount": {
-                              "type": "integer"
-                            },
-                            "toEmail": {
-                              "type": "string"
-                            },
-                            "sendEmail": {
-                              "type": "boolean"
-                            },
-                            "toSMS": {
-                              "type": "string"
-                            },
-                            "shouldSendSMS": {
-                              "type": "boolean"
-                            }
-                          },
-                          "required": [
-                            "printCopiesCount"
-                          ]
-                        },
-                        "inventoryPurchases": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "properties": {
-                              "customerId": {
-                                "type": "integer"
-                              },
-                              "inventoryId": {
-                                "type": "integer"
-                              },
-                              "quantity": {
-                                "type": "integer"
-                              },
-                              "price": {
-                                "type": "number"
-                              },
-                              "freeTax": {
-                                "type": "boolean"
-                              },
-                              "action": {
-                                "type": "string",
-                                "enum": [
-                                  "Unknown",
-                                  "Sold",
-                                  "Received",
-                                  "InternalUse",
-                                  "Adjustment",
-                                  "Added",
-                                  "Edited",
-                                  "Deleted"
-                                ]
-                              }
-                            }
-                          }
-                        },
-                        "refundAmount": {
-                          "type": "number"
-                        }
-                      }
-                    },
-                    "amountTowardsRent": {
-                      "type": "number"
-                    },
-                    "securityDepositAmount": {
-                      "type": "number"
-                    },
-                    "setupAmount": {
-                      "type": "number"
-                    },
-                    "specialId": {
-                      "type": "integer"
-                    },
-                    "leadId": {
-                      "type": "integer"
                     }
                   }
                 }
@@ -3328,49 +2893,6 @@
                                 "checkNumber"
                               ]
                             },
-                            "autoBillingInfoId": {
-                              "type": "object",
-                              "properties": {
-                                "firstName": {
-                                  "type": "string",
-                                  "pattern": "-a-zA-Z0-9'.,_ ]*",
-                                  "minLength": 1
-                                },
-                                "lastName": {
-                                  "type": "string",
-                                  "pattern": "-a-zA-Z0-9'.,_ ]*",
-                                  "minLength": 1
-                                },
-                                "streetAddress": {
-                                  "type": "string",
-                                  "minLength": 2
-                                },
-                                "city": {
-                                  "type": "string",
-                                  "pattern": "-a-zA-Z0-9'.,_ ]*",
-                                  "minLength": 2
-                                },
-                                "stateId": {
-                                  "type": "integer"
-                                },
-                                "stateCode": {
-                                  "type": "string"
-                                },
-                                "countryId": {
-                                  "type": "integer"
-                                },
-                                "countryCode": {
-                                  "type": "string"
-                                },
-                                "zip": {
-                                  "type": "string"
-                                }
-                              },
-                              "required": [
-                                "countryId",
-                                "zip"
-                              ]
-                            },
                             "billingInfo": {
                               "type": "object",
                               "properties": {
@@ -3467,9 +2989,390 @@
                   "amountTowardsRent"
                 ]
               }
+            },
+            "application/xml": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "reservation": {
+                    "type": "object",
+                    "properties": {
+                      "siteId": {
+                        "type": "string"
+                      },
+                      "dateTime": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "isEcomReservation": {
+                        "type": "string"
+                      },
+                      "isActive": {
+                        "type": "string"
+                      },
+                      "isDeleted": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "payment": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string"
+                      },
+                      "siteId": {
+                        "type": "integer"
+                      },
+                      "selectedLeaseId": {
+                        "type": "integer"
+                      },
+                      "specialId": {
+                        "description": "Only when making payment.",
+                        "type": "integer"
+                      },
+                      "releaseDeliquencyStatus": {
+                        "type": "boolean"
+                      },
+                      "hasProrate": {
+                        "type": "boolean"
+                      },
+                      "signatureSetting": {
+                        "type": "string",
+                        "enum": [
+                          "Email = 1",
+                          "DisplayOnScreen",
+                          "SignLater",
+                          "TenantFacingPortal",
+                          "None"
+                        ]
+                      },
+                      "payments": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "amount": {
+                              "type": "number"
+                            },
+                            "salesTax": {
+                              "type": "number"
+                            },
+                            "amountWithoutDiscount": {
+                              "type": "number"
+                            },
+                            "methodId": {
+                              "type": [
+                                "string",
+                                "integer"
+                              ]
+                            },
+                            "setAsAutoBilling": {
+                              "type": "string"
+                            },
+                            "savePaymentMethod": {
+                              "type": "string"
+                            },
+                            "creditCardInfo": {
+                              "type": "object"
+                            },
+                            "encryptedCreditCardInfo": {
+                              "type": "string"
+                            },
+                            "achInfo": {
+                              "type": "object",
+                              "required": [
+                                "accountType",
+                                "accountNumber",
+                                "routingNumber"
+                              ],
+                              "properties": {
+                                "accountType": {
+                                  "type": "string"
+                                },
+                                "accountNumber": {
+                                  "type": "string",
+                                  "description": "This use sterilize attributes"
+                                },
+                                "routingNumber": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "checkInfo": {
+                              "type": "object",
+                              "required": [
+                                "bankNumber",
+                                "checkNumber"
+                              ],
+                              "properties": {
+                                "bankNumber": {
+                                  "type": "string",
+                                  "pattern": "[a-zA-Z0-9/\\\\- ]*"
+                                },
+                                "checkNumber": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "bllingInfo": {
+                              "type": "object",
+                              "properties": {
+                                "firstName": {
+                                  "type": "string",
+                                  "pattern": "[-a-zA-Z0-9'., ]*",
+                                  "minLength": 1
+                                },
+                                "lastName": {
+                                  "type": "string",
+                                  "minLength": 2,
+                                  "pattern": "[-a-zA-Z0-9'., ]*"
+                                },
+                                "streetAddress": {
+                                  "type": "string",
+                                  "minLength": 2
+                                },
+                                "city": {
+                                  "type": "string",
+                                  "pattern": "[-a-zA-Z0-9'., ]*",
+                                  "minLength": 2
+                                },
+                                "stateId": {
+                                  "type": "integer"
+                                },
+                                "countryId": {
+                                  "type": "integer"
+                                },
+                                "zip": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "linkedPayment": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "achInfo",
+                            "checkInfo"
+                          ]
+                        }
+                      },
+                      "leaseAllocations": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "leaseId": {
+                              "type": "integer"
+                            },
+                            "amount": {
+                              "type": "number"
+                            },
+                            "appliedCredit": {
+                              "type": "number"
+                            },
+                            "receivableAllocations": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "amount": {
+                                    "type": "number"
+                                  },
+                                  "receivableId": {
+                                    "type": "integer"
+                                  }
+                                },
+                                "required": [
+                                  "amount",
+                                  "receivableId"
+                                ]
+                              }
+                            },
+                            "receivableCategories": {
+                              "type": "object",
+                              "properties": {
+                                "rent": {
+                                  "type": "number"
+                                },
+                                "securityDeposit": {
+                                  "type": "number"
+                                },
+                                "credit": {
+                                  "type": "integer"
+                                },
+                                "accountCharges": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "entityId": {
+                                        "type": "number"
+                                      },
+                                      "amount": {
+                                        "type": "number"
+                                      }
+                                    }
+                                  }
+                                },
+                                "prorate": {
+                                  "type": "number"
+                                },
+                                "debit": {
+                                  "type": "number"
+                                },
+                                "adminFee": {
+                                  "type": "number"
+                                },
+                                "lateFee": {
+                                  "type": "number"
+                                },
+                                "preLienFee": {
+                                  "type": "number"
+                                },
+                                "lienFee": {
+                                  "type": "number"
+                                },
+                                "cutLockFees": {
+                                  "type": "number"
+                                },
+                                "nsfFee": {
+                                  "type": "number"
+                                },
+                                "advertisementCharges": {
+                                  "type": "number"
+                                },
+                                "salesTax": {
+                                  "type": "number"
+                                },
+                                "inventory": {
+                                  "type": "number"
+                                },
+                                "reservationDeposit": {
+                                  "type": "number"
+                                },
+                                "reservationSetupFee": {
+                                  "type": "number"
+                                },
+                                "insurance": {
+                                  "type": "number"
+                                },
+                                "previousCharge": {
+                                  "type": "number"
+                                },
+                                "transferFee": {
+                                  "type": "number"
+                                }
+                              }
+                            }
+                          },
+                          "required": [
+                            "receivableAllocations"
+                          ]
+                        }
+                      },
+                      "otherCharges": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "clientId": {
+                              "type": "integer"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "description": {
+                              "type": "string"
+                            },
+                            "fixedAmount": {
+                              "type": "number"
+                            },
+                            "percentAmount": {
+                              "type": "number",
+                              "format": "float"
+                            },
+                            "isOneTimeCharge": {
+                              "type": "boolean"
+                            },
+                            "isEditable": {
+                              "type": "boolean"
+                            },
+                            "amount": {
+                              "type": "number",
+                              "description": "Only included when embedded in leases"
+                            },
+                            "startDate": {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "endDate": {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "isActive": {
+                              "type": "boolean"
+                            },
+                            "isDeleted": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "clientId"
+                          ]
+                        }
+                      },
+                      "receiptOptions": {
+                        "type": "object",
+                        "properties": {
+                          "printCopiesCount": {
+                            "type": "integer"
+                          },
+                          "toEmail": {
+                            "type": "string"
+                          },
+                          "sendEmail": {
+                            "type": "boolean"
+                          },
+                          "toSMS": {
+                            "type": "string"
+                          },
+                          "shouldSendSMS": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "printCopiesCount",
+                          "toEmail",
+                          "sendEmail",
+                          "toSMS"
+                        ]
+                      },
+                      "inventoryPurchase": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "refundAmount": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "siteId"
+                    ]
+                  }
+                }
+              }
             }
           },
-          "description": "The createReservation body request are required data parameters that neeeds to be passed in order to create a new reservation. "
+          "description": "The createReservation body request are required Reservation data parameters that neeeds to be passed in order to create a new reservation. The difference between Reservation and Reservation data is that it consist of Reservation and Payment objects, whereas Reservation only consist of Reservation objects. "
         },
         "tags": [
           "Reservation Endpoints"
