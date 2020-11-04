@@ -5075,9 +5075,6 @@
       "PreferredReporting": {
         "title": "PreferredReporting",
         "type": "object",
-        "x-tags": [
-          "models"
-        ],
         "properties": {
           "id": {
             "type": "integer"
@@ -5097,7 +5094,10 @@
               "OTHER"
             ]
           }
-        }
+        },
+        "x-tags": [
+          "Models"
+        ]
       },
       "MilitaryInfo": {
         "title": "MilitaryInfo",
@@ -5305,10 +5305,10 @@
             "type": "string"
           }
         },
+        "description": "Response model for getTenants request.",
         "x-tags": [
-          "models"
-        ],
-        "description": "Response model for getTenants request."
+          "Models"
+        ]
       },
       "Feature": {
         "title": "Feature",
@@ -5637,7 +5637,10 @@
           "leadId": {
             "type": "integer"
           }
-        }
+        },
+        "x-tags": [
+          "Models"
+        ]
       },
       "PaymentRequestDataObjects": {
         "title": "PaymentRequestDataObjects",
@@ -5665,7 +5668,10 @@
           "refundAmount": {
             "type": "string"
           }
-        }
+        },
+        "x-tags": [
+          "Models"
+        ]
       },
       "NewPaymentData": {
         "title": "NewPaymentData",
@@ -5674,7 +5680,10 @@
           "id": {
             "type": "string"
           }
-        }
+        },
+        "x-tags": [
+          "Models"
+        ]
       },
       "LeaseAllocationData": {
         "title": "LeaseAllocationData",
@@ -5683,7 +5692,10 @@
           "id": {
             "type": "string"
           }
-        }
+        },
+        "x-tags": [
+          "Models"
+        ]
       },
       "MonthlyChargeData": {
         "title": "MonthlyChargeData",
@@ -5692,7 +5704,10 @@
           "id": {
             "type": "string"
           }
-        }
+        },
+        "x-tags": [
+          "Models"
+        ]
       },
       "ReceiptOptionData": {
         "title": "ReceiptOptionData",
@@ -5701,7 +5716,10 @@
           "id": {
             "type": "string"
           }
-        }
+        },
+        "x-tags": [
+          "Models"
+        ]
       },
       "InventoryPurchaseData": {
         "title": "InventoryPurchaseData",
@@ -5735,7 +5753,10 @@
               "Deleted"
             ]
           }
-        }
+        },
+        "x-tags": [
+          "Models"
+        ]
       }
     },
     "securitySchemes": {
