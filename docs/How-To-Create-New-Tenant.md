@@ -3,10 +3,18 @@
 To create new tenant a user account needs to be created in QuikStor API application with an appropriate role permission to access and modify QuikStor data. We use account with 'login' and password token authentication. This can be viewed in the Login POST method located below:
 
 
-As well as the Login models located below: 
+If you're not familiar with the Login or Authentication process, please go to the link below: 
+
+
+
+
 
 #### Create Tenant Account
 
+Get Tenant response objects are located below: 
+https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1api~1%3Cpartner-name%3E~1gettenants/get
 
+Tenant model data: 
+https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Tenant
 
 #### Create User Roles

@@ -25,6 +25,13 @@ username=email@quikstor.com&password=typepassword&grant_type=password
 }
 ```
 
+Login POST method objects are located below: 
+https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1login/post
+
+
+TokenResponse models are located below: 
+https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/TokenResponse
+
 #### Connections by HTTP and HTTPS
 
 Access to the REST API uses HTTPS only by default. HTTP access is not permitted. Any attempt to access any of the API endpoints using HTTP will result in *403 Forbidden error*
@@ -32,5 +39,7 @@ Access to the REST API uses HTTPS only by default. HTTP access is not permitted.
 You must configure HTTPS before attempting to access the API endpoints. 
 
 Please take a look at configuring REST API by using SSL certificates below: 
+
+
 
 
