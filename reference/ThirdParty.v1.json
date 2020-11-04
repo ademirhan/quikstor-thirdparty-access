@@ -3354,8 +3354,30 @@
                         "items": {
                           "type": "object",
                           "properties": {
-                            "": {
-                              "type": "string"
+                            "inventoryId": {
+                              "type": "integer"
+                            },
+                            "quantity": {
+                              "type": "integer"
+                            },
+                            "price": {
+                              "type": "number"
+                            },
+                            "freeTax": {
+                              "type": "boolean"
+                            },
+                            "action": {
+                              "type": "string",
+                              "enum": [
+                                "Unknown",
+                                "Sold",
+                                "Received",
+                                "InternalUse",
+                                "Adjustment",
+                                "Added",
+                                "Edited",
+                                "Deleted"
+                              ]
                             }
                           }
                         }
