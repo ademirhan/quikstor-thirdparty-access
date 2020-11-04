@@ -1,10 +1,12 @@
 # II. Authentication
 
-QuikStor use a standards-compliant OAuth 2.0 (https://oauth.net/2/) authorization server. Our implementation also allows users to manage their own connections.
+QuikStor use a standards-compliant [OAuth 2.0](https://oauth.net/2/) authorization server. Our implementation also allows users to manage their own connections.
 
-If you are new to OAuth, you can read more at http://oauth.net. 
+If you are new to OAuth, you can read more at [OAuth 2.0](http://oauth.net). 
 
-The authorization endpoint and the token request endpoint are https://api-test.quikstor.com/quikstor_online_api/Quikstor.Online.Authorization/Provider/OAuthProvider
+The authorization endpoint and the token request endpoint are 
+
+https://api-test.quikstor.com/quikstor_online_api/Quikstor.Online.Authorization/Provider/OAuthProvider
 
 #### Access Token
 To make calls from our API you will need an access token. To get an access token you need to go through the access token flow and prompt the user to authorize by logging into QuikStor. Access tokens can be requested per user login. 
