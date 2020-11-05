@@ -3969,7 +3969,7 @@
               }
             }
           },
-          "description": "The createTenant body request are required data parameters that neeeds to be passed when adding a new tenant into a facility. "
+          "description": "The createTenant request body are required to be passed when adding a new tenant into a facility. "
         }
       }
     },
@@ -5668,14 +5668,53 @@
       "NewPaymentData": {
         "title": "NewPaymentData",
         "type": "object",
+        "x-tags": [
+          "Models"
+        ],
         "properties": {
-          "id": {
+          "amount": {
+            "type": "number"
+          },
+          "salesTax": {
+            "type": "number"
+          },
+          "amountWithoutDiscount": {
+            "type": "number"
+          },
+          "methodId": {
+            "type": "string",
+            "enum": [
+              "Credit_Card = 1",
+              "ACH = 2",
+              "Check = 3",
+              "Cash = 4",
+              "Token = 5",
+              "CardReader = 6"
+            ]
+          },
+          "setAsAutoBilling": {
+            "type": "boolean"
+          },
+          "savePaymentMethod": {
+            "type": "boolean"
+          },
+          "encryptedCreditCardInfo": {
+            "type": "string"
+          },
+          "linkedPayment": {
+            "type": "boolean"
+          },
+          "token": {
+            "type": "string"
+          },
+          "referenceNumber": {
+            "type": "string"
+          },
+          "channelResponse": {
             "type": "string"
           }
         },
-        "x-tags": [
-          "Models"
-        ]
+        "description": "New Payment Data is the response model for Reservation and Payment. "
       },
       "LeaseAllocationData": {
         "title": "LeaseAllocationData",
@@ -5749,6 +5788,104 @@
         "x-tags": [
           "Models"
         ]
+      },
+      "CreditCardInfo": {
+        "title": "CreditCardInfo",
+        "type": "object",
+        "description": "Response model for credtit card information in payment.",
+        "properties": {
+          "type": {
+            "type": "integer"
+          },
+          "number": {
+            "type": "string",
+            "minLength": 14
+          },
+          "cvv": {
+            "type": "string",
+            "pattern": "[0-9]*"
+          },
+          "expirationMonth": {
+            "type": "integer"
+          },
+          "expirationYesr": {
+            "type": "integer"
+          }
+        }
+      },
+      "AchInfo": {
+        "title": "AchInfo",
+        "type": "object",
+        "description": "AchInfo is the response to Payment and Reservation for clearing house for processing transactions, for domestic low value payments between participating financial institutions to support credit transfers and direct debits.",
+        "properties": {
+          "accountType": {
+            "type": "string"
+          },
+          "accountNumber": {
+            "type": "string"
+          },
+          "routingNumber": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "accountType",
+          "accountNumber",
+          "routingNumber"
+        ]
+      },
+      "CheckInfo": {
+        "title": "CheckInfo",
+        "type": "object",
+        "properties": {
+          "bankNumber": {
+            "type": "string",
+            "pattern": "[a-zA-Z0-9/\\\\- ]*"
+          },
+          "checkNumber": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "bankNumber",
+          "checkNumber"
+        ],
+        "description": "This is a response model for Payments when creating Reservations."
+      },
+      "BillingInfo": {
+        "title": "BillingInfo",
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "pattern": "[-a-zA-Z0-9'.,_ ]*",
+            "minLength": 1
+          },
+          "lastName": {
+            "type": "string",
+            "pattern": "[-a-zA-Z0-9'.,_ ]*",
+            "minLength": 1
+          },
+          "streetAddress": {
+            "type": "string",
+            "minLength": 2
+          },
+          "city": {
+            "type": "string",
+            "pattern": "[-a-zA-Z0-9'.,_ ]*",
+            "minLength": 2
+          },
+          "stateId": {
+            "type": "string"
+          },
+          "countryId": {
+            "type": "string"
+          },
+          "zip": {
+            "type": "string"
+          }
+        },
+        "description": ""
       }
     },
     "securitySchemes": {
