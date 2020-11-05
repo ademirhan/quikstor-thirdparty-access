@@ -4363,9 +4363,7 @@
                       "city",
                       "zip",
                       "state",
-                      "stateCode",
-                      "country",
-                      "countryCode"
+                      "country"
                     ],
                     "properties": {
                       "id ": {
@@ -4397,16 +4395,10 @@
                       "state": {
                         "type": "string"
                       },
-                      "stateCode": {
-                        "type": "string"
-                      },
                       "countryId": {
                         "type": "integer"
                       },
                       "country": {
-                        "type": "string"
-                      },
-                      "countryCode": {
                         "type": "string"
                       }
                     }
@@ -4426,6 +4418,7 @@
                   },
                   "militaryInfo": {
                     "type": "object",
+                    "description": "Will only be enabled IF isActiveMilitary is true.",
                     "required": [
                       "customer Id",
                       "etsDate",
@@ -4433,7 +4426,6 @@
                       "unitPhoneNumber",
                       "commandingOfficer"
                     ],
-                    "description": "Will only be enabled IF isActiveMilitary is true.",
                     "properties": {
                       "customer Id": {
                         "type": "integer"
