@@ -5811,7 +5811,10 @@
           "expirationYesr": {
             "type": "integer"
           }
-        }
+        },
+        "x-tags": [
+          "Models"
+        ]
       },
       "AchInfo": {
         "title": "AchInfo",
@@ -5832,6 +5835,10 @@
           "accountType",
           "accountNumber",
           "routingNumber"
+        ],
+        "x-tags": [
+          "Models",
+          "Payments"
         ]
       },
       "CheckInfo": {
@@ -5850,7 +5857,10 @@
           "bankNumber",
           "checkNumber"
         ],
-        "description": "This is a response model for Payments when creating Reservations."
+        "description": "This is a response model for Payments when creating Reservations.",
+        "x-tags": [
+          "Models"
+        ]
       },
       "BillingInfo": {
         "title": "BillingInfo",
@@ -5885,7 +5895,10 @@
             "type": "string"
           }
         },
-        "description": ""
+        "description": "",
+        "x-tags": [
+          "Models"
+        ]
       }
     },
     "securitySchemes": {
