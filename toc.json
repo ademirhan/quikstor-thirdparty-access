@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "type": "divider",
+      "title": "Divider"
+    },
+    {
+      "type": "item",
+      "title": "Item",
+      "uri": "docs/1.-Overview.md"
+    },
+    {
+      "type": "group",
+      "title": "Group",
+      "items": [
+        {
+          "type": "item",
+          "title": "Nested Item",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/MonthlyChargeData"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "title": "External Link",
+      "uri": "https://stoplight.io"
+    }
+  ]
+}
