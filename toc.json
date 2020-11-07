@@ -34,12 +34,18 @@
     },
     {
       "type": "group",
-      "title": "Endpoints",
+      "title": "Tenant Endpoints",
       "items": [
         {
           "type": "item",
-          "title": "MonthlyChargeData Model",
-          "uri": "reference/ThirdParty.v1.json/components/schemas/MonthlyChargeData"
+          "title": "Get Tenants",
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1gettenants"
+        },
+        
+        {
+          "type": "item",
+          "title": "Create Tenants",
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1createtenant"
         }
       ]
     },
