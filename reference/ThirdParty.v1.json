@@ -3391,7 +3391,7 @@
               }
             }
           },
-          "description": "The createReservation body request are required Reservation data object that neeeds to be passed in order to create a new reservation. The difference between Reservation and Reservation data is that it consist of Reservation and Payment objects, whereas Reservation only consist of Reservation objects. \n\nReservation details data models are located below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/ReservationDetails\n\nPayment data models are located below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/PaymentRequestDataObjects"
+          "description": "The createReservation body request are required Reservation data object that neeeds to be passed in order to create a new reservation. The difference between Reservation and Reservation data is that it consist of Reservation and Payment objects, whereas Reservation only consist of Reservation objects. \n\nReservation details data models are located below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/ReservationDetails\n\nPayment data models are located below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/PaymentRequestData"
         },
         "tags": [
           "Reservation Endpoints"
@@ -3553,7 +3553,7 @@
                       "unitId": {
                         "type": "integer"
                       },
-                      "customerId": {
+                      "tenantId": {
                         "type": "integer"
                       },
                       "leaseId": {
@@ -5034,7 +5034,7 @@
           "unitId": {
             "type": "integer"
           },
-          "customerId": {
+          "tenantId": {
             "type": "integer"
           },
           "leaseId": {
@@ -5634,8 +5634,8 @@
           "Models"
         ]
       },
-      "PaymentRequestDataObjects": {
-        "title": "PaymentRequestDataObjects",
+      "PaymentRequestData": {
+        "title": "PaymentRequestData",
         "type": "object",
         "description": "",
         "properties": {
@@ -5719,38 +5719,95 @@
       "LeaseAllocationData": {
         "title": "LeaseAllocationData",
         "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          }
-        },
         "x-tags": [
           "Models"
-        ]
+        ],
+        "properties": {
+          "leaseId": {
+            "type": "integer"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "appliedCredit": {
+            "type": "number"
+          }
+        }
       },
       "MonthlyChargeData": {
         "title": "MonthlyChargeData",
         "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          }
-        },
         "x-tags": [
           "Models"
-        ]
+        ],
+        "properties": {
+          "Id": {
+            "type": "integer"
+          },
+          "clientId": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "fixedAmount": {
+            "type": "number"
+          },
+          "percentAmount": {
+            "type": "number",
+            "format": "float"
+          },
+          "isOneTimeCharge": {
+            "type": "boolean"
+          },
+          "isEditable": {
+            "type": "boolean"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          }
+        }
       },
       "ReceiptOptionData": {
         "title": "ReceiptOptionData",
         "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          }
-        },
         "x-tags": [
           "Models"
-        ]
+        ],
+        "properties": {
+          "printCopiesCount": {
+            "type": "integer"
+          },
+          "toEmail": {
+            "type": "string"
+          },
+          "sendEmail": {
+            "type": "boolean"
+          },
+          "toSMS": {
+            "type": "string"
+          },
+          "shouldSendSMS": {
+            "type": "boolean"
+          }
+        }
       },
       "InventoryPurchaseData": {
         "title": "InventoryPurchaseData",
@@ -5837,8 +5894,7 @@
           "routingNumber"
         ],
         "x-tags": [
-          "Models",
-          "Payments"
+          "Models"
         ]
       },
       "CheckInfo": {
@@ -5899,6 +5955,81 @@
         "x-tags": [
           "Models"
         ]
+      },
+      "ReceivableAllocations": {
+        "title": "ReceivableAllocations",
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number"
+          },
+          "receivableId": {
+            "type": "integer"
+          }
+        }
+      },
+      "ReceivableCategories": {
+        "title": "ReceivableCategories",
+        "type": "object",
+        "properties": {
+          "rent": {
+            "type": "number"
+          },
+          "securityDeposit": {
+            "type": "number"
+          },
+          "credit": {
+            "type": "number"
+          },
+          "prorate": {
+            "type": "number"
+          },
+          "debit": {
+            "type": "number"
+          },
+          "adminFee": {
+            "type": "number"
+          },
+          "lateFee": {
+            "type": "number"
+          },
+          "preLienFee": {
+            "type": "number"
+          },
+          "lienFee": {
+            "type": "number"
+          },
+          "cutLockFees": {
+            "type": "number"
+          },
+          "nsfFee": {
+            "type": "number"
+          },
+          "advertisementCharges": {
+            "type": "number"
+          },
+          "salesTax": {
+            "type": "number"
+          },
+          "inventory": {
+            "type": "number"
+          },
+          "reservationDeposit": {
+            "type": "number"
+          },
+          "reservationSetupFee": {
+            "type": "number"
+          },
+          "insurance": {
+            "type": "number"
+          },
+          "previousCharge": {
+            "type": "number"
+          },
+          "transferFee": {
+            "type": "number"
+          }
+        }
       }
     },
     "securitySchemes": {
