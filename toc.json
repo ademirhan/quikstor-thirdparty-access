@@ -21,6 +21,10 @@
       ]
     },
     {
+      "type": "divider",
+      "title": "TestLink"
+    },
+    {
       "type": "item",
       "title": "External Link",
       "uri": "https://stoplight.io"
