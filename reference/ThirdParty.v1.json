@@ -3586,7 +3586,7 @@
           },
           "description": "The editReservation body are required parameters to update/edit data for an existing reserved tenants using Reservation data objects. \n\nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Reservation"
         },
-        "description": "The editReservation PUT method modifies and update data to existing reserved prospective tenants for a facility."
+        "description": "***This feature has not been implemented yet.***\n\nThe editReservation PUT method modifies and update data to existing reserved prospective tenants for a facility."
       }
     },
     "/api/<partner-name>/createtenant": {
