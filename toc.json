@@ -2,27 +2,69 @@
   "items": [
     {
       "type": "divider",
-      "title": "Divider"
+      "title": "Overview"
     },
     {
       "type": "item",
-      "title": "Item",
+      "title": "Overview",
       "uri": "docs/1.-Overview.md"
     },
     {
+      "type": "item",
+      "title": "Authentication",
+      "uri": "docs/2.-Authentication.md"
+    },
+    {
+      "type": "divider",
+      "title": "Guidelines to Start Integrating"
+    },
+    {
+      "type": "item",
+      "title": "Create a New Tenant",
+      "uri": "docs/3.-How-To-Create-New-Tenant.md"
+    },
+    {
+      "type": "item",
+      "title": "Reservations",
+      "uri": "docs/4.-How-To-Reserve.mdd"
+    },
+    {
+      "type": "divider",
+      "title": "Endpoints"
+    },
+    {
       "type": "group",
-      "title": "Group",
+      "title": "Endpoints",
       "items": [
         {
           "type": "item",
-          "title": "Nested Item",
+          "title": "MonthlyChargeData Model",
           "uri": "reference/ThirdParty.v1.json/components/schemas/MonthlyChargeData"
         }
       ]
     },
     {
       "type": "divider",
-      "title": "TestLink"
+      "title": "Login & Site Model"
+    },
+
+
+    {
+      "type": "divider",
+      "title": "Tenant Model"
+    },
+
+    {
+      "type": "divider",
+      "title": "Reservation Model"
+    },
+
+
+
+
+    {
+      "type": "divider",
+      "title": "Payment Model"
     },
     {
       "type": "item",
