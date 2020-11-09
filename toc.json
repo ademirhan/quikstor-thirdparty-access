@@ -28,32 +28,96 @@
       "title": "Reservations",
       "uri": "docs/4.-How-To-Reserve.mdd"
     },
+
+// START OF ENDPOINTS
+
     {
       "type": "divider",
-      "title": "Endpoints"
+      "title": "Login & Site Model"
+    },
+      {
+      "type": "group",
+      "title": "Login Endpoint",
+      "items": [
+        {
+          "type": "item",
+          "title": "Login",
+          "uri": "reference/ThirdParty.v1.json/paths/~1login"
+        }
+      ]
     },
     {
       "type": "group",
-      "title": "Tenant Endpoints",
+      "title": "Site Endpoint",
+      "items": [
+        {
+          "type": "item",
+          "title": "Get Site",
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1getsites"
+        }
+      ]
+    },
+
+    {
+      "type": "divider",
+      "title": "Endpoint"
+    },
+
+// Tenant Endpoints
+    {
+      "type": "group",
+      "title": "Tenant Endpoint",
       "items": [
         {
           "type": "item",
           "title": "Get Tenants",
           "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1gettenants"
         },
-        
         {
           "type": "item",
           "title": "Create Tenants",
           "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1createtenant"
+        },        
+        {
+          "type": "item",
+          "title": "Edit Tenants",
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1edittenant"
         }
       ]
     },
-    {
-      "type": "divider",
-      "title": "Login & Site Model"
-    },
 
+// Units Endpoints
+    {
+      "type": "group",
+      "title": "Units Endpoint",
+      "items": [
+        {
+          "type": "item",
+          "title": "Get Units",
+          "uri": "reference/ThirdParty.v1.json/paths/quikstor_online~1api~1<partner-name>~1getunits"
+        },
+        {
+          "type": "item",
+          "title": "Get Unit Types",
+          "uri": "reference/ThirdParty.v1.json/paths/quikstor_online~1api~1<partner-name>~1getunittypes"
+        },
+         {
+          "type": "item",
+          "title": "Get Available Unit Types",
+          "uri": "reference/ThirdParty.v1.json/paths/quikstor_online~1api~1<partner-name>~1getavailableunittypes"
+        },
+        {
+          "type": "item",
+          "title": "Get Specials for Unit Types",
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1getspecialsforunittype"
+        },
+         {
+          "type": "item",
+          "title": "Get Specials for Unit Types",
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1getspecialsforunittype"
+        }
+      ]
+    },
 
     {
       "type": "divider",

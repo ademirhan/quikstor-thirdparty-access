@@ -4518,7 +4518,7 @@
             }
           }
         },
-        "description": "Lock Unit POST method controlls unit's locking data in a facility. ",
+        "description": "Lock Unit POST method controlls locking data when different users are simultaneously viewing or modifying the list of units. ",
         "tags": [
           "Unit & Unit Type Endpoints"
         ],
@@ -4913,7 +4913,8 @@
               "Parking"
             ]
           }
-        }
+        },
+        "description": ""
       },
       "Special": {
         "title": "Special",
