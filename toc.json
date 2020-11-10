@@ -38,26 +38,59 @@
 
     {
       "type": "divider",
-      "title": "Endpoints"
+      "title": "Login"
     },
       {
       "type": "group",
-      "title": "Login & Site Endpoints",
+      "title": "Login Endpoint",
       "items": [
         {
           "type": "item",
           "title": "Login",
           "uri": "reference/ThirdParty.v1.json/paths/~1login/post"
-        }, 
+        }
+        
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Login Model",
+      "items": [
         {
+          "type": "item",
+          "title": "Token Response",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/TokenResponse"
+        }
+        
+      ]
+    },
+    
+   {
+      "type": "divider",
+      "title": "Site Endpoints & Response" 
+    },
+    {
+      "type": "group",
+      "title": "Site Endpoints",
+      "items": [
+                {
           "type": "item",
           "title": "Get Site",
           "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1getsites/get"
         }
       ]
     },
-    
-   
+    {
+      "type": "group",
+      "title": "Site Model",
+      "items": [
+                {
+          "type": "item",
+          "title": "Site Response Model",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/Site"
+        }
+      ]
+    },
 
     {
       "type": "group",
@@ -66,17 +99,17 @@
         {
           "type": "item",
           "title": "Get Tenants",
-          "uri": "https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1api~1%3Cpartner-name%3E~1gettenants/get"
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1%3Cpartner-name%3E~1gettenants/get"
         },
         {
           "type": "item",
           "title": "Create Tenants",
-          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1api~1%3Cpartner-name%3E~1createtenant/post"
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1createtenant/post"
         },        
         {
           "type": "item",
           "title": "Edit Tenants",
-          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1api~1%3Cpartner-name%3E~1edittenant/put"
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1edittenant/put"
         }
       ]
     },
@@ -88,22 +121,49 @@
         {
           "type": "item",
           "title": "Get Units",
-          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/quikstor_online~1api~1%3Cpartner-name%3E~1getunits/get"
+          "uri": "reference/ThirdParty.v1.json/paths/quikstor_online~1api~1<partner-name>~1getunits/get"
         },
         {
           "type": "item",
           "title": "Get Unit Types",
-          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/quikstor_online~1api~1%3Cpartner-name%3E~1getunittypes/get"
+          "uri": "reference/ThirdParty.v1.json/paths/quikstor_online~1api~1<partner-name>~1getunittypes/get"
         },
          {
           "type": "item",
           "title": "Get Available Unit Types",
-          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/quikstor_online~1api~1%3Cpartner-name%3E~1getavailableunittypes/get"
+          "uri": "reference/ThirdParty.v1.json/paths/quikstor_online~1api~1<partner-name>~1getavailableunittypes/get"
         },
         {
           "type": "item",
           "title": "Get Specials for Unit Types",
-          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1api~1%3Cpartner-name%3E~1getspecialsforunittype/get"
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1getspecialsforunittype/get"
+        }
+      ]
+    },
+
+       {
+      "type": "group",
+      "title": "Reservation Endpoints",
+      "items": [
+        {
+          "type": "item",
+          "title": "Get Reservationss",
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1getreservations/get"
+        },
+        {
+          "type": "item",
+          "title": "Get Reservation Details",
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1getreservationdetails/get"
+        },
+         {
+          "type": "item",
+          "title": "Create Reservations",
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1createreservation/post"
+        },
+        {
+          "type": "item",
+          "title": "Edit Reservations",
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1editreservation/put"
         }
       ]
     },
