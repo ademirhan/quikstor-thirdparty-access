@@ -105,7 +105,7 @@
         {
           "type": "item",
           "title": "Get Tenants",
-          "uri": "reference/ThirdParty.v1.json/paths/~1api~1%3Cpartner-name%3E~1gettenants/get"
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1gettenants/get"
         },
         {
           "type": "item",
