@@ -61,7 +61,7 @@
         {
           "type": "item",
           "title": "Get Tenants",
-          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1api~1%3Cpartner-name%3E~1gettenants/get"
+          "uri": "https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1api~1%3Cpartner-name%3E~1gettenants/get"
         },
         {
           "type": "item",
