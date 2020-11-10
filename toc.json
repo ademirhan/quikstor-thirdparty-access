@@ -47,12 +47,12 @@
         {
           "type": "item",
           "title": "Login",
-          "uri": "paths/~1login/post"
+          "uri": "reference/ThirdParty.v1.json/paths/~1login/post"
         }, 
         {
           "type": "item",
           "title": "Get Site",
-          "uri": "paths/~1api~1<partner-name>~1getsites/get"
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1getsites/get"
         }
       ]
     },
