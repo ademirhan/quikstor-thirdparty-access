@@ -30,6 +30,11 @@
       "title": "Reservations",
       "uri": "docs/4.-How-To-Reserve.md"
     },
+    {
+      "type": "item",
+      "title": "Create Lead",
+      "uri": "docs/6.-How-To-Create-Lead.md"
+    },
 
     {
       "type": "divider",
@@ -42,12 +47,12 @@
         {
           "type": "item",
           "title": "Login",
-          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1login/post"
+          "uri": "paths/~1login/post"
         }, 
         {
           "type": "item",
           "title": "Get Site",
-          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1api~1%3Cpartner-name%3E~1getsites/get"
+          "uri": "paths/~1api~1<partner-name>~1getsites/get"
         }
       ]
     },
