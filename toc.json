@@ -92,6 +92,12 @@
       ]
     },
 
+
+    {
+      "type": "divider",
+      "title": "Tenant Endpoints & Model"
+    },
+
     {
       "type": "group",
       "title": "Tenant Endpoints",
@@ -113,6 +119,23 @@
         }
       ]
     },
+    {
+      "type": "group",
+      "title": "Tenant Model",
+      "items": [
+                {
+          "type": "item",
+          "title": "Tenant Model",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/Tenant"
+        },
+        {
+          "type": "item",
+          "title": "Address Model",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/Address"
+        }
+      ]
+    },
+
 
     {
       "type": "group",
