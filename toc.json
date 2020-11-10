@@ -1,5 +1,4 @@
 {
-  /////
   "items": 
   [
     {
@@ -34,21 +33,21 @@
 
     {
       "type": "divider",
-      "title": "Endpoint"
+      "title": "Endpoints"
     },
       {
       "type": "group",
-      "title": "Login & Site Endpoint",
+      "title": "Login & Site Endpoints",
       "items": [
         {
           "type": "item",
           "title": "Login",
-          "uri": "https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/reference/ThirdParty.v1.json/paths/~1login"
+          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1login/post"
         }, 
         {
           "type": "item",
           "title": "Get Site",
-          "uri": "https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1getsites"
+          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1api~1%3Cpartner-name%3E~1getsites/get"
         }
       ]
     },
@@ -57,54 +56,49 @@
 
     {
       "type": "group",
-      "title": "Tenant Endpoint",
+      "title": "Tenant Endpoints",
       "items": [
         {
           "type": "item",
           "title": "Get Tenants",
-          "uri": "https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1gettenants"
+          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1api~1%3Cpartner-name%3E~1gettenants/get"
         },
         {
           "type": "item",
           "title": "Create Tenants",
-          "uri": "https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1createtenant"
+          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1api~1%3Cpartner-name%3E~1createtenant/post"
         },        
         {
           "type": "item",
           "title": "Edit Tenants",
-          "uri": "https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1edittenant"
+          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1api~1%3Cpartner-name%3E~1edittenant/put"
         }
       ]
     },
 
     {
       "type": "group",
-      "title": "Units Endpoint",
+      "title": "Units Endpoints",
       "items": [
         {
           "type": "item",
           "title": "Get Units",
-          "uri": "https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/reference/ThirdParty.v1.json/paths/quikstor_online~1api~1<partner-name>~1getunits"
+          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/quikstor_online~1api~1%3Cpartner-name%3E~1getunits/get"
         },
         {
           "type": "item",
           "title": "Get Unit Types",
-          "uri": "reference/ThirdParty.v1.json/paths/quikstor_online~1api~1<partner-name>~1getunittypes"
+          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/quikstor_online~1api~1%3Cpartner-name%3E~1getunittypes/get"
         },
          {
           "type": "item",
           "title": "Get Available Unit Types",
-          "uri": "https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/reference/ThirdParty.v1.json/paths/quikstor_online~1api~1<partner-name>~1getavailableunittypes"
+          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/quikstor_online~1api~1%3Cpartner-name%3E~1getavailableunittypes/get"
         },
         {
           "type": "item",
           "title": "Get Specials for Unit Types",
-          "uri": "https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1getspecialsforunittype"
-        },
-         {
-          "type": "item",
-          "title": "Get Specials for Unit Types",
-          "uri": "https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1getspecialsforunittype"
+          "uri": "docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/paths/~1api~1%3Cpartner-name%3E~1getspecialsforunittype/get"
         }
       ]
     },
