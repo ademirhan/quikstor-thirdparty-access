@@ -14,6 +14,8 @@
       "title": "Authentication",
       "uri": "docs/2.-Authentication.md"
     },
+
+// How-To Articles   
     {
       "type": "divider",
       "title": "Guidelines to Start Integrating"
@@ -33,23 +35,17 @@
 
     {
       "type": "divider",
-      "title": "Login & Site Model"
+      "title": "Endpoint"
     },
       {
       "type": "group",
-      "title": "Login Endpoint",
+      "title": "Login & Site Endpoint",
       "items": [
         {
           "type": "item",
           "title": "Login",
           "uri": "reference/ThirdParty.v1.json/paths/~1login"
-        }
-      ]
-    },
-    {
-      "type": "group",
-      "title": "Site Endpoint",
-      "items": [
+        }, 
         {
           "type": "item",
           "title": "Get Site",
@@ -57,11 +53,8 @@
         }
       ]
     },
-
-    {
-      "type": "divider",
-      "title": "Endpoint"
-    },
+    
+   
 
 // Tenant Endpoints
     {
@@ -128,9 +121,6 @@
       "type": "divider",
       "title": "Reservation Model"
     },
-
-
-
 
     {
       "type": "divider",
