@@ -203,7 +203,29 @@
 
     {
       "type": "divider",
-      "title": "Payment Model"
+      "title": "Model",
+      "items": [
+        {
+          "type": "item",
+          "title": "Get Reservationss",
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1getreservations/get"
+        },
+        {
+          "type": "item",
+          "title": "Get Reservation Details",
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1getreservationdetails/get"
+        },
+         {
+          "type": "item",
+          "title": "Create Reservations",
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1createreservation/post"
+        },
+        {
+          "type": "item",
+          "title": "Edit Reservations",
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1editreservation/put"
+        }
+      ]
     },
 
 
