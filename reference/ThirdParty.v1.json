@@ -92,7 +92,7 @@
         "summary": "GetSites",
         "responses": {
           "200": {
-            "description": "API reponds to the Site model. \n\nSee (https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Site)",
+            "description": "API reponds to the [Site model] (https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Site)",
             "headers": {},
             "content": {
               "application/json": {
@@ -1023,7 +1023,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Response model for getTenants can be viewed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Tenant",
+            "description": "Response model for [getTenants](https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Tenant)",
             "content": {
               "application/json": {
                 "schema": {
@@ -1483,7 +1483,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Response model for getReservations can be viewed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Reservation",
+            "description": "Response model for [getReservations](https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Reservation)",
             "content": {
               "application/json": {
                 "schema": {
@@ -1618,7 +1618,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Response model for getReservationDetails can be viewed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Reservation",
+            "description": "Response model for [getReservationDetails](https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Reservation)",
             "content": {
               "application/json": {
                 "schema": {
@@ -1771,7 +1771,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Response model for getSpecialsForUnitType can be viewed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Special",
+            "description": "Response model for [getSpecialsForUnitType](https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Special)",
             "content": {
               "application/json": {
                 "schema": {
@@ -2187,7 +2187,7 @@
               }
             }
           },
-          "description": "API request model for Lead can be viewed below:\n\nSee (https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Lead)"
+          "description": "API request model for [Lead](https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Lead)"
         },
         "security": [
           {
@@ -2336,7 +2336,7 @@
               }
             }
           },
-          "description": "API request model for createLead can be viewed below:\n\nSee (https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Site)"
+          "description": "API request model for [createLead](https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Site)"
         },
         "description": "The MoveIn POST endpoint is used to request data from ther server to identify all tenants moving into the facility. ",
         "security": [
@@ -2646,7 +2646,8 @@
                 }
               }
             }
-          }
+          },
+          "description": ""
         },
         "description": "",
         "security": [
@@ -2682,7 +2683,7 @@
         "operationId": "post-api-partner-name-createreservation",
         "responses": {
           "200": {
-            "description": "Response model for getReservations can be viewed below: \n\nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Reservation",
+            "description": "Response model for [getReservations](https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Reservation)",
             "content": {
               "application/json": {
                 "schema": {
@@ -3391,7 +3392,7 @@
               }
             }
           },
-          "description": "The createReservation body request are required Reservation data object that neeeds to be passed in order to create a new reservation. The difference between Reservation and Reservation data is that it consist of Reservation and Payment objects, whereas Reservation only consist of Reservation objects. \n\nReservation details data models are located below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/ReservationDetails\n\nPayment data models are located below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/PaymentRequestData"
+          "description": "The createReservation body request are required Reservation data object that neeeds to be passed in order to create a new reservation. The difference between Reservation and Reservation data is that it consist of Reservation and Payment objects, whereas Reservation only consist of Reservation objects. \n\nData models for [Reservation details](https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/ReservationDetails)\n\nData models for [Payment](https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/PaymentRequestData)"
         },
         "tags": [
           "Reservation Endpoints"
