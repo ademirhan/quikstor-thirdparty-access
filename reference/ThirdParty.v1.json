@@ -1388,7 +1388,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Response model for getInventoryItems can be viewed below: \nhttps://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/InventoryItem",
+            "description": "Response model for [getInventoryItems](https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/InventoryItem)",
             "content": {
               "application/json": {
                 "schema": {
