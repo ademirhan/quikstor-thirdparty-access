@@ -3596,7 +3596,7 @@
         "operationId": "post-api-partner-name-createtenant",
         "responses": {
           "200": {
-            "description": "Response model for [getTenants](https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Tenant)",
+            "description": "Response [Tenants model can be viewed here.](https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Tenant)",
             "content": {
               "application/json": {
                 "schema": {
