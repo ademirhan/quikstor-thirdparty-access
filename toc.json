@@ -227,38 +227,38 @@
         },
         {
           "type": "item",
-          "title": "Address",
-          "uri": "reference/ThirdParty.v1.json/components/schemas/Address"
+          "title": "Feature",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/Feature"
         },
             {
           "type": "item",
-          "title": "Billing Info",
-          "uri": "reference/ThirdParty.v1.json/components/schemas/BillingInfo"
+          "title": "Inventory Item",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/InventoryItem"
         },
         {
           "type": "item",
-          "title": "Check Info",
-          "uri": "reference/ThirdParty.v1.json/components/schemas/CheckInfo"
+          "title": "Inventory Purchase Data",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/InventoryPurchaseData"
         },
               {
           "type": "item",
-          "title": "ACH Info",
-          "uri": "reference/ThirdParty.v1.json/components/schemas/AchInfo"
+          "title": "Language",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/Language"
         },
         {
           "type": "item",
-          "title": "Address",
-          "uri": "reference/ThirdParty.v1.json/components/schemas/Address"
+          "title": "Lead",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/Lead"
         },
         {
           "type": "item",
-          "title": "Billing Info",
-          "uri": "reference/ThirdParty.v1.json/components/schemas/BillingInfo"
+          "title": "LeaseAllocation Data",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/LeaseAllocationData"
         },
         {
           "type": "item",
-          "title": "Check Info",
-          "uri": "reference/ThirdParty.v1.json/components/schemas/CheckInfo"
+          "title": "Millitary Info",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/MilitaryInfo"
         }
       ]
     },
