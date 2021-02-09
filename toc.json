@@ -202,23 +202,63 @@
       "items": [
         {
           "type": "item",
-          "title": "Get Reservationss",
-          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1getreservations/get"
+          "title": "ACH Info",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/AchInfo"
         },
         {
           "type": "item",
-          "title": "Get Reservation Details",
-          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1getreservationdetails/get"
+          "title": "Address",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/Address"
         },
          {
           "type": "item",
-          "title": "Create Reservations",
-          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1createreservation/post"
+          "title": "Billing Info",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/BillingInfo"
         },
         {
           "type": "item",
-          "title": "Edit Reservations",
-          "uri": "reference/ThirdParty.v1.json/paths/~1api~1<partner-name>~1editreservation/put"
+          "title": "Check Info",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/CheckInfo"
+        },
+              {
+          "type": "item",
+          "title": "CreditCard Info",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/CreditCardInfo"
+        },
+        {
+          "type": "item",
+          "title": "Address",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/Address"
+        },
+            {
+          "type": "item",
+          "title": "Billing Info",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/BillingInfo"
+        },
+        {
+          "type": "item",
+          "title": "Check Info",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/CheckInfo"
+        },
+              {
+          "type": "item",
+          "title": "ACH Info",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/AchInfo"
+        },
+        {
+          "type": "item",
+          "title": "Address",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/Address"
+        },
+        {
+          "type": "item",
+          "title": "Billing Info",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/BillingInfo"
+        },
+        {
+          "type": "item",
+          "title": "Check Info",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/CheckInfo"
         }
       ]
     },
