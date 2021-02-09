@@ -193,7 +193,7 @@
 
     {
       "type": "group",
-      "title": "Reservation Model",
+      "title": "Model for Login",
       "items": [
                 {
           "type": "item",
@@ -248,6 +248,47 @@
         {
           "type": "item",
           "title": "LeaseAllocation Data",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/LeaseAllocationData"
+        },
+        {
+          "type": "item",
+          "title": "Millitary Info",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/MilitaryInfo"
+        },
+        {
+          "type": "item",
+          "title": "Monthly Charge Data",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/Language"
+        },
+        {
+          "type": "item",
+          "title": "New Payment Data",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/Lead"
+        },
+        {
+          "type": "item",
+          "title": "Payment Request Data",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/LeaseAllocationData"
+        },
+        {
+          "type": "item",
+          "title": "Picture",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/MilitaryInfo"
+        },
+        
+              {
+          "type": "item",
+          "title": "Preferred Reporting",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/Language"
+        },
+        {
+          "type": "item",
+          "title": "Receipt Option Data",
+          "uri": "reference/ThirdParty.v1.json/components/schemas/Lead"
+        },
+        {
+          "type": "item",
+          "title": "Receivable categories ",
           "uri": "reference/ThirdParty.v1.json/components/schemas/LeaseAllocationData"
         },
         {
