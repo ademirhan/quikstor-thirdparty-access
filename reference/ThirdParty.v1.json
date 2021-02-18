@@ -387,7 +387,7 @@
       },
       "parameters": []
     },
-    "quikstor_online/api/<partner-name>/getunittypes": {
+    "/api/<partner-name>/getunittypes": {
       "get": {
         "summary": "GetUnitTypes",
         "responses": {
@@ -614,7 +614,7 @@
       },
       "parameters": []
     },
-    "quikstor_online/api/<partner-name>/getavailableunittypes": {
+    "/api/<partner-name>/getavailableunittypes": {
       "get": {
         "summary": "GetAvailableUnitTypes",
         "responses": {
@@ -906,7 +906,7 @@
       },
       "parameters": []
     },
-    "quikstor_online/api/<partner-name>/getunits": {
+    "/api/<partner-name>/getunits": {
       "get": {
         "summary": "GetUnits",
         "tags": [
@@ -1380,7 +1380,7 @@
         ]
       }
     },
-    "quikstor_online/api/<partner-name>/getinventoryitems": {
+    "/api/<partner-name>/getinventoryitems": {
       "get": {
         "summary": "GetInventoryItems",
         "tags": [
