@@ -2377,7 +2377,81 @@
                         }
                       },
                       "customer": {
-                        "type": "string"
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string"
+                            },
+                            "siteId": {
+                              "type": "string"
+                            },
+                            "primaryAddressId": {
+                              "type": "string"
+                            },
+                            "languageId": {
+                              "type": "string"
+                            },
+                            "profileId": {
+                              "type": "string"
+                            },
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "firstName": {
+                              "type": "string"
+                            },
+                            "middleName": {
+                              "type": "string"
+                            },
+                            "lastName": {
+                              "type": "string"
+                            },
+                            "dateOfBirth ": {
+                              "type": "string"
+                            },
+                            "gender": {
+                              "type": "string"
+                            },
+                            "driversLicense": {
+                              "type": "string"
+                            },
+                            "drivingLicensesStateId": {
+                              "type": "string"
+                            },
+                            "companyName": {
+                              "type": "string"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "socialSecurityNumber": {
+                              "type": "string"
+                            },
+                            "ssnChanged": {
+                              "type": "string"
+                            },
+                            "cellPhone": {
+                              "type": "string"
+                            },
+                            "homePhone": {
+                              "type": "string"
+                            },
+                            "workPhone": {
+                              "type": "string"
+                            },
+                            "faxNumber": {
+                              "type": "string"
+                            },
+                            "lastReceiptNumber": {
+                              "type": "string"
+                            },
+                            "": {
+                              "type": "string"
+                            }
+                          }
+                        }
                       },
                       "alternate": {
                         "type": "object"
