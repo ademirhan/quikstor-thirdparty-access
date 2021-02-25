@@ -2625,243 +2625,260 @@
                         "type": "object",
                         "properties": {
                           "siteId": {
-                              "type": "integer"
-                            },
-                            "primaryAddressId": {
-                              "type": "integer"
-                            },
-                            "languageId": {
-                              "type": "integer"
-                            },
-                            "profileId": {
-                              "type": "integer"
-                            },
-                            "sourceId": {
-                              "type": "integer"
-                            },
-                            "firstName": {
-                              "type": "string",
-                              "pattern": "[-a-zA-Z0-9'.,_() ]*",
-                              "maxLength": 50
-                            },
-                            "middleName": {
-                              "type": "string",
-                              "pattern": "[-a-zA-Z0-9'.,_() ]*",
-                              "maxLength": 50
-                            },
-                            "lastName": {
-                              "type": "string",
-                              "pattern": "[-a-zA-Z0-9'.,_() ]*",
-                              "maxLength": 50
-                            },
-                            "dateOfBirth": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "gender": {
-                              "type": "string"
-                            },
-                            "driversLicense": {
-                              "type": "string",
-                              "maxLength": 15
-                            },
-                            "drivingLicenseStateId": {
-                              "type": "integer"
-                            },
-                            "companyName": {
-                              "type": "string",
-                              "maxLength": 50
-                            },
-                            "email": {
-                              "type": "string",
-                              "maxLength": 50
-                            },
-                            "socialSecurityNumber": {
-                              "type": "string",
-                              "maxLength": 11
-                            },
-                            "ssnChanged": {
-                              "type": "string",
-                              "pattern": "[-0-9() ]*"
-                            },
-                            "cellPhone": {
-                              "type": "string",
-                              "pattern": "[-0-9() ]*",
-                              "maxLength": 15
-                            },
-                            "homePhone": {
-                              "type": "string",
-                              "pattern": "[-0-9() ]*",
-                              "maxLength": 15
-                            },
-                            "workPhone": {
-                              "type": "string",
-                              "pattern": "[-0-9() ]*",
-                              "maxLength": 15
-                            },
-                            "faxNumber": {
-                              "type": "string"
-                            },
-                            "lastReceiptNumber": {
-                              "type": "string"
-                            },
-                            "customerNumber": {
-                              "type": "string"
-                            },
-                            "profileType": {
-                              "type": "string"
-                            },
-                            "hasWebPassword": {
-                              "type": "boolean"
-                            },
-                            "address": {
-                              "type": "object",
-                              "properties": {
-                                "id ": {
-                                  "type": "integer"
-                                },
-                                "streetAddress": {
-                                  "type": "string",
-                                  "pattern": "[-a-zA-Z0-9_.,# ]*",
-                                  "maxLength": 50
-                                },
-                                "streetAddress2": {
-                                  "type": "string",
-                                  "pattern": "[-a-zA-Z0-9_.,# ]*",
-                                  "maxLength": 50
-                                },
-                                "city": {
-                                  "type": "string",
-                                  "pattern": "[-a-zA-Z0-9_.,# ]*",
-                                  "maxLength": 20
-                                },
-                                "zip": {
-                                  "type": "string",
-                                  "maxLength": 20,
-                                  "pattern": "[-a-zA-Z0-9_.,# ]*"
-                                },
-                                "stateId": {
-                                  "type": "integer"
-                                },
-                                "state": {
-                                  "type": "string"
-                                },
-                                "stateCode": {
-                                  "type": "string"
-                                },
-                                "countryId": {
-                                  "type": "integer"
-                                },
-                                "country": {
-                                  "type": "string"
-                                },
-                                "countryCode": {
-                                  "type": "string"
-                                }
+                            "type": "integer"
+                          },
+                          "primaryAddressId": {
+                            "type": "integer"
+                          },
+                          "languageId": {
+                            "type": "integer"
+                          },
+                          "profileId": {
+                            "type": "integer"
+                          },
+                          "sourceId": {
+                            "type": "integer"
+                          },
+                          "firstName": {
+                            "type": "string",
+                            "pattern": "[-a-zA-Z0-9'.,_() ]*",
+                            "maxLength": 50
+                          },
+                          "middleName": {
+                            "type": "string",
+                            "pattern": "[-a-zA-Z0-9'.,_() ]*",
+                            "maxLength": 50
+                          },
+                          "lastName": {
+                            "type": "string",
+                            "pattern": "[-a-zA-Z0-9'.,_() ]*",
+                            "maxLength": 50
+                          },
+                          "dateOfBirth": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "gender": {
+                            "type": "string"
+                          },
+                          "driversLicense": {
+                            "type": "string",
+                            "maxLength": 15
+                          },
+                          "drivingLicenseStateId": {
+                            "type": "integer"
+                          },
+                          "companyName": {
+                            "type": "string",
+                            "maxLength": 50
+                          },
+                          "email": {
+                            "type": "string",
+                            "maxLength": 50
+                          },
+                          "socialSecurityNumber": {
+                            "type": "string",
+                            "maxLength": 11
+                          },
+                          "ssnChanged": {
+                            "type": "string",
+                            "pattern": "[-0-9() ]*"
+                          },
+                          "cellPhone": {
+                            "type": "string",
+                            "pattern": "[-0-9() ]*",
+                            "maxLength": 15
+                          },
+                          "homePhone": {
+                            "type": "string",
+                            "pattern": "[-0-9() ]*",
+                            "maxLength": 15
+                          },
+                          "workPhone": {
+                            "type": "string",
+                            "pattern": "[-0-9() ]*",
+                            "maxLength": 15
+                          },
+                          "faxNumber": {
+                            "type": "string"
+                          },
+                          "lastReceiptNumber": {
+                            "type": "string"
+                          },
+                          "customerNumber": {
+                            "type": "string"
+                          },
+                          "profileType": {
+                            "type": "string"
+                          },
+                          "hasWebPassword": {
+                            "type": "boolean"
+                          },
+                          "address": {
+                            "type": "object",
+                            "properties": {
+                              "id ": {
+                                "type": "integer"
+                              },
+                              "streetAddress": {
+                                "type": "string",
+                                "pattern": "[-a-zA-Z0-9_.,# ]*",
+                                "maxLength": 50
+                              },
+                              "streetAddress2": {
+                                "type": "string",
+                                "pattern": "[-a-zA-Z0-9_.,# ]*",
+                                "maxLength": 50
+                              },
+                              "city": {
+                                "type": "string",
+                                "pattern": "[-a-zA-Z0-9_.,# ]*",
+                                "maxLength": 20
+                              },
+                              "zip": {
+                                "type": "string",
+                                "maxLength": 20,
+                                "pattern": "[-a-zA-Z0-9_.,# ]*"
+                              },
+                              "stateId": {
+                                "type": "integer"
+                              },
+                              "state": {
+                                "type": "string"
+                              },
+                              "stateCode": {
+                                "type": "string"
+                              },
+                              "countryId": {
+                                "type": "integer"
+                              },
+                              "country": {
+                                "type": "string"
+                              },
+                              "countryCode": {
+                                "type": "string"
                               }
-                            },
-                            "optOutOfNotifications": {
-                              "type": "boolean"
-                            },
-                            "milesFromSite": {
-                              "type": "number",
-                              "format": "float"
-                            },
-                            "units": {
-                              "type": "string"
-                            },
-                            "isActiveMilitary": {
-                              "type": "boolean"
-                            },
-                            "militaryInfo": {
-                              "type": "object",
-                              "description": "This will only be available if isActiveMilitary is marked as True",
+                            }
+                          },
+                          "optOutOfNotifications": {
+                            "type": "boolean"
+                          },
+                          "milesFromSite": {
+                            "type": "number",
+                            "format": "float"
+                          },
+                          "units": {
+                            "type": "string"
+                          },
+                          "isActiveMilitary": {
+                            "type": "boolean"
+                          },
+                          "militaryInfo": {
+                            "type": "object",
+                            "description": "This will only be available if isActiveMilitary is marked as True",
+                            "properties": {
+                              "id": {
+                                "type": "integer"
+                              },
+                              "customer Id": {
+                                "type": "integer"
+                              },
+                              "etsDate": {
+                                "type": "string",
+                                "format": "date-time"
+                              },
+                              "unitName": {
+                                "type": "string",
+                                "pattern": "[-a-zA-Z0-9'.,_() ]*",
+                                "maxLength": 150
+                              },
+                              "unitPhoneNumber": {
+                                "type": "string",
+                                "pattern": "[-0-9() ]*",
+                                "maxLength": 15
+                              },
+                              "commandingOfficer": {
+                                "type": "string",
+                                "pattern": "[-a-zA-Z0-9'.,_() ]*",
+                                "maxLength": 150
+                              }
+                            }
+                          },
+                          "preferredReporting": {
+                            "type": "array",
+                            "uniqueItems": false,
+                            "items": {
+                              "type": [
+                                "object",
+                                "integer"
+                              ],
+                              "enum": [
+                                "customerId = tenantId",
+                                "channelId = channelId",
+                                "reportingType = reportingType"
+                              ],
                               "properties": {
                                 "id": {
                                   "type": "integer"
                                 },
-                                "customer Id": {
+                                "customerId": {
                                   "type": "integer"
                                 },
-                                "etsDate": {
-                                  "type": "string",
-                                  "format": "date-time"
+                                "channelId": {
+                                  "type": "integer"
                                 },
-                                "unitName": {
-                                  "type": "string",
-                                  "pattern": "[-a-zA-Z0-9'.,_() ]*",
-                                  "maxLength": 150
-                                },
-                                "unitPhoneNumber": {
-                                  "type": "string",
-                                  "pattern": "[-0-9() ]*",
-                                  "maxLength": 15
-                                },
-                                "commandingOfficer": {
-                                  "type": "string",
-                                  "pattern": "[-a-zA-Z0-9'.,_() ]*",
-                                  "maxLength": 150
+                                "reportingType": {
+                                  "type": "integer",
+                                  "enum": [
+                                    "receipts = 1",
+                                    "bills = 2",
+                                    "notices = 3",
+                                    "other"
+                                  ]
                                 }
                               }
-                            },
-                            "preferredReporting": {
-                              "type": "array",
-                              "uniqueItems": false,
-                              "items": {
-                                "type": [
-                                  "object",
-                                  "integer"
-                                ],
-                                "enum": [
-                                  "customerId = tenantId",
-                                  "channelId = channelId",
-                                  "reportingType = reportingType"
-                                ],
-                                "properties": {
-                                  "id": {
-                                    "type": "integer"
-                                  },
-                                  "customerId": {
-                                    "type": "integer"
-                                  },
-                                  "channelId": {
-                                    "type": "integer"
-                                  },
-                                  "reportingType": {
-                                    "type": "integer",
-                                    "enum": [
-                                      "receipts = 1",
-                                      "bills = 2",
-                                      "notices = 3",
-                                      "other"
-                                    ]
-                                  }
-                                }
-                              }
-                            },
-                            "NSFCount": {
-                              "type": "number",
-                              "format": "float"
-                            },
-                            "isActive": {
-                              "type": "boolean"
-                            },
-                            "isDeleted": {
-                              "type": "boolean"
-                            },
-                            "hasPassword": {
-                              "type": "boolean"
-                            },
-                            "noEmail": {
-                              "type": "boolean"
-                            },
-                            "noPhoneNumber": {
-                              "type": "boolean"
                             }
+                          },
+                          "NSFCount": {
+                            "type": "number",
+                            "format": "float"
+                          },
+                          "isActive": {
+                            "type": "boolean"
+                          },
+                          "isDeleted": {
+                            "type": "boolean"
+                          },
+                          "hasPassword": {
+                            "type": "boolean"
+                          },
+                          "noEmail": {
+                            "type": "boolean"
+                          },
+                          "noPhoneNumber": {
+                            "type": "boolean"
                           }
-                        },
+                        }
+                      },
                       "autoBillingInfo": {
-                        "type": "object"
+                        "type": "object",
+                        "properties": {
+                          "leaseId": {
+                            "type": "string"
+                          },
+                          "linkId": {
+                            "type": "string"
+                          },
+                          "paymentMethodId": {
+                            "type": "string"
+                          },
+                          "processorId": {
+                            "type": "string"
+                          },
+                          "": {
+                            "type": "string"
+                          }
+                        }
                       },
                       "unitRent": {
                         "type": "object"
