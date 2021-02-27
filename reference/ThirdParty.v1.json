@@ -2996,7 +2996,114 @@
                           "specialId": {
                             "type": "string"
                           },
-                          "": {
+                          "releaseDeliquencyStatus": {
+                            "type": "string"
+                          },
+                          "hasProrate": {
+                            "type": "string"
+                          },
+                          "signatureSetting": {
+                            "type": "string"
+                          },
+                          "payments": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "amount": {
+                                  "type": "string"
+                                },
+                                "salesTax": {
+                                  "type": "string"
+                                },
+                                "amountWithoutDiscount": {
+                                  "type": "string"
+                                },
+                                "methodId": {
+                                  "type": "string"
+                                },
+                                "setAsAutoBilling": {
+                                  "type": "string"
+                                },
+                                "savePaymentMethod": {
+                                  "type": "string"
+                                },
+                                "creditCardInfo": {
+                                  "type": "string"
+                                },
+                                "encryptedCreditCardInfo": {
+                                  "type": "string"
+                                },
+                                "achInfo": {
+                                  "type": "string"
+                                },
+                                "checkInfo": {
+                                  "type": "string"
+                                },
+                                "autoBillingInfoId": {
+                                  "type": "string"
+                                },
+                                "billingInfo": {
+                                  "type": "string"
+                                },
+                                "linkedPayment": {
+                                  "type": "string"
+                                },
+                                "token": {
+                                  "type": "string"
+                                },
+                                "referenceNumber": {
+                                  "type": "string"
+                                },
+                                "channelResponse": {
+                                  "type": "string"
+                                },
+                                "firstName": {
+                                  "type": "string"
+                                },
+                                "lastName": {
+                                  "type": "string"
+                                },
+                                "streetAddress": {
+                                  "type": "string"
+                                },
+                                "city": {
+                                  "type": "string"
+                                },
+                                "stateId": {
+                                  "type": "string"
+                                },
+                                "stateCode": {
+                                  "type": "string"
+                                },
+                                "countryId": {
+                                  "type": "string"
+                                },
+                                "countryCode": {
+                                  "type": "string"
+                                },
+                                "zip": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "leaseAllocations": {
+                            "type": "string"
+                          },
+                          "otherCharges": {
+                            "type": "string"
+                          },
+                          "receiptOptions": {
+                            "type": "string"
+                          },
+                          "inventoryPurchases": {
+                            "type": "string"
+                          },
+                          "refundAmount": {
+                            "type": "string"
+                          },
+                          "total": {
                             "type": "string"
                           }
                         }
