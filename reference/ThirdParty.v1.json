@@ -3011,25 +3011,38 @@
                               "type": "object",
                               "properties": {
                                 "amount": {
-                                  "type": "string"
+                                  "type": "number"
                                 },
                                 "salesTax": {
-                                  "type": "string"
+                                  "type": "number"
                                 },
                                 "amountWithoutDiscount": {
-                                  "type": "string"
+                                  "type": "number"
                                 },
                                 "methodId": {
-                                  "type": "string"
+                                  "type": "string",
+                                  "enum": [
+                                    "Credit_Card = 1",
+                                    "ACH = 2",
+                                    "Check = 3",
+                                    "Cash = 4",
+                                    "Token = 5",
+                                    "CardReader = 6"
+                                  ]
                                 },
                                 "setAsAutoBilling": {
-                                  "type": "string"
+                                  "type": "boolean"
                                 },
                                 "savePaymentMethod": {
-                                  "type": "string"
+                                  "type": "boolean"
                                 },
                                 "creditCardInfo": {
-                                  "type": "string"
+                                  "type": "object",
+                                  "properties": {
+                                    "": {
+                                      "type": "string"
+                                    }
+                                  }
                                 },
                                 "encryptedCreditCardInfo": {
                                   "type": "string"
