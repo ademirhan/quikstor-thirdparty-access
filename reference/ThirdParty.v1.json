@@ -2237,28 +2237,28 @@
                         "type": "object",
                         "properties": {
                           "id": {
-                            "type": "string"
+                            "type": "integer"
                           },
                           " unitId": {
-                            "type": "string"
+                            "type": "integer"
                           },
                           "customerId": {
-                            "type": "string"
+                            "type": "integer"
                           },
                           "vacateStatusId": {
-                            "type": "string"
+                            "type": "integer"
                           },
                           "moveOutReasonTypeId": {
-                            "type": "string"
+                            "type": "integer"
                           },
                           "lastTransactionId": {
-                            "type": "string"
+                            "type": "integer"
                           },
                           "linkId": {
-                            "type": "string"
+                            "type": "integer"
                           },
                           "active": {
-                            "type": "string"
+                            "type": "boolean"
                           },
                           "pending": {
                             "type": "string"
