@@ -2261,10 +2261,10 @@
                             "type": "boolean"
                           },
                           "pending": {
-                            "type": "string"
+                            "type": "boolean"
                           },
                           "isDelinquent": {
-                            "type": "string"
+                            "type": "boolean"
                           },
                           "createdAt": {
                             "type": "string"
@@ -2372,7 +2372,21 @@
                             "type": "string"
                           },
                           "autoBillingInfo": {
-                            "type": "string"
+                            "type": "object",
+                            "properties": {
+                              "leaseId": {
+                                "type": "string"
+                              },
+                              "linkId": {
+                                "type": "string"
+                              },
+                              "paymentMethodId": {
+                                "type": "string"
+                              },
+                              "processorId": {
+                                "type": "string"
+                              }
+                            }
                           }
                         }
                       },
@@ -3136,32 +3150,153 @@
                       "charges": {
                         "type": "array",
                         "items": {
-                          "type": "object"
+                          "type": "object",
+                          "properties": {
+                            "chargeTypeId": {
+                              "type": "integer"
+                            },
+                            "amount": {
+                              "type": "number"
+                            }
+                          }
                         }
                       },
                       "insuranceTypeId": {
-                        "type": "string"
+                        "type": "integer"
                       },
                       "autoProRateToFirst": {
                         "type": "string"
                       },
                       "backToRescheduleRentDate": {
-                        "type": "string"
+                        "type": "string",
+                        "format": "date-time"
                       },
                       "monthsPaid": {
-                        "type": "string"
+                        "type": "integer"
                       },
                       "specialId": {
                         "type": "string"
                       },
                       "leadId": {
-                        "type": "string"
+                        "type": "integer"
                       },
                       "keyCode": {
-                        "type": "string"
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "siteId": {
+                            "type": "integer"
+                          },
+                          "unitId": {
+                            "type": "integer"
+                          },
+                          "tenantId": {
+                            "type": "integer"
+                          },
+                          "leaseId": {
+                            "type": "integer"
+                          },
+                          "userId": {
+                            "type": "integer"
+                          },
+                          "isAccessCard": {
+                            "type": "boolean"
+                          },
+                          "isNonTenant": {
+                            "type": "boolean"
+                          },
+                          "allowPayAtGate": {
+                            "type": "boolean"
+                          },
+                          "accessType": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "code": {
+                            "type": "string"
+                          },
+                          "gateTimeZoneId": {
+                            "type": "integer"
+                          },
+                          "keypadZoneId": {
+                            "type": "number"
+                          },
+                          "thirdPartykey": {
+                            "type": "integer"
+                          },
+                          "gateTimeZoneNumber": {
+                            "type": "integer"
+                          },
+                          "keypadZoneNumber": {
+                            "type": "integer"
+                          }
+                        }
                       },
                       "tenantFiles": {
-                        "type": "string"
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "tenantId": {
+                              "type": "integer"
+                            },
+                            "userId": {
+                              "type": "integer"
+                            },
+                            "categoryId": {
+                              "type": "integer"
+                            },
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "PDF = 1",
+                                "EXCEL",
+                                "WORD",
+                                "TXT",
+                                "HTML",
+                                "JPG",
+                                "PNG",
+                                "CSV"
+                              ]
+                            },
+                            "categoryName": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string",
+                              "maxLength": 50
+                            },
+                            "description": {
+                              "type": "string",
+                              "maxLength": 250
+                            },
+                            "absoluteUri": {
+                              "type": "string"
+                            },
+                            "referenceKey": {
+                              "type": "string",
+                              "maxLength": 128
+                            },
+                            "bucket": {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "updated": {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "isFeatured": {
+                              "type": "boolean"
+                            }
+                          }
+                        }
                       },
                       "testthismovein": {
                         "type": "string"
