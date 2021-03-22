@@ -2267,16 +2267,20 @@
                             "type": "boolean"
                           },
                           "createdAt": {
-                            "type": "string"
+                            "type": "string",
+                            "format": "date-time"
                           },
                           "movedInDate": {
-                            "type": "string"
+                            "type": "string",
+                            "format": "date-time"
                           },
                           "movedOutDate": {
-                            "type": "string"
+                            "type": "string",
+                            "format": "date-time"
                           },
                           "expectedMoveOutDate": {
-                            "type": "string"
+                            "type": "string",
+                            "format": "date-time"
                           },
                           "movedOutReason": {
                             "type": "string"
@@ -2351,40 +2355,158 @@
                             "type": "string"
                           },
                           "linkSet": {
-                            "type": "string"
+                            "type": "object"
                           },
                           "insurance": {
-                            "type": "string"
+                            "type": "object"
                           },
                           "monthlyCharges": {
-                            "type": "string"
+                            "type": "array",
+                            "items": {
+                              "type": "object"
+                            }
                           },
                           "transferHistory": {
-                            "type": "string"
+                            "type": "array",
+                            "items": {
+                              "type": "object"
+                            }
                           },
                           "vehicleInformation": {
-                            "type": "string"
+                            "type": "array",
+                            "items": {
+                              "type": "object"
+                            }
                           },
                           "notes": {
-                            "type": "string"
+                            "type": "array",
+                            "items": {
+                              "type": "object"
+                            }
                           },
                           "specialMappings": {
-                            "type": "string"
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "integer"
+                                },
+                                "leaseId": {
+                                  "type": "integer"
+                                },
+                                "specialId": {
+                                  "type": "integer"
+                                },
+                                "specialName": {
+                                  "type": "string"
+                                },
+                                "specialDescription": {
+                                  "type": "string"
+                                },
+                                "applied": {
+                                  "type": "string",
+                                  "format": "date-time"
+                                },
+                                "expired": {
+                                  "type": "string",
+                                  "format": "date-time"
+                                },
+                                "status": {
+                                  "type": "string",
+                                  "enum": [
+                                    "Pending = 1",
+                                    "Active",
+                                    "Expired"
+                                  ]
+                                }
+                              }
+                            }
                           },
                           "autoBillingInfo": {
                             "type": "object",
                             "properties": {
                               "leaseId": {
-                                "type": "string"
+                                "type": "integer"
                               },
                               "linkId": {
-                                "type": "string"
+                                "type": "integer"
                               },
                               "paymentMethodId": {
-                                "type": "string"
+                                "type": "integer"
                               },
                               "processorId": {
+                                "type": "integer"
+                              },
+                              "checkingAccountType": {
+                                "enum": [
+                                  "Checking = 0",
+                                  "Savings = 1"
+                                ],
+                                "description": "Required if \"CardNumber\" is true",
+                                "type": "object",
+                                "properties": {
+                                  "checking": {
+                                    "type": "integer",
+                                    "minimum": 0
+                                  },
+                                  "savings": {
+                                    "type": "integer",
+                                    "minimum": 1
+                                  }
+                                }
+                              },
+                              "checkingAccountNumber": {
+                                "type": "string",
+                                "description": "Required if \"CardNumber\" is true"
+                              },
+                              "checkingRoutingNumber": {
+                                "type": "string",
+                                "description": "Required if \"CardNumber\" is true"
+                              },
+                              "cardTypeId": {
+                                "type": "integer",
+                                "description": "Required if \"CheckingAccountNumber\" is true"
+                              },
+                              "cardNumber": {
+                                "type": "string",
+                                "description": "Required if \"CheckingAccountNumber\" is true"
+                              },
+                              "cardExpiration": {
+                                "type": "string",
+                                "format": "date",
+                                "description": "Required if \"CheckingAccountNumber\" is true"
+                              },
+                              "cardCvv": {
+                                "type": "string",
+                                "description": "Required if \"CheckingAccountNumber\" is true"
+                              },
+                              "cardTypeTitle": {
                                 "type": "string"
+                              },
+                              "processAfterDays": {
+                                "type": "integer"
+                              },
+                              "confirmUsingAvs": {
+                                "type": "boolean"
+                              },
+                              "AutoPayToken": {
+                                "type": "string"
+                              },
+                              "isActive": {
+                                "type": "boolean"
+                              },
+                              "isDeleted": {
+                                "type": "boolean"
+                              },
+                              "isPrimary": {
+                                "type": "boolean"
+                              },
+                              "applyToLinkedLeases": {
+                                "type": "boolean"
+                              },
+                              "relatedUnit": {
+                                "type": "integer"
                               }
                             }
                           }
@@ -3334,7 +3456,7 @@
           },
           "description": "API request model for [createLead](https://quikstor.stoplight.io/docs/quikstor-thirdparty-access/reference/ThirdParty.v1.json/components/schemas/Site)"
         },
-        "description": "The MoveIn POST endpoint is used to request data from ther server to identify all tenants moving into the facility. ",
+        "description": "      The MoveIn POST endpoint is used to request data from ther server to identify all tenants moving into the facility. ",
         "security": [
           {
             "BearerToken": []
