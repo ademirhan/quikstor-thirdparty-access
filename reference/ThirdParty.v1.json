@@ -2375,13 +2375,122 @@
                           "vehicleInformation": {
                             "type": "array",
                             "items": {
-                              "type": "object"
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "leaseId": {
+                                  "type": "string"
+                                },
+                                "stateId": {
+                                  "type": "string"
+                                },
+                                "year": {
+                                  "type": "string"
+                                },
+                                "make": {
+                                  "type": "string"
+                                },
+                                "color": {
+                                  "type": "string"
+                                },
+                                "licensePlate": {
+                                  "type": "string"
+                                },
+                                "vin": {
+                                  "type": "string"
+                                },
+                                "lienHolder": {
+                                  "type": "string"
+                                },
+                                "insuranceProvider": {
+                                  "type": "string"
+                                },
+                                "insurancePolicyNumber": {
+                                  "type": "string"
+                                },
+                                "typeId": {
+                                  "type": "string"
+                                },
+                                "registrationExpiration": {
+                                  "type": "string"
+                                },
+                                "insuranceExpiration": {
+                                  "type": "string"
+                                },
+                                "nonOperationalRegistration": {
+                                  "type": "string"
+                                },
+                                "notes": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "userId": {
+                                        "type": "string"
+                                      },
+                                      "vehicleId": {
+                                        "type": "string"
+                                      },
+                                      "create": {
+                                        "type": "string"
+                                      },
+                                      "content": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
                             }
                           },
                           "notes": {
                             "type": "array",
                             "items": {
-                              "type": "object"
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "integer"
+                                },
+                                "leaseId": {
+                                  "type": "integer"
+                                },
+                                "dateTime": {
+                                  "type": "string",
+                                  "format": "date-time"
+                                },
+                                "note": {
+                                  "type": "string"
+                                },
+                                "source": {
+                                  "type": "string",
+                                  "enum": [
+                                    "DASHBOARD = 1",
+                                    "RENT_CHANGE",
+                                    "PAID_TO_DATE_CHANGE",
+                                    "TENANT_DEBIT_CREDIT",
+                                    "VOID_REVERSAL",
+                                    "UNIT_TRANSFER",
+                                    "DELINQUENCY_ACTIONS",
+                                    "REGULAR",
+                                    "UNDO_MOVEOUT",
+                                    "UNIT_NOTE",
+                                    "PARKING",
+                                    "LEAD",
+                                    "CALENDAR",
+                                    "PAYMENT_METHOD_CHANGE",
+                                    "OTHER = 99"
+                                  ],
+                                  "default": "NoteSource.OTHER"
+                                },
+                                "applyToLinked": {
+                                  "type": "boolean"
+                                }
+                              }
                             }
                           },
                           "specialMappings": {
