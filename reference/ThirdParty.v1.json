@@ -2411,16 +2411,18 @@
                                   "type": "string"
                                 },
                                 "typeId": {
-                                  "type": "string"
+                                  "type": "integer"
                                 },
                                 "registrationExpiration": {
-                                  "type": "string"
+                                  "type": "string",
+                                  "format": "date-time"
                                 },
                                 "insuranceExpiration": {
-                                  "type": "string"
+                                  "type": "string",
+                                  "format": "date-time"
                                 },
                                 "nonOperationalRegistration": {
-                                  "type": "string"
+                                  "type": "boolean"
                                 },
                                 "notes": {
                                   "type": "array",
@@ -2428,16 +2430,17 @@
                                     "type": "object",
                                     "properties": {
                                       "id": {
-                                        "type": "string"
+                                        "type": "integer"
                                       },
                                       "userId": {
-                                        "type": "string"
+                                        "type": "integer"
                                       },
                                       "vehicleId": {
-                                        "type": "string"
+                                        "type": "integer"
                                       },
                                       "create": {
-                                        "type": "string"
+                                        "type": "string",
+                                        "format": "date-time"
                                       },
                                       "content": {
                                         "type": "string"
