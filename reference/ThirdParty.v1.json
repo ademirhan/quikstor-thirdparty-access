@@ -2358,18 +2358,90 @@
                             "type": "object"
                           },
                           "insurance": {
-                            "type": "object"
+                            "type": "object",
+                            "properties": {
+                              "monthlyPayment": {
+                                "type": "string"
+                              },
+                              "startDate": {
+                                "type": "string"
+                              }
+                            }
                           },
                           "monthlyCharges": {
                             "type": "array",
                             "items": {
-                              "type": "object"
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "integer"
+                                },
+                                "clientId": {
+                                  "type": "integer"
+                                },
+                                "name ": {
+                                  "type": "string"
+                                },
+                                "description": {
+                                  "type": "string"
+                                },
+                                "fixedAmount": {
+                                  "type": "number"
+                                },
+                                "percentAmount": {
+                                  "type": "number"
+                                },
+                                "isOneTimeCharge": {
+                                  "type": "boolean"
+                                },
+                                "isEditable": {
+                                  "type": "boolean"
+                                },
+                                "amount": {
+                                  "type": "number"
+                                },
+                                "startDate": {
+                                  "type": "string",
+                                  "format": "date-time"
+                                },
+                                "endDate": {
+                                  "type": "string",
+                                  "format": "date-time"
+                                },
+                                "isActive": {
+                                  "type": "boolean"
+                                },
+                                "isDeleted": {
+                                  "type": "boolean"
+                                }
+                              }
                             }
                           },
                           "transferHistory": {
                             "type": "array",
                             "items": {
-                              "type": "object"
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "integer"
+                                },
+                                "leaseId": {
+                                  "type": "integer"
+                                },
+                                "transactionId": {
+                                  "type": "integer"
+                                },
+                                "originalUnitId": {
+                                  "type": "integer"
+                                },
+                                "newUnitId": {
+                                  "type": "integer"
+                                },
+                                "transferDate": {
+                                  "type": "string",
+                                  "format": "date-time"
+                                }
+                              }
                             }
                           },
                           "vehicleInformation": {
@@ -2378,13 +2450,13 @@
                               "type": "object",
                               "properties": {
                                 "id": {
-                                  "type": "string"
+                                  "type": "integer"
                                 },
                                 "leaseId": {
-                                  "type": "string"
+                                  "type": "integer"
                                 },
                                 "stateId": {
-                                  "type": "string"
+                                  "type": "integer"
                                 },
                                 "year": {
                                   "type": "string"
