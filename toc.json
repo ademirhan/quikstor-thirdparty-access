@@ -42,7 +42,7 @@
         {
           "type": "item",
           "title": "Login",
-          "uri": "reference/ThirdParty.v1.json/paths/~1login/post"
+          "uri": "reference/ThirdParty.v1.json/paths/~1api~1login"          
         }
         
       ]
