@@ -12,7 +12,7 @@
     }
   ],
   "paths": {
-    "/login": {
+    "/api/login": {
       "post": {
         "summary": "PostLogin",
         "tags": [
