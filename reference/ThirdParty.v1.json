@@ -66,6 +66,15 @@
                   },
                   "password": {
                     "type": "string"
+                  },
+                  "grant_type": {
+                    "type": "string"
+                  },
+                  "client_id": {
+                    "type": "string"
+                  },
+                  "client_secret": {
+                    "type": "string"
                   }
                 },
                 "required": [
@@ -76,12 +85,12 @@
               },
               "examples": {
                 "example-1": {
-                  "value": "grant_type=password&username=<third-party-user-name>@quikstor.com&password=<third-party-password>"
+                  "value": "grant_type=client_credentials&client_id=<clientId>&client_secret=<clientSecret>"
                 }
               }
             }
           },
-          "description": "Raw text body required for authentication\n\ngrant_type=client_credentials&client_id=<clientId>&client_secret=<clientSecret>"
+          "description": "Raw text body required for authentication"
         },
         "description": "Get an access token from API test",
         "security": []
