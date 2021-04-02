@@ -12,7 +12,7 @@
     }
   ],
   "paths": {
-    "/login": {
+    "/api/login": {
       "post": {
         "summary": "PostLogin",
         "tags": [
@@ -58,15 +58,6 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "grant-type": {
-                    "type": "string"
-                  },
-                  "username": {
-                    "type": "string"
-                  },
-                  "password": {
-                    "type": "string"
-                  },
                   "grant_type": {
                     "type": "string"
                   },
@@ -78,9 +69,9 @@
                   }
                 },
                 "required": [
-                  "grant-type",
-                  "username",
-                  "password"
+                  "grant_type",
+                  "client_id",
+                  "client_secret"
                 ]
               },
               "examples": {
@@ -94,7 +85,8 @@
         },
         "description": "Get an access token from API test",
         "security": []
-      }
+      },
+      "parameters": []
     },
     "/api/<partner-name>/getsites": {
       "get": {
