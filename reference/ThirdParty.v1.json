@@ -6008,6 +6008,68 @@
           }
         ]
       }
+    },
+    "/api/refreshtoken": {
+      "post": {
+        "summary": "RefreshToken",
+        "operationId": "post-refreshtoken",
+        "responses": {
+          "200": {
+            "description": "OKAPI responses with the TokenResponse model(See models.)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "access_token": {
+                      "type": "string"
+                    },
+                    "token_type": {
+                      "type": "string"
+                    },
+                    "expires_in": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "refresh_token": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Refreshes token after being logged in. ",
+        "security": [],
+        "requestBody": {
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "grant_type": {
+                    "type": "string"
+                  },
+                  "refresh_token": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "grant_type",
+                  "refresh_token"
+                ]
+              },
+              "examples": {
+                "example-1": {
+                  "value": "grant_type=refresh_token&refresh_token={0}"
+                }
+              }
+            }
+          },
+          "description": "Raw text body required for authentication"
+        }
+      }
     }
   },
   "components": {
