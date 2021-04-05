@@ -6009,7 +6009,7 @@
         ]
       }
     },
-    "/api/refreshtoken": {
+    "/api/login/": {
       "post": {
         "summary": "RefreshToken",
         "operationId": "post-refreshtoken",
@@ -6091,7 +6091,8 @@
         "tags": [
           "Login"
         ]
-      }
+      },
+      "parameters": []
     }
   },
   "components": {
