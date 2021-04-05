@@ -6037,7 +6037,7 @@
             }
           }
         },
-        "description": "RefreshToken are requested by the application after the user successfully authenticates and grants consent for the appication through login. ",
+        "description": "RefreshToken are requested by the application after the user successfully authenticates and grants consent for the appication through login. \n\nNOTE: Use /api/login - Remove the \"/\" at the end. ",
         "security": [],
         "requestBody": {
           "content": {
