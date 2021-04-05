@@ -6015,7 +6015,7 @@
         "operationId": "post-refreshtoken",
         "responses": {
           "200": {
-            "description": "OKAPI responses with the TokenResponse model(See models.)",
+            "description": "API responses with the TokenResponse model(See models.)",
             "content": {
               "application/json": {
                 "schema": {
