@@ -6030,9 +6030,6 @@
                     "expires_in": {
                       "type": "string",
                       "format": "date-time"
-                    },
-                    "refresh_token": {
-                      "type": "string"
                     }
                   }
                 }
@@ -6040,7 +6037,7 @@
             }
           }
         },
-        "description": "Refreshes token after being logged in. ",
+        "description": "RefreshToken are requested by the application after the user successfully authenticates and grants consent for the appication through login. ",
         "security": [],
         "requestBody": {
           "content": {
@@ -6052,26 +6049,7 @@
                     "type": "string"
                   },
                   "refresh_token": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "grant_type": {
-                          "type": "string"
-                        },
-                        "client_id": {
-                          "type": "string"
-                        },
-                        "client_secret": {
-                          "type": "string"
-                        }
-                      },
-                      "required": [
-                        "grant_type",
-                        "client_id",
-                        "client_secret"
-                      ]
-                    }
+                    "type": "string"
                   }
                 },
                 "required": [
@@ -6081,7 +6059,7 @@
               },
               "examples": {
                 "example-1": {
-                  "value": "grant_type=refresh_token&refresh_token={0}"
+                  "value": "grant_type=client_credentials&client_id=<clientId>&client_secret=<clientSecret>"
                 }
               }
             }
