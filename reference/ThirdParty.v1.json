@@ -6068,7 +6068,10 @@
             }
           },
           "description": "Raw text body required for authentication"
-        }
+        },
+        "tags": [
+          "Login"
+        ]
       }
     }
   },
