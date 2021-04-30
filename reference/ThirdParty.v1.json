@@ -2323,7 +2323,7 @@
                             "type": "string"
                           },
                           "billfor": {
-                            "type": "string"
+                            "type": "integer"
                           },
                           "cancellationReason": {
                             "type": "string"
@@ -2332,19 +2332,20 @@
                             "type": "string"
                           },
                           "isSuspended": {
-                            "type": "string"
+                            "type": "boolean"
                           },
                           "othersAllowed": {
                             "type": "string"
                           },
                           "rentPostDate": {
-                            "type": "string"
+                            "type": "string",
+                            "format": "date-time"
                           },
                           "transfered": {
-                            "type": "string"
+                            "type": "boolean"
                           },
                           "lateFee": {
-                            "type": "string"
+                            "type": "number"
                           },
                           "chargesAndNoticesMode": {
                             "type": "string"
